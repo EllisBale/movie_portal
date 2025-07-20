@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+from pathlib import Path
 import os
 import dj_database_url
-from pathlib import Path
 if os.path.isfile('env.py'):
     import env
 
@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-4-r#+vhg%4fd9%0qyhgic&46f*2e1-=#9#-v4h079!*4*=c70a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com',]
+ALLOWED_HOSTS = ['.herokuapp.com',
+                 '127.0.0.1',]
 
 
 # Application definition
@@ -80,6 +81,8 @@ WSGI_APPLICATION = 'movie_portal.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
