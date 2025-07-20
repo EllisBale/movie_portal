@@ -3,7 +3,7 @@
 
 
 
-1. [UX](#UX)
+1. [UX](#ux)
     - [Strategy](#strategy)
     - [Scope](#scope)
     - [Structure](#structure)
@@ -28,28 +28,24 @@
 6. [Credits](#credits)
 
 
-## Strategy
+## **UX**
 
 
+### Strategy
+
+#### Project Goals:
+
+#### User Goals:
+
+#### Admin/Manager Goals:
 
 
-### Project Goals:
+#### Site Owner Goals
 
-### User Goals:
-
-### Admin/Manager Goals:
+#### Target Audience 
 
 
-
-### Site Owner Goals
-
-### Target Audience 
-
-
-### Research
-
-
-#### Reviewing Other Websites
+#### Research
 
 For this project, I looked at popular cinema websites such as Vue, Odeon and Cineworld. When looking at these websites I noticed a common trend in which all of the websites had a landing page with hero carousel images. They would include current movies showing in cinemas which would seem to grab a user's attention. It would benefit my website to have a carousel hero images on my landing page as it will show the user what the website is about. Most of the websites I visited had a dark theme to it to match the cinematic tone which makes it immersive. From this I will be using more dark tones for this project.
 
