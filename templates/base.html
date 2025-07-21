@@ -1,3 +1,4 @@
+{% load static %}
 {% url 'home' as home_url %}
 
 <!DOCTYPE html>
@@ -33,27 +34,27 @@
                         <a class="nav-link active text-white" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'films' %}">Films</a>
+                        <a class="nav-link text-white" href="">Films</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'coming_soon' %}">Coming Soon</a>
+                        <a class="nav-link text-white" href="">Coming Soon</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'family' %}">Family</a>
+                        <a class="nav-link text-white" href="">Family</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'food&drink' %}">Food & Drink </a>
+                        <a class="nav-link text-white" href="">Food & Drink </a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'account_logout' %}"> Logout<i class="fa-solid fa-user"></i></a>
+                        <a class="nav-link text-white" href=""> Logout<i class="fa-solid fa-user"></i></a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'account_logout' %}"> Register<i class="fa-solid fa-user"></i></a>
+                        <a class="nav-link text-white" href=""> Register<i class="fa-solid fa-user"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'account_logout' %}"> Login<i class="fa-solid fa-user"></i></a>
+                        <a class="nav-link text-white" href=""> Login<i class="fa-solid fa-user"></i></a>
                     </li>
                     {% endif %}
         
