@@ -1,0 +1,85 @@
+{% url 'home' as home_url %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoviePortal</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/98a92d70f6.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body class="d-flex flex-column h-100 main-bg">
+
+    <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+             <a class="navbar-brand text-white" href="#">MP</a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex justify-content-around w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'films' %}">Films</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'coming_soon' %}">Coming Soon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'family' %}">Family</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'food&drink' %}">Food & Drink </a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'account_logout' %}"> Logout<i class="fa-solid fa-user"></i></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'account_logout' %}"> Register<i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'account_logout' %}"> Login<i class="fa-solid fa-user"></i></a>
+                    </li>
+                    {% endif %}
+        
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        {% block content %}
+        <!-- Content goes here -->
+        {% endblock content %}
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -18,13 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from home.views import home_test
 from bookings.views import testbooking
-from . import views
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home_test, name='home'),
     path('bookings/', testbooking, name='bookings'),
-    path('login/', views.login_user, name='login'),
-    path('logout/', views.logout_user, name='logout')
 ]
