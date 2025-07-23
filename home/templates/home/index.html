@@ -55,7 +55,7 @@
 <!-- Popular Films Section-->
 
 
-<div class="container my-5">
+<div class="container my-5 section">
   <!-- Heading -->
   <div class="row mb-3">
     <div class="col-md-3">
@@ -105,7 +105,26 @@
 </div>
 
 
+<!-- Films for the family section-->
 
+
+<div class="container pt-5 mt-5 section">
+  <div class="row align-items-stretch">
+    <div class="col-12 col-lg-6 mb-4 order-1 order-lg-2">
+      <img src="{% static 'images/test.jpg' %}" class="img-fluid w-100 h-100 object-fit-cover" style="max-height: 400px;" alt="Descriptive Alt Text">
+    </div>
+    <div class="col-12 col-lg-6 mb-4 d-flex order-2 order-lg-1">
+      <div class="neon-blue p-4 bg-dark text-white w-100 d-flex flex-column justify-content-center">
+        <h3>Films For The Family!</h3>
+        <p>Sign Up To Book Now</p>
+        <div class="mt-3 d-flex gap-2 flex-wrap">
+          <a href="#" class="btn btn-primary custom-btn">Sign Up</a>
+          <a href="#" class="btn btn-outline-light custom-btn">View Films</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- index.html content ends here -->
 {% endblock %}

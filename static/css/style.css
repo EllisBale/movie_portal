@@ -12,19 +12,39 @@ h1, h2, h3 {
 }
 
 .main-bg {
-    background-color: #121212;  /* dark color example */
+    background-color: #000000;  /* dark color example */
+    
 }
 
 .navbar-brand {
 
-     font-size: 3rem;
- 
-}
+    font-size: 3rem;
+    margin-left: 40px;
 
+}
 
 
 p {
     color: white;
+}
+
+
+.navbar {
+    background-color: #0f0f0f  !important;
+     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
+}
+
+
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+
+
+.neon-blue {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
 }
 
 
@@ -33,6 +53,10 @@ p {
 .carousel-inner,
 .carousel-item {
   height: 65vh;
+}
+
+.carousel .carousel-item {
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 .carousel-img {
@@ -47,14 +71,42 @@ p {
 }
 
 
-
 .carousel .carousel-item.active,
 .carousel .carousel-item-next,
 .carousel .carousel-item-prev { 
-    background-color: rgb(0, 0, 0) !important;
+    background-color: #000000  !important;
 }
 .card {
-    background-color: #121212;
+    background-color: #000000;
     border: none;
 }
 
+
+/* Buttons */
+
+.custom-btn {
+    background-color: #000000;
+    border-color: #00BFFF !important;
+}
+
+
+.btn {
+  background-color: #000000 !important;
+  color: white !important;
+  border: 2px solid ;
+  
+}
+
+
+.custom-btn:hover,
+.custom-btn:focus,
+.custom-btn:active {
+ box-shadow: 
+ 0 0 30px 0 rgba(0, 191, 255, 0.4), 
+ inset 0 0 15px 0 rgba(0, 191, 255, 0.3); 
+ text-shadow: 0 0 3px #00BFFF;
+ border-color: #00BFFF;
+ background-color: transparent;
+ color: #00BFFF;
+
+}
