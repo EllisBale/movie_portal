@@ -53,16 +53,25 @@ p {
 .carousel-inner,
 .carousel-item {
   height: 65vh;
+  
 }
+
+.carousel-inner {
+    height: 85vh !important;
+}
+
 
 .carousel .carousel-item {
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
+
+
 .carousel-img {
   width: 100%;
   height: 45vh;
   object-fit: cover;
+  display: block;
  
 }
 
@@ -76,6 +85,8 @@ p {
 .carousel .carousel-item-prev { 
     background-color: #000000  !important;
 }
+
+
 .card {
     background-color: #000000;
     border: none;
@@ -110,3 +121,5 @@ p {
  color: #00BFFF;
 
 }
+
+
