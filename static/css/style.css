@@ -1,7 +1,14 @@
 body {
     background-color:black;
+
 }
 
 .main-bg {
     background-color: #121212;  /* dark color example */
+}
+
+.navbar-brand {
+
+     font-size: 3rem;
+ 
 }
