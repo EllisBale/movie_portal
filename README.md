@@ -45,6 +45,8 @@ The projects purpose is to provide an immersive and user-friendly platform that 
 
 #### Site Owner Goals
 
+The site owner goals would be to increase ticket sales, improve customer experience by offering a seamless, user friendly interface, and promote films by showing new releases and upcoming films.
+
 #### Target Audience
 
 The target audience would be for casual and frequent moviegoers of all different age groups, particularly families and young adults. The platform also works for mobile users because of how many people have mobiles compared to computers making mobile users more likely to visit the site.
