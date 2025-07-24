@@ -1,0 +1,159 @@
+
+/* Global Styles */
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto; 
+    background-color: #000000; /* solid black base */
+    background-image:
+  linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%),
+  linear-gradient(-45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #eee; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+p {
+    color: white;
+    font-size: 1rem;
+}
+
+hr {
+    color: white;
+    
+}
+
+
+.main-bg {
+    background-color: #000000;  /* dark color example */
+    
+}
+
+.navbar-brand {
+
+    font-size: 3rem;
+    margin-left: 40px;
+
+}
+
+
+
+.navbar {
+    background-color: #0f0f0f  !important;
+     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
+}
+
+
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+
+
+.neon-blue {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
+}
+
+
+/* Hero carousel index.html */
+
+.carousel-inner,
+.carousel-item {
+  height: 65vh;
+  
+}
+
+.carousel-inner {
+    height: 85vh !important;
+}
+
+
+.carousel .carousel-item {
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+
+
+.carousel-img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  display: block;
+ 
+}
+
+.carousel-control-prev, .carousel-control-next {
+    height: 350px;
+}
+
+
+.carousel .carousel-item.active,
+.carousel .carousel-item-next,
+.carousel .carousel-item-prev { 
+    background-color: #1a1919  !important;
+    height: 100px;
+    
+}
+
+
+.card {
+    background-color: #000000;
+    border: 0 !important;
+}
+
+.card-img-top {
+    border-radius: 0px !important; 
+}
+
+/* Buttons */
+
+.custom-btn {
+    background-color: #000000;
+    border-color: #00BFFF !important;
+}
+
+
+.btn {
+  background-color: #000000 !important;
+  color: white !important;
+  border: 2px solid ;
+  
+}
+
+
+.custom-btn:hover,
+.custom-btn:focus,
+.custom-btn:active {
+ box-shadow: 
+ 0 0 30px 0 rgba(0, 191, 255, 0.4), 
+ inset 0 0 15px 0 rgba(0, 191, 255, 0.3); 
+ text-shadow: 0 0 3px #00BFFF;
+ border-color: #00BFFF;
+ background-color: transparent;
+ color: #00BFFF;
+
+}
+
