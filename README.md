@@ -45,7 +45,11 @@ The projects purpose is to provide an immersive and user-friendly platform that 
 
 #### Site Owner Goals
 
-#### Target Audience 
+#### Target Audience
+
+The target audience would be for casual and frequent moviegoers of all different age groups, particularly families and young adults. The platform also works for mobile users because of how many people have mobiles compared to computers making mobile users more likely to visit the site.
+
+
 
 
 #### Research
