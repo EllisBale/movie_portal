@@ -130,8 +130,9 @@ Schema chart
 
 ### Colours:
 
-Explain colour choices
+The website uses dark colours, primarily black to create an immersive, cinematic atmosphere that mirrors the experience of being inside a cinema. Neon blue is used as an accent colour to highlight interactive elements, helping them stand out clearly against the dark background. This not only enhances visual appeal but also guides the user by making it immediately obvious which elements are clickable or interactive.
 
+![black](docs/readme_imgs/black.png)  ![Neon blue](docs/readme_imgs/neonblue1.png)
 
 
 ### Fonts
