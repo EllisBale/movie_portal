@@ -5,6 +5,7 @@
 
 1. [UX](#ux)
     - [Strategy](#strategy)
+        - [Project Purpose](#project-purpose)
     - [Scope](#scope)
     - [Structure](#structure)
     - [Skeleton](#skeleton)
@@ -33,7 +34,9 @@
 
 ### Strategy
 
-#### Project Goals:
+#### Project Purpose:
+
+The projects purpose is to provide an immersive and user-friendly platform that allows users to explore and discover films with ease. The website enables users to book cinema tickets online, select seats and choose a film that is currently available. The website is designed to deliver the user a smooth experience across all devices and enhance accessibilty for cinema-goers.
 
 #### User Goals:
 
