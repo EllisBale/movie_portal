@@ -32,7 +32,7 @@ body {
 
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: white;
     font-family: var(--heading-font);
     font-weight: 400;
@@ -56,6 +56,10 @@ hr {
     
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
 
 .main-bg {
     background-color: #000000;  /* dark color example */
@@ -95,6 +99,7 @@ hr {
 
 .neon-blue {
     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
+    
 }
 
 
@@ -175,5 +180,20 @@ hr {
  background-color: transparent;
  color: #ff00ff;
 
+}
+
+
+
+footer {
+    background: var(--colour-secondary);
+}
+
+
+/* FontAwesome */
+
+.fa-brands {
+    font-size: 1.8rem;
+    padding: 5px;
+    
 }
 

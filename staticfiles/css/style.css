@@ -1,14 +1,22 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /* Global Styles */
 
+:root {
+    /* Fonts */
+    --main-font: "Roboto", sans-serif;
+    --heading-font: "Barlow Condensed", sans-serif;
+    /* Colours */
+    --colour-primary: #000000;
+    --colour-secondary: #1a1a2e ;
+    --colour-accent: #00BFFF;
 
-* {
-  box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 body {
     margin: 0 auto; 
@@ -21,12 +29,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #eee; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: white;
+    font-family: var(--heading-font);
+    font-weight: 400;
+    
 }
 
 h3 {
@@ -35,20 +45,29 @@ h3 {
 
 
 p {
-    color: white;
     font-size: 1rem;
+    font-family: var(--main-font);
+    color: white;
 }
+
 
 hr {
     color: white;
     
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
 
 .main-bg {
     background-color: #000000;  /* dark color example */
     
 }
+
+
+/* Navbar */
 
 .navbar-brand {
 
@@ -60,10 +79,15 @@ hr {
 
 
 .navbar {
-    background-color: #0f0f0f  !important;
-     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
+    
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
+   
 }
 
+
+.nav-link {
+    font-family: "Montserrat", sans-serif;
+}
 
 
 .section {
@@ -75,6 +99,7 @@ hr {
 
 .neon-blue {
     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
+    
 }
 
 
@@ -132,12 +157,12 @@ hr {
 
 .custom-btn {
     background-color: #000000;
-    border-color: #00BFFF !important;
+    border-color: var(--colour-accent) !important;
 }
 
 
 .btn {
-  background-color: #000000 !important;
+  background-color: var(--colour-primary) !important;
   color: white !important;
   border: 2px solid ;
   
@@ -153,7 +178,22 @@ hr {
  text-shadow: 0 0 3px #00BFFF;
  border-color: #00BFFF;
  background-color: transparent;
- color: #00BFFF;
+ color: #ff00ff;
 
+}
+
+
+
+footer {
+    background: var(--colour-secondary);
+}
+
+
+/* FontAwesome */
+
+.fa-brands {
+    font-size: 1.8rem;
+    padding: 5px;
+    
 }
 
