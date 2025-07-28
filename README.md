@@ -99,19 +99,53 @@ For this project, I looked at popular cinema websites such as Vue, Odeon and Cin
 ### Wireframes
 
 
-Home page
+#### Mobile
+
+<details> 
+<summary> Home </summary>
+
+ <img src="docs/wireframes/homemobile.png">
+
+</details>
+<br>
+
+<details> 
+<summary>  Films </summary>
+
+ <img src="docs/wireframes/filmsmobile.png">
+</details>
+<br>
+
+<details> 
+<summary>  Menu </summary>
+
+ <img src="docs/wireframes/menumobile.png">
+</details>
+<br>
+
+#### Desktop
+
+<details> 
+<summary> Home </summary>
+
+ <img src="docs/wireframes/homedesktop.png">
+</details>
+<br>
 
 
-Booking page
+<details> 
+<summary> Films </summary>
 
+ <img src="docs/wireframes/filmsdesktop.png">
+</details>
+<br>
 
-Sign up page
+<details> 
+<summary> Menu </summary>
 
-login page
-
-about us page
-
-contact us page
+ <img src="docs/wireframes/menudesktop.png">
+</details>
+<br>
 
 
 
@@ -119,7 +153,6 @@ contact us page
 Schema 
 
 Schema chart
-
 
 
 
