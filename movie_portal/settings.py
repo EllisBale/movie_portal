@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'home',
     'bookings',
-    'accounts',
+
     
 ]
 
