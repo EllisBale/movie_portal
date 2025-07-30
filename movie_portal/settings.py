@@ -63,9 +63,27 @@ INSTALLED_APPS = [
     'allauth.account',
 ]
 
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',   
+]
+
 SITE_ID = 1
 ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
+
+ACCOUNT_LOGIN_METHODS = ['email']
+
+ACCOUNT_FORMS = {
+    'signup': 'user_account.forms.CustomSignupForm',
+}
+
+ACCOUNT_SIGNUP_FIELDS = ['first_name*', 'last_name*', 'email*', 'password1*', 'password2*']
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -100,6 +118,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'movie_portal.wsgi.application'
 
