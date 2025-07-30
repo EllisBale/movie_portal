@@ -201,3 +201,15 @@ footer {
     
 }
 
+
+
+.form-text {
+    color: white;
+}
+
+
+.form-check {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
