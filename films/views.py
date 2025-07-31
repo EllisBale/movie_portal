@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Film
 
 # Create your views here.
 
-def index(request):
-    return HttpResponse("Welcome to the Films section!")
+def films_list(request):
+    films = Film.objects.all()
+    return render(request, 'films.html', {'films': films})
