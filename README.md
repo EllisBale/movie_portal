@@ -170,7 +170,13 @@ The website uses dark colours, primarily black to create an immersive, cinematic
 
 ### Fonts
 
-Explain font choices
+I used three types of fonts for this website. All the fonts I used are imported from googlefonts. I felt the fonts worked well for eachother as they give a balance of readability and contrast.
+
+- [Robot Condensed](https://fonts.google.com/specimen/Roboto+Condensed?query=Roboto) For the body text such as paragraphs
+- [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed?query=Barlow+c) For headings 
+- [Montserrat](https://fonts.google.com/specimen/Montserrat) For button text
+
+
 
 
 
