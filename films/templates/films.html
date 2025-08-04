@@ -4,28 +4,28 @@
 
 {% for genre in genres %}
 <div class="container my-5 section mt-lg-5">
-  <!-- Genre -->
-  <div class="row mb-3">
-    <div class="col-md-3">
-    
+    <!-- Genre -->
+    <div class="row mb-3">
+      <div class="col-md-3">
         <h2 class="pb-3 text-center text-md-start"> {{ genre.name }}</h2>
+      </div>
     </div>
-  </div>
 
-  
-   {% for film in genre.film_set.all %}
-   <!-- Film -->
-  <div class="row justify-content-center g-4">
-    <div class="col-md-6 col-xxl-3 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-             <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
-            <div class="card-body pb-5">
-                <h3>{{ film.title }}</h3>
-            </div>
-        </div>
+    
+    <!-- Film -->
+    <div class="row justify-content-start g-4">
+      {% for film in genre.film_set.all %}
+      <div class="col-md-6 col-lg-4 col-xxl-3 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+              <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
+              <div class="card-body pb-5">
+                  <h3>{{ film.title }}</h3>
+              </div>
+          </div>
+      </div>
+      {% endfor %}
     </div>
     {% endfor %}
-  </div>
-  {% endfor %}
+</div>
   
 {% endblock %}
