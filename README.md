@@ -73,6 +73,43 @@ For this project, I looked at popular cinema websites such as Vue, Odeon and Cin
 
 ## Scope
 
+The following features below are categorized by priority on what the users needs and development goals are.
+
+
+### Must-Have Features
+
+- User registration and login
+
+- Film listing page
+
+- Booking form with seat selection
+
+- Admin/Manager panel to manage film listings
+
+- Admin/Manager panel to view/manage bookings.
+
+
+### Should-Have Features
+
+- Logout feature
+
+- Admin/Manager edit menu items
+
+- Confirmation of booking
+
+- User can update profile information
+
+- User can view menu
+
+- View upcoming movies
+
+
+
+### Could-Have Features
+
+- User can cancel booking
+
+- User can filter movies by genre
 
 
 ## **Structure**
