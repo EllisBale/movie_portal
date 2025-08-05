@@ -4,8 +4,8 @@
 
 <div class="container my-5 section mt-lg-5">
     <div class="row mb-3">
-      <div class="col-md-3">
-        <h2 class="pb-3 text-center text-md-start"> All Films</h2>
+      <div class="col-md-12">
+        <h2 class="pb-5 text-center"> All Films</h2>
       </div>
     </div>
 
@@ -14,7 +14,7 @@
     <div class="row justify-content-start g-4">
       {% for film in films %}
       <div class="col-md-6 col-lg-4 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 18rem;">
+          <div class="card">
               <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
               <div class="card-body pb-5">
                   <h3>{{ film.title }}</h3>
