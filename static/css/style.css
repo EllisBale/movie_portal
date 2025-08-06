@@ -143,6 +143,8 @@ a {
     
 }
 
+/* Card Poster */
+
 
 .card-poster {
     background: none;
@@ -159,6 +161,7 @@ a {
     object-fit: cover;
    
 }
+
 
 /* Buttons  */
 
