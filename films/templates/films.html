@@ -15,7 +15,7 @@
       {% for film in films %}
       <div class=" col-6 col-md-4 col-xl-3 d-flex justify-content-center">
           <div class="card card-poster ">
-            <a href="{% url 'film_detail' film.id %}"> 
+              <a href="{% url 'film_detail' film.id %}"> 
               <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
               <div class="card-body pb-5">
                   <h3>  {{ film.title }} </h3>
