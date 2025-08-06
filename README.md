@@ -69,7 +69,7 @@ For this project, I looked at popular cinema websites such as Vue, Odeon and Cin
 
 
 
-
+<hr>
 
 ## Scope
 
@@ -111,6 +111,7 @@ The following features below are categorized by priority on what the users needs
 
 - User can filter movies by genre
 
+<hr>
 
 ## **Structure**
 <hr>

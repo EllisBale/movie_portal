@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import PopularFilm
+from films.models import Film
 # Create your views here.
 
 def index(request):
-    films = PopularFilm.objects.all()
-    return render(request, 'home/index.html', {'films': films})
+    popular_films = Film.objects.filter(is_popular=True)
+    return render(request, 'home/index.html', {'popular_films': popular_films})
 
