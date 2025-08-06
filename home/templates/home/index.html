@@ -20,7 +20,7 @@
   <div class="row justify-content-center g-4">
     {% for film in films %}
     <div class="col-md-6 col-xxl-3 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card card-poster">
              <img src="{{ film.image.url }}" class="card-img-top" alt="{{ film.title }}">
             <div class="card-body pb-5">
                 <h3>{{ film.title }}</h3>
