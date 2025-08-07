@@ -28,7 +28,7 @@
     - [Heroku](#heroku)
     - [Github](#github)
     - [Enviroment Setup](#enviroment-setup)
-8. - [Security Features](#security-features)
+8. [Security Features](#security-features)
 9. [Credits](#credits)
 
 ---
