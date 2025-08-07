@@ -308,9 +308,47 @@ Booking page edit/delete
 
 ### Bugs & Fixes
 
+<details>
+
+<summary> Procfile issue </summary>
+<br>
+
+Fixed an issue in which my Procfile was showing the wrong name. This happened because I coppied the Procfile from the codestar project to this project.
+
+</details>
 
 
+<br>
 
+<details>
+
+<summary> CSS not showing up fix </summary>
+<br>
+Fixed a bug which was not allowing me to see changes to my CSS which I originally fought that bootstrap was the issue but then realised my debug mode was on false.
+
+</details>
+
+<br>
+
+<details>
+
+<summary> Heroku not deploying fix </summary>
+<br>
+ Issue with server 500,  server deployed on heroku but didn't show up. I fixed this by adding the cloudinary to config var on the heroku settings page.
+</details>
+
+<br>
+
+
+<details>
+
+<summary> Hero carousel not moving on Firefox browser</summary>
+<br>
+  
+Fixed issue with hero carousel not automatically moving a firefox. I fixed this by adding a timer to it with  `data-bs-interval="7000"`. This
+gives 7 seconds to move between each hero image. 
+  
+</details>
 
 
 
