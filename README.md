@@ -2,6 +2,10 @@
 
 
 
+- - -
+## Table of Contents
+
+
 
 1. [UX](#ux)
     - [Strategy](#strategy)
@@ -69,7 +73,7 @@ For this project, I looked at popular cinema websites such as Vue, Odeon and Cin
 
 
 
-<hr>
+- - -
 
 ## Scope
 
@@ -111,10 +115,10 @@ The following features below are categorized by priority on what the users needs
 
 - User can filter movies by genre
 
-<hr>
+- - -
 
 ## **Structure**
-<hr>
+
 
 
 
@@ -129,9 +133,10 @@ The following features below are categorized by priority on what the users needs
 
 
 
+- - -
 
 ## **Skeleton**
-<hr> 
+
 
 
 ### Wireframes
@@ -193,10 +198,10 @@ Schema
 Schema chart
 
 
-
+- - -
 
 ## **Surface**
-<hr>
+
 
 
 ### Colours:
@@ -224,10 +229,9 @@ I used three types of fonts for this website. All the fonts I used are imported 
 
 
 
-
+- - -
 
 ## **Project planning method**
-<hr> 
 
 
 
@@ -236,9 +240,10 @@ I used three types of fonts for this website. All the fonts I used are imported 
 
 
 
+- - -
 
 ## **Features**
-<hr>
+
 
 
 
@@ -282,19 +287,19 @@ Booking page edit/delete
 ### Footer
 
 
-
+- - -
 
 ## Technologies Used
 
-<hr>
 
 
 
 
 
+- - -
 
 ## Testing
-<hr>
+
 
 
 ### Code Validation
@@ -357,14 +362,15 @@ gives 7 seconds to move between each hero image.
 
 ### User Story Testing
 
+- - -
 
 ## Deployment
-<hr>
 
 
 
 
+- - -
 
 ## Credits
-<hr>
+
 
