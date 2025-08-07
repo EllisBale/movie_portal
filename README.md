@@ -7,31 +7,36 @@
 
 
 
-1. [UX](#ux)
+1. [Project Overview](#project-overview)
+2. [UX](#ux)
     - [Strategy](#strategy)
-        - [Project Purpose](#project-purpose)
     - [Scope](#scope)
     - [Structure](#structure)
     - [Skeleton](#skeleton)
     - [Surface](#surface)
-
-2. [Features](#features)
-
-3. [Technologies Used](#technologies-used)
-
-4. [Testing](#testing)
+3. [Features](#features)
+4. [Data Model & Schema](#data-model--schema)
+5. [Technologies Used](#technologies-used)
+6. [Testing](#testing)
     - [Code Validation](#code-validation)
     - [Lighthouse Testing](#lighthouse-testing)
     - [Browser Compatibility](#browser-compatibility)
     - [Functional Testing](#functional-testing)
     - [User Story Testing](#user-story-testing)
-
-5. [Deployment](#deployment)
+    - [Bugs & Fixes](#bugs--fixes)
+7. [Deployment](#deployment)
     - [Heroku](#heroku)
     - [Github](#github)
+    - [Enviroment Setup](#enviroment-setup)
+8. - [Security Features](#security-features)
+9. [Credits](#credits)
 
-6. [Credits](#credits)
+---
 
+## Project Overview
+
+
+---
 
 ## **UX**
 
@@ -56,6 +61,17 @@ The site owner goals would be to increase ticket sales, improve customer experie
 The target audience would be for casual and frequent moviegoers of all different age groups, particularly families and young adults. The platform also works for mobile users because of how many people have mobiles compared to computers making mobile users more likely to visit the site.
 
 
+#### User Stories
+
+
+**Vistors:**
+
+
+**Logged-in User:**
+
+
+**Admin/Manager:**
+
 
 
 #### Research
@@ -63,7 +79,7 @@ The target audience would be for casual and frequent moviegoers of all different
 For this project, I looked at popular cinema websites such as Vue, Odeon and Cineworld. When looking at these websites I noticed a common trend in which all of the websites had a landing page with hero carousel images. They would include current movies showing in cinemas which would seem to grab a user's attention. It would benefit my website to have a carousel hero images on my landing page as it will show the user what the website is about. Most of the websites I visited had a dark theme to it to match the cinematic tone which makes it immersive. From this I will be using more dark tones for this project.
 
 
-**Websites visited:**
+**Websites Visited:**
 
 [Vue](https://www.myvue.com/)
 
@@ -73,7 +89,7 @@ For this project, I looked at popular cinema websites such as Vue, Odeon and Cin
 
 
 
-- - -
+---
 
 ## Scope
 
@@ -115,7 +131,7 @@ The following features below are categorized by priority on what the users needs
 
 - User can filter movies by genre
 
-- - -
+---
 
 ## **Structure**
 
@@ -133,7 +149,7 @@ The following features below are categorized by priority on what the users needs
 
 
 
-- - -
+---
 
 ## **Skeleton**
 
@@ -192,16 +208,9 @@ The following features below are categorized by priority on what the users needs
 
 
 
-
-Schema 
-
-Schema chart
-
-
-- - -
+---
 
 ## **Surface**
-
 
 
 ### Colours:
@@ -222,14 +231,7 @@ I used three types of fonts for this website. All the fonts I used are imported 
 
 
 
-
-
-### Visuals
-
-
-
-
-- - -
+---
 
 ## **Project planning method**
 
@@ -240,7 +242,7 @@ I used three types of fonts for this website. All the fonts I used are imported 
 
 
 
-- - -
+---
 
 ## **Features**
 
@@ -287,7 +289,14 @@ Booking page edit/delete
 ### Footer
 
 
-- - -
+---
+
+
+
+## Data Model & Schema
+
+
+---
 
 ## Technologies Used
 
@@ -296,7 +305,7 @@ Booking page edit/delete
 
 
 
-- - -
+---
 
 ## Testing
 
@@ -311,50 +320,6 @@ Booking page edit/delete
 ### Browser Compatibility 
 
 
-### Bugs & Fixes
-
-<details>
-
-<summary> Procfile issue </summary>
-<br>
-
-Fixed an issue in which my Procfile was showing the wrong name. This happened because I coppied the Procfile from the codestar project to this project.
-
-</details>
-
-
-<br>
-
-<details>
-
-<summary> CSS not showing up fix </summary>
-<br>
-Fixed a bug which was not allowing me to see changes to my CSS which I originally fought that bootstrap was the issue but then realised my debug mode was on false.
-
-</details>
-
-<br>
-
-<details>
-
-<summary> Heroku not deploying fix </summary>
-<br>
- Issue with server 500,  server deployed on heroku but didn't show up. I fixed this by adding the cloudinary to config var on the heroku settings page.
-</details>
-
-<br>
-
-
-<details>
-
-<summary> Hero carousel not moving on Firefox browser</summary>
-<br>
-  
-Fixed issue with hero carousel not automatically moving a firefox. I fixed this by adding a timer to it with  `data-bs-interval="7000"`. This
-gives 7 seconds to move between each hero image. 
-  
-</details>
-
 
 
 ### Functional Testing
@@ -362,14 +327,63 @@ gives 7 seconds to move between each hero image.
 
 ### User Story Testing
 
-- - -
+
+### Bugs & Fixes
+
+<details>
+<summary> Procfile issue </summary>  
+
+Fixed an issue in which my Procfile was showing the wrong name.
+This happened because I coppied the Procfile from the codestar project to this project.        
+</details>  
+
+
+<details>
+<summary>  CSS not showing up fix  </summary>
+
+Fixed a bug which was not allowing me to see changes to my CSS which
+I originally thought that bootstrap was the issue but then realised my debug mode was on false.  
+</details>
+
+
+<details>
+<summary> Heroku not deploying fix </summary>
+
+ Issue with server 500,  server deployed on heroku but didn't show up.
+ I fixed this by adding the cloudinary to config var on the heroku settings page.
+</details>
+
+
+<details>
+<summary> Hero carousel not moving on Firefox browser</summary>
+
+Fixed issue with hero carousel not automatically moving a firefox. I fixed this by adding a timer to it with  `data-bs-interval="7000"`. This
+gives 7 seconds to move between each hero image. 
+</details>  
+
+
+
+
+---
 
 ## Deployment
 
 
+### Heroku
 
 
-- - -
+### Enviroment Setup
+
+
+### Github
+
+
+---
+
+## Security Features
+
+
+---
 
 ## Credits
 
