@@ -164,6 +164,20 @@ a {
 
 }
 
+.card-poster-hover {
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+    will-change: transform;
+    
+}
+
+.card-poster-hover.inactive {
+    opacity: 0.8;
+    filter: grayscale(0.3);
+    transform: scale(0.98);
+    will-change: transform, opacity, filter;
+}
+
+
 .card-img-top {
     border-radius: 0px !important; 
     width: 100%;
@@ -237,3 +251,16 @@ footer {
     color: #acb0b6;
 }
 
+
+
+@media (max-width: 1024px) {
+    .card-poster-hover {
+        transform: none;
+    }
+
+    .card-poster-hover.inactive {
+    opacity: 1;
+    filter: none;
+    transform: scale(1);
+    }
+}
