@@ -1,28 +1,38 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% block carousel %}{% endblock %}
 
-<div class="container my-5 section mt-lg-5">
-    <div class="row mb-3">
-      <div class="col-md-12">
-        <h2 class="pb-5 text-center"> All Films</h2>
-      </div>
-    </div>
-
+<div class="container my-5 section mt-5">
+  <div class="row mb-3 w-100">
     
-    <!-- Film -->
-    <div class="row justify-content-start g-4">
-      {% for film in films %}
-      <div class="col-md-6 col-lg-4 col-xxl-3 d-flex justify-content-center">
-          <div class="card">
-              <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
-              <div class="card-body pb-5">
-                  <h3> <a href="{% url 'films_detail' film.id %}">  {{ film.title }} </a></h3>
-              </div>
-          </div>
+    <!-- Poster -->
+    <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+      <div class="card card-poster text-center">
+        <h1 class="mb-3 text-center">{{ film.title }}</h1>
+        <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
       </div>
-      {% endfor %}
     </div>
+
+    <!-- Description -->
+    <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+      <h2 class="details-heading">Description</h2>
+      <p>{{ film.description }}</p>
+      <h2 class="details-heading">Cast</h2>
+      <p>{{ film.cast }}</p>
+    </div>
+
+    <!-- Details -->
+    <div class="col-lg-3 col-md-12">
+      <h2 class="details-heading"> Runtime</h2>
+      <p>{{ film.duration }} mins</p>
+      <h2 class="details-heading"> Release Date</h2>
+      <p>{{ film.release_date }}</p>
+      <h2 class="details-heading"> Genre</h2>
+      <p>{{ film.genre }}</p>
+    </div>
+
+  </div>
 </div>
   
 {% endblock %}
