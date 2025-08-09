@@ -35,6 +35,9 @@
 
 ## Project Overview
 
+MoviePortal is a cinema booking platform that allows users to explore films, view schedules, select seats, browse food items and book tickets to watch films in the cinema. It was developed to provide convenience, accessibility, and an immersive experience for cinema-goers across all devices.
+
+The website also provides cinema managers with efficient tools to manage film listings, schedules and bookings.
 
 ---
 
