@@ -1,12 +1,13 @@
 from django.conf import settings
 from django.db import models
+from .seats import validate_seat
 from films.models import FilmSchedule
 
 class Booking(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     film_schedule = models.ForeignKey(FilmSchedule, on_delete=models.CASCADE, related_name='bookings')
     guests = models.PositiveIntegerField(default=1)
-    seat_number = models.CharField(max_length=10)
+    seat_number = models.CharField(max_length=10, validators=[validate_seat])
 
     booked_at = models.DateTimeField(auto_now_add=True)
 
@@ -15,3 +16,4 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"Booking for {self.user} - {self.film_schedule} seat {self.seat_number}"
+    

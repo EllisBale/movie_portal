@@ -59,3 +59,8 @@ class FilmSchedule(models.Model):
 
     def __str__(self):
         return f"{self.film.title} on {self.show_date} at {self.slot}"
+    
+
+def save(self, *args, **kwargs):
+    print(f"Attempting to save seat_number: {self.seat_number} (length: {len(self.seat_number)})")
+    super().save(*args, **kwargs)
