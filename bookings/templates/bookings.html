@@ -41,9 +41,18 @@
                                 {{ form.guests.label_tag }}
                                 {{ form.guests }}
                                 {% if form.guests.errors %}
-                                    <div class="text-danger small">{{ form.guests.errors }} </div>
+                                    <div class="text-danger small">{{ form.guests.errors }}</div>
                                 {% endif %}
                              </div>
+
+                             <!-- Seats -->
+                            <div class=" form-outline form-white mb-4 text-start">
+                                {{ form.seats.label_tag }}
+                                {{ form.seats }}
+                                {% if form.seats.errors %}
+                                    <div class="text-danger small">{{ form.seats.errors }}</div>
+                                {% endif %}
+                            </div>  
 
                         </form>
                     </div>

@@ -8,7 +8,8 @@ class BookingForm(forms.ModelForm):
         choices=[(f"{row}{num}", f"{row}{num}")
                  for row, _ in BookingSeat.ROW_CHOICES
                  for num in range(1, 9)],
-        widget= forms.CheckboxSelectMultiple,
+        widget= forms.CheckboxSelectMultiple(attrs={
+            'class': 'seat-checkbox',}),
         required =True,
         label="Select seats (max 8)"
     )
