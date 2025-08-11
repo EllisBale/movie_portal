@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
 from films.models import Film
 
@@ -33,3 +34,29 @@ class Booking(models.Model):
     def __str__(self):
         return f"Booking for {self.film} on {self.date} at {self.time} by {self.user}"
     
+
+
+class BookingSeat(models.Model):
+    booking = models.ForeignKey(
+        Booking, on_delete=models.CASCADE, related_name='seats'
+    )
+
+    ROW_CHOICES = [
+        ('A', 'A'),
+        ('B', 'B'),
+        ('C', 'C'),
+        ('D', 'D'),
+        ('E', 'E'),
+        ('F', 'F'),
+    ]
+
+    row = models.CharField(max_length=2, choices=ROW_CHOICES)
+    number = models.PositiveBigIntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(8)]
+    )
+
+    class Meta:
+        unique_together = ('row', 'number', 'booking')
+
+    def __str__(self):
+        return f"Seat {self.row}{self.number} for {self.booking}"
