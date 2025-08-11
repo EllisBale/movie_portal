@@ -16,7 +16,17 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ['films', 'date', 'time', 'guests']
+        fields = ['film', 'date', 'time', 'guests']
+        widgets = {
+            'film': forms.Select(attrs={'class': 'form-select'}),
+            'date': forms.DateInput(attrs={
+                'class': 'form-control',
+                'type': 'date'
+            }),
+            
+            'time': forms.Select(attrs={'class': 'form-select'}),
+            'guests': forms.NumberInput(attrs={'class': 'form-control'}),
+        }
     
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

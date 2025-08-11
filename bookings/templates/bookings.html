@@ -15,19 +15,36 @@
                     <div class="mb-md-5 mt-md-4 pb-0">
                         <h1 class="fw-bold mb-2 text-uppercase">Book A Film </h1>
                         <p class="text-white-50 mb-5">Please enter your booking details below</p>
-                        <form method="post" action="">
+                        <form method="post">
                             {% csrf_token %}
 
                              <!-- Film -->
                              <div class="form-outline form-white mb-4 text-start">
                                 {{ form.film.label_tag }}
-                                {{ form.film|add_class:"form-select" }}
+                                {{ form.film }}
                                 {% if form.film.errors %}
-                                <div class="text-danger small">{{ form.film.errors }} </div>
+                                    <div class="text-danger small">{{ form.film.errors }} </div>
                                 {% endif %}
                              </div>
-                             
-                             
+
+                             <!-- Date -->
+                             <div class="form-outline form-white mb-4 text-start">
+                                {{ form.date.label_tag }}
+                                {{ form.date }}
+                                {% if form.date.errors %}
+                                    <div class="text-danger small">{{ form.date.errors }} </div>
+                                {% endif %}
+                             </div>
+
+                             <!-- Guests -->
+                             <div class="form-outline form-white mb-4 text-start">
+                                {{ form.guests.label_tag }}
+                                {{ form.guests }}
+                                {% if form.guests.errors %}
+                                    <div class="text-danger small">{{ form.guests.errors }} </div>
+                                {% endif %}
+                             </div>
+
                         </form>
                     </div>
                 </div>
