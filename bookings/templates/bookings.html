@@ -3,13 +3,37 @@
 {% block content %}
 {% block carousel %}{% endblock %}
 
-{% block content %}
 
 
+<section> 
 
+<div class="container py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-10 col-lg-6 col-xl-6">
+            <div class="card bg-dark text-white">
+                <div class="card-body px-5 pb-5 text-center">
+                    <div class="mb-md-5 mt-md-4 pb-0">
+                        <h1 class="fw-bold mb-2 text-uppercase">Book A Film </h1>
+                        <p class="text-white-50 mb-5">Please enter your booking details below</p>
+                        <form method="post" action="">
+                            {% csrf_token %}
 
-
-
-
-  
+                             <!-- Film -->
+                             <div class="form-outline form-white mb-4 text-start">
+                                {{ form.film.label_tag }}
+                                {{ form.film|add_class:"form-select" }}
+                                {% if form.film.errors %}
+                                <div class="text-danger small">{{ form.film.errors }} </div>
+                                {% endif %}
+                             </div>
+                             
+                             
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 {% endblock %}
