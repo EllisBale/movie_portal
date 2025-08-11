@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from datetime import date
 
 class Genre(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
@@ -40,3 +41,21 @@ class Film(models.Model):
         if hours:
             return f"{hours}h {minutes}m"
         return f"{minutes}m"
+    
+
+class ShowtimeSlot(models.Model):
+    start_time = models.TimeField()
+
+    def __str__(self):
+        return self.start_time.strftime('%H:%M')
+    
+class FilmSchedule(models.Model):
+    film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name='schedules')
+    show_date = models.DateField(default=date.today)
+    slot = models.ForeignKey(ShowtimeSlot, on_delete=models.CASCADE, null=True, blank=True)
+
+    class Meta:
+        unique_together = ('show_date', 'slot')
+
+    def __str__(self):
+        return f"{self.film.title} on {self.show_date} at {self.slot}"
