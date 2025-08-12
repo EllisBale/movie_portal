@@ -11,9 +11,11 @@ def book_seat(request):
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
-            return redirect('booking_success')
+            return redirect('bookings_success')
     else:
         form = BookingForm()
     return render(request, 'bookings.html', {'form': form})
 
 
+def bookings_success(request):
+    return render(request, 'bookings_success.html')
