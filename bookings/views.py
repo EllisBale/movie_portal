@@ -1,21 +1,19 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .forms import BookingForm
+from .models import Booking, BookingSeat
 # Create your views here.
 
 @login_required
 def book_seat(request):
-    if request.method == "POST":
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            booking = form.save(commit=False)
-            booking.user = request.user
-            booking.save()
-            return redirect('bookings_success')
-    else:
-        form = BookingForm()
-    return render(request, 'bookings.html', {'form': form})
+    """
+    Handles the booking of seats for a film screening
+    """
+ 
 
 
 def bookings_success(request):
+    """
+    A simple view to display booking message
+    """
     return render(request, 'bookings_success.html')

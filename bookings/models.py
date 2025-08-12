@@ -17,3 +17,13 @@ class Booking(models.Model):
     def __str__(self):
         return f"Booking for {self.user} - {self.film_schedule} seat {self.seat_number}"
     
+
+class BookingSeat(models.Model):
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE, related_name='seats')
+    seat_number = models.CharField(max_length=4, validators=[validate_seat])
+
+    class Meta:
+        unique_together = ('booking__film_schedule', 'seat_number')
+
+    def __str__(self):
+        return f"{self.seat_number} for {self.booking.film_schedule}"

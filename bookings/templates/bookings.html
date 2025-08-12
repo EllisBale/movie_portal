@@ -18,7 +18,14 @@
               
               <form method="POST" action="">
                 {% csrf_token %}
-                {{ form|crispy }}
+                
+                {{ form.film_schedule|as_crispy_field }}
+                {{ form.guests|as_crispy_field }}
+
+                <label>Select Seats:</label>
+                <div style="max-height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+                     {{ form.seat_number }}
+                </div>
                 <button class="btn btn-outline-light btn-lg px-5 custom-btn" type="submit">
                   Book Now
                 </button>
