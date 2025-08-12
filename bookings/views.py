@@ -24,3 +24,7 @@ def book_film_seat(request, schedule_id):
         form = BookingForm()
 
     return render(request, 'bookings/book_seats.html', {'form': form, 'schedule': schedule})
+
+
+def booking_success(request):
+    return render(request, 'bookings_success.html')
