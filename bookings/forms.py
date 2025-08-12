@@ -3,22 +3,14 @@ from .models import Booking
 from .seats import ALL_SEATS
 from films.models import FilmSchedule, Film
 
-class BookingForm(forms.ModelForm):
-    # Allow user to select multiple seats (up to 8)
+class BookingForm(forms.Form):
+    schedule = forms.ModelChoiceField(queryset=FilmSchedule.objects.all(), label="Select Showtime")
     seat_numbers = forms.MultipleChoiceField(
         choices=[(seat, seat) for seat in ALL_SEATS],
         widget=forms.CheckboxSelectMultiple,
         label="Select your seats (max 8)",
     )
-    schedule = forms.ModelChoiceField(
-        queryset=FilmSchedule.objects.all(),
-        label="Select Film Schedule"
-     )
     
-    class Meta:
-        model = Booking
-        fields = ['schedule', 'seat_numbers']
-
     def clean_seat_numbers(self):
         seats = self.cleaned_data.get('seat_numbers')
         if not seats:
