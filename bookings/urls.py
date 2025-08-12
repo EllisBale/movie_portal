@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import bookings_success
+from .views import test
 
 urlpatterns = [
-    path('', , name='bookings'),
-    path('success/', bookings_success, name='bookings_success'),
+    path('', test, name='bookings'),
 ]
