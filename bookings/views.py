@@ -14,6 +14,6 @@ def book_seat(request):
             return redirect('booking_success')
     else:
         form = BookingForm()
-    return render(request, 'booings.html', {'form': form})
+    return render(request, 'bookings.html', {'form': form})
 
 
