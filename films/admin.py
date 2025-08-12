@@ -23,6 +23,9 @@ class ShowtimeSlotAdmin(admin.ModelAdmin):
 
 @admin.register(FilmSchedule)
 class FilmScheduleAdmin(admin.ModelAdmin):
-    list_display = ('film', 'show_date', 'slot')
-    list_filter = ('show_date', 'slot')
-    search_fields = ('film__title',)
+    list_display = ('film', 'days_of_week', 'slot')
+    list_filter = ('days_of_week', 'slot')
+    
+    def get_day_of_week(self, obj):
+        return obj.get_days_of_week_display()
+    get_day_of_week.short_description = 'Days of Week'

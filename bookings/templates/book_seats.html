@@ -4,6 +4,25 @@
 {% block content %}
 {% block carousel %}{% endblock %}
 
+<div class="container mt-5">
+  <h2>Book Seats for: {{ schedule.film.title }}</h2>
+  <p><strong>Show Date:</strong> {{ schedule.show_date }}</p>
+  <p><strong>Show Time:</strong> {{ schedule.slot }}</p>  {# This calls ShowtimeSlot.__str__ automatically #}
 
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div class="mb-3">
+      {{ form.seat_numbers.label_tag }}
+      {{ form.seat_numbers }}
+      {% if form.seat_numbers.errors %}
+        <div class="text-danger">{{ form.seat_numbers.errors }}</div>
+      {% endif %}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Book Now</button>
+  </form>
+</div>
 
 {% endblock %}

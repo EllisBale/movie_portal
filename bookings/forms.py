@@ -1,6 +1,7 @@
 from django import forms
 from .models import Booking
 from .seats import ALL_SEATS
+from films.models import FilmSchedule
 
 class BookingForm(forms.ModelForm):
     # Allow user to select multiple seats (up to 8)
@@ -9,7 +10,11 @@ class BookingForm(forms.ModelForm):
         widget=forms.CheckboxSelectMultiple,
         label="Select your seats (max 8)",
     )
-
+    schedule = forms.ModelChoiceField(
+        queryset=FilmSchedule.objects.all(),
+        label="Select Film Schedule"
+     )
+    
     class Meta:
         model = Booking
         fields = ['seat_numbers']
