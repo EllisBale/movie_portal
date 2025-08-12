@@ -1,36 +1,23 @@
 from django import forms
-from .models import Booking, FilmSchedule
+from .models import Booking
 from .seats import ALL_SEATS
 
 class BookingForm(forms.ModelForm):
-    seat_number = forms.MultipleChoiceField(
-        choices=[],
-        label="Seat(s)", 
-        widget=forms.CheckboxSelectMultiple
+    # Allow user to select multiple seats (up to 8)
+    seat_numbers = forms.MultipleChoiceField(
+        choices=[(seat, seat) for seat in ALL_SEATS],
+        widget=forms.CheckboxSelectMultiple,
+        label="Select your seats (max 8)",
     )
 
     class Meta:
         model = Booking
-        fields = ['film_schedule', 'guests',]
-        widgets = {
-            'film_schedule': forms.Select(attrs={'class': 'form-control'}),
-            'guests': forms.NumberInput(attrs={'min': 1, 'class': 'form-control'}),
-        }
+        fields = ['seat_numbers']
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['film_schedule'].queryset = FilmSchedule.objects.order_by('show_date', 'slot')
-
-
-
-    def clean_seat_number(self):
-        seats = self.cleaned_data.get('seat_number', [])
+    def clean_seat_numbers(self):
+        seats = self.cleaned_data.get('seat_numbers')
+        if not seats:
+            raise forms.ValidationError("Please select at least one seat.")
         if len(seats) > 8:
-            raise forms.ValidationError(" You can only select a maximum of 8 seats.")
-        
-        if len(seats) != self.cleaned_data.get('guests'):
-            raise forms.ValidationError("The number of seats must match number of guests.")
-
+            raise forms.ValidationError("You can select a maximum of 8 seats.")
         return seats
-
-    
