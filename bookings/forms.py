@@ -1,7 +1,7 @@
 from django import forms
 from .models import Booking
 from .seats import ALL_SEATS
-from films.models import FilmSchedule
+from films.models import FilmSchedule, Film
 
 class BookingForm(forms.ModelForm):
     # Allow user to select multiple seats (up to 8)
@@ -17,7 +17,7 @@ class BookingForm(forms.ModelForm):
     
     class Meta:
         model = Booking
-        fields = ['seat_numbers']
+        fields = ['schedule', 'seat_numbers']
 
     def clean_seat_numbers(self):
         seats = self.cleaned_data.get('seat_numbers')
@@ -26,3 +26,6 @@ class BookingForm(forms.ModelForm):
         if len(seats) > 8:
             raise forms.ValidationError("You can select a maximum of 8 seats.")
         return seats
+    
+class FilmSelectForm(forms.Form):
+    film = forms.ModelChoiceField(queryset=Film.objects.all(), label="Select a Film")
