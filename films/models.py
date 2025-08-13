@@ -52,7 +52,9 @@ class ShowtimeSlot(models.Model):
         return f"{self.start_time.strftime('%H:%M')} - {end_time.strftime('%H:%M')}"
     
 class FilmSchedule(models.Model):
+    film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name='schedules')
     
+    # Film schedule days
     DAYS_OF_WEEK = [
         (0, 'Monday'),
         (1, 'Tuesday'),
@@ -60,21 +62,21 @@ class FilmSchedule(models.Model):
         (3, 'Thursday'),
         (4, 'Friday'),
         (5, 'Saturday'),
+        (6, 'Sunday'),
     ]
-
-
-    film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name='schedules')
-    days_of_week = models.IntegerField(choices=DAYS_OF_WEEK, default=0)
-    slot = models.ForeignKey(ShowtimeSlot, on_delete=models.CASCADE)
+    days_of_week = models.IntegerField(choices=DAYS_OF_WEEK, null=True, blank=True)
+    slot = models.ForeignKey(ShowtimeSlot, on_delete=models.CASCADE, null=True, blank=True)
+    
+    # Specific schedule
+    specific_date = models.DateField(null=True, blank=True)
+    specific_time = models.TimeField(null=True, blank=True)
 
     class Meta:
-        unique_together = ('days_of_week', 'slot')
+        unique_together = ('film', 'days_of_week', 'slot', 'specific_date', 'specific_time')
 
     def __str__(self):
-        day = dict(self.DAYS_OF_WEEK).get(self.days_of_week, 'Unknown day')
-        return f"{self.film.title} on {day} at {self.slot}"
-    
-
-def save(self, *args, **kwargs):
-    print(f"Attempting to save seat_number: {self.seat_number} (length: {len(self.seat_number)})")
-    super().save(*args, **kwargs)
+        if self.specific_date and self.specific_time:
+            return f"{self.film.title} on {self.specific_date} at {self.specific_time.strftime('%H:%M')}"
+        else:
+            day = dict(self.DAYS_OF_WEEK).get(self.days_of_week, 'Unknown day')
+            return f"{self.film.title} on {day} at {self.slot}"
