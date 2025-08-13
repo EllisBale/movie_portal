@@ -233,6 +233,7 @@ footer {
 }
 
 
+/* Forms */
 
 .form-text {
     color: white;
@@ -243,6 +244,14 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
+}
+
+.seat-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--colour-accent);
+    padding: 10px;
+    border-radius: 8px;
 }
 
 
