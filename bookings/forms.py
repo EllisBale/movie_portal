@@ -4,7 +4,13 @@ from .seats import ALL_SEATS
 from films.models import FilmSchedule, Film
 
 class BookingForm(forms.Form):
-    schedule = forms.ModelChoiceField(queryset=FilmSchedule.objects.all(), label="Select Showtime")
+    schedule = forms.ModelChoiceField(
+        queryset=FilmSchedule.objects.all(),
+        label="Select Showtime",
+        widget=forms.Select(attrs={
+            'class': 'form-select form-select-md',
+        })
+    )
     seat_numbers = forms.MultipleChoiceField(
         choices=[(seat, seat) for seat in ALL_SEATS],
         widget=forms.CheckboxSelectMultiple,
