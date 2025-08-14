@@ -1,32 +1,27 @@
 from django.db import models
-from django.conf import settings
+from django.contrib.auth.models import User
 from films.models import FilmSchedule
-from .seats import validate_seat
 
+class Seat(models.Model):
+    ROW_CHOICES = [(chr(i), chr(i)) for i in range(ord('A'), ord('F')+1)]
+    row = models.CharField(max_length=1, choices=ROW_CHOICES)
+    number = models.IntegerField()
+
+    class Meta:
+        unique_together = ('row', 'number')
+        ordering = ['row', 'number']
+
+    def __str__(self):
+        return f"{self.row}{self.number}"
 
 class Booking(models.Model):
-    schedule = models.ForeignKey(
-        FilmSchedule,
-        on_delete=models.CASCADE,
-        related_name='bookings'
-    )
-
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True
-    )
-
-    seat_number = models.CharField(
-        max_length=3,
-        validators=[validate_seat]
-    )
+    film_schedule = models.ForeignKey(FilmSchedule, on_delete=models.CASCADE, related_name='bookings')
+    seat = models.ForeignKey(Seat, null=True, blank=True, on_delete=models.SET_NULL)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')  # tie to logged-in user
     booked_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ('schedule', 'seat_number')
-        ordering = ['schedule', 'seat_number']
+        unique_together = ('film_schedule', 'seat')
 
     def __str__(self):
-        return f"{self.seat_number} - {self.schedule}"
+        return f"{self.user.username} - {self.seat} for {self.film_schedule}"
