@@ -7,16 +7,28 @@ class BookingForm(forms.Form):
     schedule = forms.ModelChoiceField(
         queryset=FilmSchedule.objects.all(),
         label="Select Showtime",
-        widget=forms.Select(attrs={
-            'class': 'form-select form-select-md',
-        })
+        widget=forms.Select(attrs={'class': 'form-select form-select-md'})
     )
     seat_numbers = forms.MultipleChoiceField(
-        choices=[(seat, seat) for seat in ALL_SEATS],
+        choices=[],
         widget=forms.CheckboxSelectMultiple,
         label="Select your seats (max 8)",
     )
-    
+
+    def __init__(self, *args, **kwargs):
+        schedule = kwargs.pop('schedule', None)
+        super().__init__(*args, **kwargs)
+
+        # Default choices (all seats)
+        available_seats = [(seat, seat) for seat in ALL_SEATS]
+
+        if schedule:
+            # Remove seats already booked for this schedule
+            booked_seats = Booking.objects.filter(film_schedule=schedule).values_list('seat__seat_number', flat=True)
+            available_seats = [(seat, seat) for seat in ALL_SEATS if seat not in booked_seats]
+
+        self.fields['seat_numbers'].choices = available_seats
+
     def clean_seat_numbers(self):
         seats = self.cleaned_data.get('seat_numbers')
         if not seats:
@@ -24,6 +36,7 @@ class BookingForm(forms.Form):
         if len(seats) > 8:
             raise forms.ValidationError("You can select a maximum of 8 seats.")
         return seats
-    
+
+
 class FilmSelectForm(forms.Form):
     film = forms.ModelChoiceField(queryset=Film.objects.all(), label="Select a Film")

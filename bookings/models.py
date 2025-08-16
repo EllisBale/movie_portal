@@ -17,7 +17,7 @@ class Seat(models.Model):
 class Booking(models.Model):
     film_schedule = models.ForeignKey(FilmSchedule, on_delete=models.CASCADE, related_name='bookings')
     seat = models.ForeignKey(Seat, null=True, blank=True, on_delete=models.SET_NULL)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')  # tie to logged-in user
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings') 
     booked_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
