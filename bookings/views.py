@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking, Seat
-from films.models import FilmSchedule
+from films.models import Film, FilmSchedule
 from .forms import BookingForm, FilmSelectForm
 
 
@@ -16,47 +16,40 @@ def select_film(request):
     return render(request, 'select_film.html', {'form': form})
 
 
+def film_schedules(request, film_id):
+    film = get_object_or_404(Film, id=film_id)
+    schedules = FilmSchedule.objects.filter(film=film)
+
+    return render(request, 'select_schedule.html', {
+        'film': film,
+        'schedules': schedules,
+    })
+
 
 
 def booking_page(request, schedule_id):
-    """Show available seats for a specific film schedule."""
     schedule = get_object_or_404(FilmSchedule, id=schedule_id)
-    seats = Seat.objects.all()
-    booked_seats = Booking.objects.filter(film_schedule=schedule).values_list('seat_id', flat=True)
 
-    context = {
+    if request.method == 'POST':
+        form = BookingForm(request.POST, schedule=schedule)
+        if form.is_valid():
+            seats = form.cleaned_data['seat_numbers']
+            for seat_number in seats:
+                seat = get_object_or_404(Seat, seat_number=seat_number)
+                Booking.objects.create(
+                    film_schedule=schedule,
+                    seat=seat,
+                    user=request.user
+                )
+            return redirect('booking_success')
+    else:
+        form = BookingForm(schedule=schedule)
+
+    return render(request, 'book_seats.html', {
         'schedule': schedule,
-        'seats': seats,
-        'booked_seats': booked_seats,
-    }
-    return render(request, 'book_seats.html', context)  
+        'form': form
+    })
 
-
-def book_seat(request, schedule_id, seat_id):
-    """ Book a seat for logged in user """
-    if not request.user.is_authenticated:
-        return redirect('login')
-
-    schedule = get_object_or_404(FilmSchedule, id=schedule_id)
-    seat = get_object_or_404(Seat, id=seat_id)
-
-    if Booking.objects.filter(film_schedule=schedule, seat=seat).exists():
-        seats = Seat.objects.all()
-        booked_seats = Booking.objects.filter(film_schedule=schedule).values_list('seat_id', flat=True)
-        return render(request, 'book_seats.html', {  
-            'schedule': schedule,
-            'seats': seats,
-            'booked_seats': booked_seats,
-            'error': f"Seat {seat} is already booked.",
-        })
-
-    Booking.objects.create(
-        film_schedule=schedule,
-        seat=seat,
-        user=request.user
-    )
-
-    return redirect('booking_success')
 
 
 def booking_success(request):
