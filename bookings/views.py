@@ -9,7 +9,11 @@ def select_film(request):
         form = FilmSelectForm(request.POST)
         if form.is_valid():
             film = form.cleaned_data['film']
-            return redirect('film')
+            return redirect('film_schedules', film_id=film.id)
+    else:
+        form = FilmSelectForm()
+
+    return render(request, 'select_film.html', {'form': form})
 
 
 
