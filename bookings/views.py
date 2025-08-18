@@ -1,9 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking, Seat
 from films.models import Film, FilmSchedule
 from .forms import FilmSelectForm
 
-
+@login_required
 def select_film(request):
     """
     Displays a form for film selection and redirects user to it
@@ -19,7 +20,7 @@ def select_film(request):
 
     return render(request, 'select_film.html', {'form': form})
 
-
+@login_required
 def film_schedules(request, film_id):
     film = get_object_or_404(Film, id=film_id)
     schedules = FilmSchedule.objects.filter(film=film)
@@ -30,7 +31,7 @@ def film_schedules(request, film_id):
     })
 
 
-
+@login_required
 def booking_page(request, schedule_id):
     """ 
     Handles the seat selection and creates booking for a film schedule
@@ -66,7 +67,7 @@ def booking_page(request, schedule_id):
     })
 
 
-
+@login_required
 def booking_success(request):
     """
     Confirmation page after booking 
