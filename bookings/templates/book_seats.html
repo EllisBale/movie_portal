@@ -4,7 +4,7 @@
 {% block carousel %}{% endblock %}
 
 <div class="container py-5">
-<form method="post">
+<form method="post" id="book_seats_form">
   {% csrf_token %}
   <div class="seat-map mb-4">
     <h5 class="mb-3">Select your seats</h5>
@@ -16,14 +16,14 @@
           </button>
         {% else %}
           <label class="btn btn-outline-light m-1">
-            <input type="checkbox" name="seats" value="{{ seat.id }}">
+            <input type="checkbox" name="seats" value="{{ seat.id }}" class="seat-checkbox">
             {{ seat.row }}{{ seat.number }}
           </label>
         {% endif %}
       {% endfor %}
     </div>
   </div>
-  <button type="submit" class="btn btn-lg mt-3">Finish Booking</button>
+  <button type="submit" class="btn btn-lg mt-3 custom-btn">Finish Booking</button>
 </form>
 </div>
 

@@ -14,9 +14,7 @@
               <p> Booked Successfully!</p>
             </div>
             <div>
-              <p class="mb-3 mt-3">
-                <a href="{% url 'home' %}" class="text-white-50 fw-bold">Back to Home</a>
-              </p>
+              <a href="{% url 'home' %}" class="btn btn-secondary  custom-btn">Back to Home</a>
             </div>
           </div>
         </div>
@@ -24,5 +22,5 @@
     </div>
   </div>
 <section>
-
+{% block button %}{% endblock %}
 {% endblock %}

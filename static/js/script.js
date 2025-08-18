@@ -10,6 +10,18 @@ const posterHover = document.querySelectorAll(
 );
 
 
+// Book_seats.html
+
+const bookSeatForm = document.getElementById(
+    "book_seats_form" // Book seats form
+);
+
+const seatCheckBox = document.querySelectorAll(
+    ".seat-checkbox" // Book seats checkbox
+);
+
+
+
 // Back to top function
 buttonToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth"  }) 
@@ -33,3 +45,17 @@ posterHover.forEach(poster => {
     });
 
 });
+
+
+// Checks if seat has been selected before booking
+if (bookSeatForm) {
+    bookSeatForm.addEventListener("submit", (event) => {
+        const seatCheckBox = document.querySelectorAll(".seat-checkbox:checked");
+
+        if (seatCheckBox.length === 0) {
+            event.preventDefault();
+            alert(" Select at least one seat to book.")
+        }
+    })
+}
+

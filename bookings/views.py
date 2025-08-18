@@ -1,10 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking, Seat
 from films.models import Film, FilmSchedule
-from .forms import BookingForm, FilmSelectForm
+from .forms import FilmSelectForm
 
 
 def select_film(request):
+    """
+    Displays a form for film selection and redirects user to it
+    schedules
+    """
     if request.method == 'POST':
         form = FilmSelectForm(request.POST)
         if form.is_valid():
@@ -28,13 +32,24 @@ def film_schedules(request, film_id):
 
 
 def booking_page(request, schedule_id):
-    """ Handles the seat selection and creates booking for a film schedule """
+    """ 
+    Handles the seat selection and creates booking for a film schedule
+    """
     schedule = get_object_or_404(FilmSchedule, id=schedule_id)
     seats = Seat.objects.all()
     booked_seats = Booking.objects.filter(film_schedule=schedule).values_list('seat_id', flat=True)
 
     if request.method == 'POST':
         selected_seat_ids = request.POST.getlist('seats')  # list of Seat IDs
+
+        if not selected_seat_ids:
+            return render(request, 'book_seats.html', {
+                'schedule': schedule,
+                'seats': seats,
+                'booked_seats': booked_seats,
+                'error': "You must select at least one seat to finish booking."
+            })
+
         for seat_id in selected_seat_ids:
             seat = get_object_or_404(Seat, id=seat_id)  # always assigns seat
             Booking.objects.create(
@@ -53,5 +68,8 @@ def booking_page(request, schedule_id):
 
 
 def booking_success(request):
-    """ Confirmation page after booking """
-    return render(request, 'booking_success.html') 
+    """
+    Confirmation page after booking 
+    """
+
+    return render(request, 'bookings_success.html')
