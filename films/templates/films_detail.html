@@ -11,7 +11,7 @@
       <div class="card card-poster text-center">
         <h1 class="mb-3 text-center">{{ film.title }}</h1>
         <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
-        <a href="#" class="btn btn-outline-light custom-btn align-self-center mt-3">BOOK NOW</a>
+        <a href="{% url 'film_schedules' film.id %}" class="btn btn-outline-light custom-btn align-self-center mt-3">BOOK NOW</a>
       </div>
     </div>
 
