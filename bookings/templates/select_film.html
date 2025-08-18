@@ -2,12 +2,15 @@
 {% load static %}
 {% block content %}
 {% block carousel %}{% endblock %}
-<div class="container py-5">
-  <h2>Select a Film</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary custom-btn">Next</button>
-  </form>
-</div>
+<section>
+  <div class="container mb-5 py-5">
+    <h2>Select a Film</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary custom-btn">Next</button>
+    </form>
+  </div>
+</section>
+{% block button %}{% endblock %}
 {% endblock %}
