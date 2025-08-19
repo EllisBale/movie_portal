@@ -199,6 +199,50 @@ The following features below are categorized by priority on what the users needs
 </details>
 <br>
 
+
+<details> 
+<summary>  Booking select film  </summary>
+
+ <img src="docs/wireframes/booking_select_mobile.png">
+</details>
+<br>
+
+
+
+<details> 
+<summary>  Booking select schedule  </summary>
+
+ <img src="docs/wireframes/booking_schedules_mobile.png">
+</details>
+<br>
+
+
+
+<details> 
+<summary>  Booking select seats  </summary>
+
+ <img src="docs/wireframes/booking_seats_mobile.png">
+</details>
+<br>
+
+
+
+<details> 
+<summary>  Login </summary>
+
+ <img src="docs/wireframes/loginmobile.png">
+</details>
+<br>
+
+
+<details> 
+<summary>  Sign Up </summary>
+
+ <img src="docs/wireframes/signupmobile.png">
+</details>
+<br>
+
+
 #### Desktop
 
 <details> 
@@ -222,6 +266,50 @@ The following features below are categorized by priority on what the users needs
  <img src="docs/wireframes/menudesktop.png">
 </details>
 <br>
+
+
+
+<details> 
+<summary>  Booking select film  </summary>
+
+ <img src="docs/wireframes/booking_select_desktop.png">
+</details>
+<br>
+
+
+
+<details> 
+<summary>  Booking select schedule  </summary>
+
+ <img src="docs/wireframes/booking_schedules_desktop.png">
+</details>
+<br>
+
+
+
+<details> 
+<summary>  Booking select seats  </summary>
+
+ <img src="docs/wireframes/booking_seats_desktop.png">
+</details>
+<br>
+
+
+<details> 
+<summary>  Login </summary>
+
+ <img src="docs/wireframes/logindesktop.png">
+</details>
+<br>
+
+
+<details> 
+<summary>  Sign Up </summary>
+
+ <img src="docs/wireframes/signupdesktop.png">
+</details>
+<br>
+
 
 
 
