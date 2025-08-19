@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block carousel %}{% endblock %}
+
+<!-- Title -->
+<div class="container my-5 section mt-lg-5">
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h2 class="pb-5 text-center"> Food & Drinks</h2>
+      </div>
+    </div>
+
+    
+    <!-- Food & Snacks -->
+    <div class="row justify-content-start g-4">
+      {% for item in menu %}
+      <div class=" col-12 col-sm-6 col-md-4 col-xl-3 d-flex justify-content-center">
+          <div class="card card-poster">
+              <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+              <div class="card-body pb-5">
+                  <h3> {{ item.name }} </h3>
+                  <p> {{ item.description }} </p>
+              </div>
+          </div>
+      </div>
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}
