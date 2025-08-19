@@ -28,6 +28,7 @@ class Film(models.Model):
     is_popular = models.BooleanField(default=False)
     is_coming_soon = models.BooleanField(default=False)
     is_family = models.BooleanField(default=False)
+    is_hero_image = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['title']

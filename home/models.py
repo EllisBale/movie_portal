@@ -7,3 +7,6 @@ class PopularFilm(models.Model):
     
 class CommingSoon(models.Model):
     comming_soon = Film.objects.filter(is_coming_soon=True)
+
+
+    
