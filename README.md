@@ -514,6 +514,22 @@ gives 7 seconds to move between each hero image.
 </details>  
 
 
+<details>
+<summary> Hero carousel not moving when mouse hovers over</summary>
+
+Fixed an issue in which `data-bs-touch="true"` was being activated even if the user wasn't hovering over the carousel. This happened because of the height of the `.carousel-inner` class, which was overlapping.
+
+Before, my code was:
+`.carousel-inner { height: 85vh !important; }`
+
+The height was set to a fixed value, so I changed it to:
+`.carousel-inner, .carousel-item { height: auto; }`
+
+I also added padding to:
+`.carousel-item .container { padding-top: 1rem; padding-bottom: 2rem; }`
+</details>  
+
+
 
 
 ---
