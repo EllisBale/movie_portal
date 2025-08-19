@@ -396,9 +396,65 @@ Booking page edit/delete
 
 ## Technologies Used
 
+### Languages
+
+- [HTML:](https://en.wikipedia.org/wiki/HTML) Used to build website structure of the website
+- [CSS:](https://en.wikipedia.org/wiki/CSS#:~:text=Cascading%20Style%20Sheets%20(CSS)%20is,Web%2C%20alongside%20HTML%20and%20JavaScript.) Used to style website elements
+- [JavaScript:](https://en.wikipedia.org/wiki/JavaScript) Used for front end interactive features
+- [Python:](https://www.python.org/) Used to build the backend of this project within Django framework
+
+### Frontend Frameworks & Libraries
+
+- [Boostrap:](https://getbootstrap.com/) Used for styling and for layout
+- [FontAwesome:](https://fontawesome.com/) Used to add icons to improve UX
+
+### Backend Modoules / Packages & Frameworks
+
+- [Django:](https://www.djangoproject.com/) Python-based web framework.
+- [AllAuth:](https://docs.allauth.org/en/latest/) Intergrated Django authentication used for login and signup.
+- [Django-crispy-forms:](https://django-crispy-forms.readthedocs.io/en/latest/) Simplifies styling and rendering of forms.
+- [asgiref:](https://pypi.org/project/asgiref/) Provides support for ASGI.
+- [certifi:](https://pypi.org/project/certifi/) Provides Mozilla's CA Bundle.
+- [charset-normalizer:](https://pypi.org/project/charset-normalizer/) Used to detect character encoding of text data.
+- [Cloudinary:](https://cloudinary.com/) Used for uploading and managing images through a cloud based management system.
+- [dj-database-url:](https://pypi.org/project/dj-database-url/) Utility used to parse a database URL and convert it into Django's DATABASES settings.
+- [Django-cloudinary-storage:](https://pypi.org/project/django-cloudinary-storage/) Package that intergrates Cloudinary storage with Django.
+- [gunicorn:](https://gunicorn.org/) Used to serve Django applications in production enviroments.
+- [idna:](https://pypi.org/project/idna/) A library that implements the IDN standard.
+- [psycopg2-binary:](https://pypi.org/project/psycopg2-binary/) Used by Django to interact with PostgreSQL databases.
+- [requests:](https://pypi.org/project/requests/) Python HTTP library used for making requests to a web server.
+- [setuptools:](https://pypi.org/project/setuptools/) Used to create Python packages and manage dependencies.
+- [six:](https://pypi.org/project/six/) Provides utility functions that help write code for both Python 2 and 3.
+- [sqlparse:](https://pypi.org/project/sqlparse/) Used for parsing SQL queries.
+- [tzdata:](https://pypi.org/project/tzdata/) Handles timezone-related data.
+- [urllib3:](https://pypi.org/project/urllib3/) HTTP client that is used by requests and other libraries.
+- [whitenoise:](https://whitenoise.readthedocs.io/en/stable/django.html) Used to serve static files in Django for production.
+
+
+### Databases
+
+- [PostgreSQL:](https://www.postgresql.org/) Open-source relational database system. 
+- [Neon:](https://neon.com/) A serverless cloud-native PostgreSQL database.
+
+
+### Other Tools
+
+- [Git:](https://git-scm.com/) Used for version control
+- [Github:](https://github.com/) Used to store the projects code
+- [VSCode:](https://code.visualstudio.com/) Code editor used for writing, editing and debugging code
+- [Heroku:](https://www.heroku.com/) Used to deploy the live website
+- [Google Chrome Dev Tools:](https://developer.chrome.com/docs/devtools) Used for inspecting HTML, CSS and JavaScript and performance of web pages
 
 
 
+### External Sites
+
+- [Balsamiq wireframes:](https://balsamiq.com/) Used to create the wireframes for the websites layout and structure
+- [Google Fonts:](https://fonts.google.com/) Used to import fonts for my project
+- [Pixabay:](https://pixabay.com/) Used for downloading copyright free images to use for my website
+- [capitalizemytitle:](https://capitalizemytitle.com/) Used for creating the description of movies in this project
+- [name-generator:](https://www.name-generator.org.uk/) Used for generating the names for the cast in the films.
+- [TempMail:](https://temp-mail.org/) Used for creating temporary emails for testing account signup/login.
 
 
 ---
