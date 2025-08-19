@@ -539,4 +539,22 @@ gives 7 seconds to move between each hero image.
 
 ## Credits
 
+### Images
+
+ Menu Images Used:
+
+- [Juices](https://pixabay.com/illustrations/ai-generated-drink-juice-8527256/) By myshoun
+- [Chocolate](https://pixabay.com/illustrations/chocolate-flavor-cocoa-close-up-8919274/) By u_he12qucmwq
+- [Ice Cream](https://pixabay.com/illustrations/ai-generated-ice-cream-food-8867435/) By Manik
+- [Candy](https://pixabay.com/illustrations/sweets-chocolate-candy-lollipop-7705343/)
+- [Hotdog](https://pixabay.com/illustrations/hot-dog-food-sandwich-bread-fries-7605754/) By Hansuan_Fabregas
+- [Popcorn](https://pixabay.com/illustrations/food-snack-popcorn-container-7908758/) By Secoura
+- [Soft Drinks](https://pixabay.com/illustrations/ai-generated-soda-drink-cola-coke-8947090/) By rosiproductorseguros
+- [Coffee Drink](https://pixabay.com/illustrations/disposable-coffee-drink-water-8748932/) By Claudio-Duart-Designer
+
+Film Images Used:
+
+- 
+- 
+- 
 
