@@ -44,6 +44,15 @@ class Film(models.Model):
             return f"{hours}h {minutes}m"
         return f"{minutes}m"
     
+    def save(self, *args, **kwargs):
+        if self.release_date <= timezone.now().date():
+            self.is_coming_soon = False
+        else: 
+            self.is_coming_soon = True
+        super().save(*args, **kwargs)
+
+
+
 
 class ShowtimeSlot(models.Model):
     start_time = models.TimeField(unique=True)
