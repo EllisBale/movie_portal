@@ -115,6 +115,9 @@ a {
 
 /* Hero carousel index.html */
 
+.carousel {
+    height: 50vh;
+}
 
 .carousel-inner,
 .carousel-item {
@@ -124,6 +127,7 @@ a {
 .carousel-img {
   width: 100%;
   max-height: 50vh;
+  min-height: 50vh;
   object-fit: cover;
   display: block;
 }
@@ -136,6 +140,7 @@ a {
 .carousel-control-prev,
 .carousel-control-next {
   height: auto; 
+
 }
 
 
@@ -264,3 +269,4 @@ footer {
     transform: scale(1);
     }
 }
+
