@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from datetime import date, time
+from django.utils import timezone
 
 class Genre(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)

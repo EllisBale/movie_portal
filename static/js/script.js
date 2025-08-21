@@ -23,9 +23,9 @@ const seatCheckBox = document.querySelectorAll(
 
 
 // Back to top function
-buttonToTop.addEventListener("click", () => {
+buttonToTop?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth"  }) 
-})
+});
 
 
 // Hover effect for poster
@@ -48,14 +48,15 @@ posterHover.forEach(poster => {
 
 
 // Checks if seat has been selected before booking
-if (bookSeatForm) {
-    bookSeatForm.addEventListener("submit", (event) => {
-        const seatCheckBox = document.querySelectorAll(".seat-checkbox:checked");
 
-        if (seatCheckBox.length === 0) {
-            event.preventDefault();
-            alert(" Select at least one seat to book.")
-        }
-    })
-}
+bookSeatForm?.addEventListener("submit", (event) => {
+    
+    const seatCheckBox = document.querySelectorAll(".seat-checkbox:checked");
+
+    if (seatCheckBox.length === 0) {
+        event.preventDefault();
+        alert(" Select at least one seat to book.")
+    }
+})
+
 
