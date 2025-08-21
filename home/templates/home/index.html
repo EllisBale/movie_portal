@@ -16,19 +16,10 @@
     </div>
   </div>
 
-  <!-- Row 2 -->
+  <!-- Popular Films -->
   <div class="row justify-content-start g-4">
     {% for film in popular_films %}
-    <div class="col-6 col-md-4 col-xl-3 d-flex justify-content-center">
-        <div class="card card-poster card-poster-hover">
-            <a href="{% url 'film_detail' film.id %}"> 
-            <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
-            <div class="card-body pb-5">
-                <h3>{{ film.title }}</h3>
-            </a>
-            </div>
-        </div>
-    </div>
+      {% include 'partials/film_poster_layout.html' with film=film %}
     {% endfor %}
   </div>
 </div>
@@ -47,16 +38,7 @@
   <!-- Comming Soon -->
   <div class="row justify-content-start g-4">
     {% for film in coming_soon %}
-    <div class="col-6 col-md-4 col-xl-3 d-flex justify-content-center">
-        <div class="card card-poster card-poster-hover">
-            <a href="{% url 'film_detail' film.id %}"> 
-            <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
-            <div class="card-body pb-5">
-                <h3>{{ film.title }}</h3>
-            </a>
-            </div>
-        </div>
-    </div>
+      {% include 'partials/film_poster_layout.html' with film=film %}
     {% endfor %}
   </div>
 </div>
@@ -85,5 +67,4 @@
   </div>
 </div>
 
-<!-- index.html content ends here -->
 {% endblock %}
