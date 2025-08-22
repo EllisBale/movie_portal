@@ -8,15 +8,17 @@
     {% csrf_token %}
     <div class="seat-map mb-4">
       <h5 class="mb-3">Select your seats</h5>
-      <div class="d-flex flex-wrap justify-content-center">
+      <div class="seats-grid">
         {% for seat in seats %}
           {% if seat.id in booked_seats %}
-            <button class="btn btn-secondary m-1" disabled>
+            <!-- Booked Seats -->
+            <button class="btn btn-secondary m-1 seat booked" disabled>
               {{ seat.row }}{{ seat.number }}
             </button>
           {% else %}
-            <label class="btn btn-outline-light m-1">
-              <input type="checkbox" name="seats" value="{{ seat.id }}" class="seat-checkbox">
+            <!-- Available Seats -->
+            <input type="checkbox" name="seats" value="{{ seat.id }}" class="btn-check seat-checkbox" id="seat{{ seat.id }}"  name="seats" value="{{ seat.id }}">
+            <label class="btn btn-outline-light m-1 seat" for="seat{{ seat.id }}">
               {{ seat.row }}{{ seat.number }}
             </label>
           {% endif %}

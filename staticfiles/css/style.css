@@ -213,6 +213,43 @@ a {
 }
 
 
+
+/* Booking form seats  */
+
+
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-content: center;
+  
+}
+
+.seat {
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.btn-check:checked + .seat {
+  background-color: var(--colour-accent) !important; 
+  color: #ffffff !important;
+  border-color: var(--colour-accent) !important;
+}
+
+.seat.booked {
+    background-color: var(--colour-primary)!important;
+    border-color: var(--colour-primary) !important; 
+    opacity: 0.6;
+}
+
+.seat:hover {
+    border-color: var(--colour-accent) !important;
+}
+
+
+
+
+
 /* Footer */
 
 footer {
@@ -242,23 +279,15 @@ footer {
     justify-content: space-around;
 }
 
-.seat-container {
-    max-height: 300px;
-    overflow-y: auto;
-    border: 1px solid var(--colour-accent);
-    padding: 10px;
-    border-radius: 8px;
-}
-
-
 
 .details-heading {
     color: #acb0b6;
 }
 
 
-
+/* Laptop and below */
 @media (max-width: 1024px) {
+
     .card-poster-hover {
         transform: none;
     }
@@ -270,3 +299,16 @@ footer {
     }
 }
 
+
+/* Tablet and below */
+@media (max-width: 768px) {
+
+  .seat {
+    font-size: 0.8rem;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    border: 2px solid;
+  }
+}
