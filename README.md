@@ -228,6 +228,34 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 
 
+## Features 
+
+
+### Existing Features
+
+
+
+| Feature | Notes | Screenshot |
+| --- | --- | --- |
+| Register | Authentication is handled by allauth, allowing users to register accounts. I have added a custom form to it, so that I can add first name and last name. | ![screenshot](documentation/features/register.png) |
+| Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
+| Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
+| Film Listings | Displays all current films with title and posters. The film listing can be found on films page, homepage and Family page. This feature is enabled for all the user types. The posters contains a hover effect, the hover effect makes the other posters scale down in size slightly and adds a slight greyscale to it. This hover effect lets the user focus on the poster they are hovered over.  | ![screenshot](documentation/features/blog-list.png) |
+| View Film details | Users can view more information about a film if they click on the films poster or title. When the user has clicked on a film, they can view information such as genre, cast, description, runtime and release date. The films detail page includes a book now button so that logged-in-users can book. | ![screenshot](documentation/features/blog-list.png) |
+| Seat booking | Logged-in users can select their preferred seats from an interactive seating layout. Booked seats are clearly marked as unavailable, while available seats can be selected individually or in groups. Chosen seats highlight in blue and a hover effect helps users see which seat they are about to pick. This gives users a clear, visual and intuitive way to secure their spots. Once the user has selected a seat/seats and finish booking, their seats will be disabled so other users can't book them and saved to the database. | ![screenshot](documentation/features/register.png) |
+| Navigation bar | A fully responsive navigation bar built with Bootstrap. On mobile and tablet devices, it collapses into a burger menu for easier access. The navbar is present on every page, ensuring consistent and intuitive site navigation. It includes links to **Home, Films, Family, Food & Drink, Booking, Login, Register and Logout**. The **Booking** link is only visible to logged-in users, making the experience tailored to user status. The navbar contains the companies logo which remains to left at all times.  | ![screenshot](documentation/features/register.png) |
+| Carousel (Hero Section)| Admin/Managers can add any film to the hero section. Having hero carousel with films engages users with visuals as well as highlighting current releases. The carousel moves onto the next image after 7 seconds if the user isn't hovered of the element. This is good for users so that if their mouse is hovered near the Book Now button, it will stop moving so the user can click on it. The carousel is on the homepage, films and family page. The book now button will send the user to the login page if they are not logged in, and the schedules page if they are logged in. | ![screenshot](documentation/features/register.png) |
+| Footer | The footer contains opening hours, social media pages, contact details and company logo. The footer is included on everypage. Font Awesome icons are added to the footer to show the user what the links are for without having to read anything. | ![screenshot](documentation/features/register.png) |
+| Scroll-to-Top Button | This button allows users to quickly return to the top of the page. This helps save time because the user doesn't have to manually scroll to the top of the page if it is a long page. This button is blocked on some pages that don't require it such as the login in page.   | ![screenshot](documentation/features/register.png) |
+| Schedule Page | Logged-in users can view a schedule of available times for the film they have chosen.  | ![screenshot](documentation/features/register.png) |
+| Food & Drink Page | All users can view the cinemas food & drink items. Each item displays an image, name and description giving visitors a clear idea of what's available before they arrive. Users can plan what snack they want in advance because they know what the cinema others. | ![screenshot](documentation/features/register.png) |
+
+
+
+
+
+
+
 
 
 
