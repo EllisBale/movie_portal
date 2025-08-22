@@ -206,6 +206,31 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Booking.select_film | ![screenshot](documentation/wireframes/mobile-register.png) | ![screenshot](documentation/wireframes/tablet-register.png) | ![screenshot](documentation/wireframes/desktop-register.png) |
 
 
+
+## User Stories
+
+
+| Target | Expectation | Outcome |
+| --- | --- | --- |
+| As a User | I want to be able to make an account,| so that I can view my bookings and make bookings. |
+| As a User | I want to be able to view a selection of films, | so that I have a variety of films to choose to watch. |
+| As a User | When visting the home page, I want to feel immersive and engaging,  | so that I can get excited about the movies and cinema atmosphere |
+| As a User | I want to view upcoming movies, | so I can decide to make a booking. |
+| As a User | I want to be able to view drinks and snacks, | so that I know what snacks the cinema offers. |
+| As a User | I want to receive confirmation of booking, | so that I know the booking went through. |
+| As a logged in User | I want to be able to make bookings for films,  |  so that I can make a booking from home. |
+| As a logged in User | I want to be able to view available seats, |  so that I decide If I want to book that seat. |
+| As a logged in User | I want to change my profile information, | so that I can change name, email address, phone number and password. |
+| As a logged in User | I want to be able to cancel a booking, | so that in case plans change. |
+| As a Admin/Manager | I want to be able to view users bookings, | so that I can remove bookings, see how busy cinema gets and verify seat numbers. |
+| As a Admin/Manager  | I want to be able to edit, delete and add films from the lists, | so that I can change movie image, change description and change movie name. |
+| As a Admin/Manager | I want to be able to update the menu, | so that I can add new snacks/drinks to the menu and remove items the cinema no longer sells. |
+
+
+
+
+
+
 ## Project planning method
 
 This project was developed using an **Agile-inspired** workflow, with tasks prioritised using the **MoSCoW method**. This method allows me to categorise features into **Must-have**, **Should-have** and **Could-have**. Using the MoSCoW method for user stories ensures that I have prioritisation on core functionality for users.
