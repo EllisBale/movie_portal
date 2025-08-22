@@ -7,8 +7,11 @@
   <form method="post" id="book_seats_form">
     {% csrf_token %}
     <div class="seat-map mb-4">
-      <h5 class="mb-3">Select your seats</h5>
-      <div class="seats-grid">
+      <div class="container text-center screen mt-2">
+        <h1> Screen </h1>
+      </div>
+      <h2 class="mb-3 mt-5">Select Your Seats</h2>
+      <div class="seats-grid">  
         {% for seat in seats %}
           {% if seat.id in booked_seats %}
             <!-- Booked Seats -->

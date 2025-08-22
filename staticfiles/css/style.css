@@ -214,20 +214,24 @@ a {
 
 
 
-/* Booking form seats  */
+/* Booking Form Seats */
 
+.screen {
+    border: 2px solid var(--colour-accent);
+    border-radius: 0 0 100% 100%;
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
 
 .seats-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  justify-content: center;
-  
+  justify-content: center;  
 }
 
 .seat {
     text-align: center;
     font-weight: bold;
-    
+    border: 1px solid;
 }
 
 .btn-check:checked + .seat {
@@ -309,6 +313,5 @@ footer {
     width: 100%;
     height: 100%;
     padding: 4px;
-    border: 2px solid;
   }
 }
