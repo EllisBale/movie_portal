@@ -285,8 +285,84 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 
 
+## Database Design
 
-## Project planning method
+
+### Data Model
+
+Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
+
+
+![screenshot](documentation/erd.png)
+
+
+I have used `Mermaid` to generate an interactive ERD of my project.
+
+```mermaid
+erDiagram
+    GENRE ||--o{ FILM : has
+    FILM ||--o{ FILMSCHEDULE : scheduled_in
+    SHOWTIMESLOT ||--o{ FILMSCHEDULE : assigned_to
+    FILMSCHEDULE ||--o{ BOOKING : reserved_in
+    USER ||--o{ BOOKING : makes
+    SEAT ||--o{ BOOKING : assigned
+    MENU {
+        int id PK
+        varchar name
+        text description
+        varchar image
+        varchar category
+    }
+    GENRE {
+        int id PK
+        varchar name
+    }
+    FILM {
+        int id PK
+        varchar title
+        text description
+        varchar poster
+        text cast
+        date release_date
+        int duration
+        bool is_popular
+        bool is_coming_soon
+        bool is_family
+        bool is_hero_image
+        int genre_id FK
+    }
+    SHOWTIMESLOT {
+        int id PK
+        time start_time
+    }
+    FILMSCHEDULE {
+        int id PK
+        int film_id FK
+        int days_of_week
+        int slot_id FK
+        date specific_date
+        time specific_time
+    }
+    SEAT {
+        int id PK
+        varchar row
+        int number
+    }
+    BOOKING {
+        int id PK
+        int film_schedule_id FK
+        int seat_id FK
+        int user_id FK
+        datetime booked_at
+    }
+```
+
+
+
+
+
+
+## Agile Development Process
 
 This project was developed using an **Agile-inspired** workflow, with tasks prioritised using the **MoSCoW method**. This method allows me to categorise features into **Must-have**, **Should-have** and **Could-have**. Using the MoSCoW method for user stories ensures that I have prioritisation on core functionality for users.
 
@@ -296,6 +372,13 @@ The planning process was guided by user stories written for different types of u
 
 This method ensured the project stayed **focused**, **adaptable** and aligned with the needs of the target audience.
 
+
+
+
+| Link | Screenshot |
+| --- | --- |
+| [![GitHub issues](https://img.shields.io/github/issues-search/EllisBale/movie_portal?query=is%3Aissue%20is%3Aopen%20-label%3Abug&label=Open%20Issues&color=yellow)](https://www.github.com/EllisBale/movie_portal/issues?q=is%3Aissue%20is%3Aopen%20-label%3Abug) | ![screenshot](documentation/gh-issues-open.png) |
+| [![GitHub closed issues](https://img.shields.io/github/issues-search/EllisBale/movie_portal?query=is%3Aissue%20is%3Aclosed%20-label%3Abug&label=Closed%20Issues&color=green)](https://www.github.com/EllisBale/movie_portal/issues?q=is%3Aissue%20is%3Aclosed%20-label%3Abug) | ![screenshot](documentation/gh-issues-closed.png) |
 
 
 
@@ -392,7 +475,10 @@ I also added padding to:
 ### Enviroment Setup
 
 
-### Github
+### Neon
+
+
+### Cloudinary
 
 
 ---

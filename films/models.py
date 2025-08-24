@@ -1,6 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
-from datetime import date, time
+from datetime import time
 from django.utils import timezone
 
 class Genre(models.Model):
