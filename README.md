@@ -585,24 +585,55 @@ There are no remaining major differences between the local version when compared
 
 ## Credits
 
+### Content
+
+
+| Source | Notes |
+| --- | --- |
+| [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
+| [I Think Therefore I Blog](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
+| [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
+| [Cloudinary API](https://cloudinary.com) | Cloud storage for static/media files |
+| [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
+| [Python Tutor](https://pythontutor.com) | Additional Python help |
+| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
+| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
+| [Pixabay:](https://pixabay.com/) Used for downloading copyright free images to use for my website.|
+| [capitalizemytitle:](https://capitalizemytitle.com/) Used for creating the description of movies in this project.|
+| [name-generator:](https://www.name-generator.org.uk/) Used for generating the names for the cast in the films.|
+| [TempMail:](https://temp-mail.org/) Used for creating temporary emails for testing account signup/login.|
+
+
+### Media
+
+ Menu Images Used:
+
+- [Juices](https://pixabay.com/illustrations/ai-generated-drink-juice-8527256/) By myshoun
+- [Chocolate](https://pixabay.com/illustrations/chocolate-flavor-cocoa-close-up-8919274/) By u_he12qucmwq
+- [Ice Cream](https://pixabay.com/illustrations/ai-generated-ice-cream-food-8867435/) By Manik
+- [Candy](https://pixabay.com/illustrations/sweets-chocolate-candy-lollipop-7705343/)
+- [Hotdog](https://pixabay.com/illustrations/hot-dog-food-sandwich-bread-fries-7605754/) By Hansuan_Fabregas
+- [Popcorn](https://pixabay.com/illustrations/food-snack-popcorn-container-7908758/) By Secoura
+- [Soft Drinks](https://pixabay.com/illustrations/ai-generated-soda-drink-cola-coke-8947090/) By rosiproductorseguros
+- [Coffee Drink](https://pixabay.com/illustrations/disposable-coffee-drink-water-8748932/) By Claudio-Duart-Designer
 
 
 
-### Code Validation
+Film Images Used:
 
-
-### Lighthouse Testing
-
-
-### Browser Compatibility 
+- 
+- 
+- 
 
 
 
 
-### Functional Testing
+### Acknowledgements
 
 
-### User Story Testing
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and impostor syndrome.
 
 
 ### Bugs & Fixes
@@ -655,59 +686,5 @@ I also added padding to:
 </details>  
 
 
-
-
----
-
-## Deployment
-
-
-### Heroku
-
-
-### Enviroment Setup
-
-
-### Neon
-
-
-### Cloudinary
-
-
----
-
-## Security Features
-
-
----
-
-## Credits
-
-### Images
-
- Menu Images Used:
-
-- [Juices](https://pixabay.com/illustrations/ai-generated-drink-juice-8527256/) By myshoun
-- [Chocolate](https://pixabay.com/illustrations/chocolate-flavor-cocoa-close-up-8919274/) By u_he12qucmwq
-- [Ice Cream](https://pixabay.com/illustrations/ai-generated-ice-cream-food-8867435/) By Manik
-- [Candy](https://pixabay.com/illustrations/sweets-chocolate-candy-lollipop-7705343/)
-- [Hotdog](https://pixabay.com/illustrations/hot-dog-food-sandwich-bread-fries-7605754/) By Hansuan_Fabregas
-- [Popcorn](https://pixabay.com/illustrations/food-snack-popcorn-container-7908758/) By Secoura
-- [Soft Drinks](https://pixabay.com/illustrations/ai-generated-soda-drink-cola-coke-8947090/) By rosiproductorseguros
-- [Coffee Drink](https://pixabay.com/illustrations/disposable-coffee-drink-water-8748932/) By Claudio-Duart-Designer
-
-Film Images Used:
-
-- 
-- 
-- 
-
-**Sites Used**
-- [Balsamiq wireframes:](https://balsamiq.com/) Used to create the wireframes for the websites layout and structure
-- [Google Fonts:](https://fonts.google.com/) Used to import fonts for my project
-- [Pixabay:](https://pixabay.com/) Used for downloading copyright free images to use for my website
-- [capitalizemytitle:](https://capitalizemytitle.com/) Used for creating the description of movies in this project
-- [name-generator:](https://www.name-generator.org.uk/) Used for generating the names for the cast in the films.
-- [TempMail:](https://temp-mail.org/) Used for creating temporary emails for testing account signup/login.
 
 
