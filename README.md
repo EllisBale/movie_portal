@@ -293,7 +293,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
 
 
-![screenshot](documentation/erd.png)
+![screenshot](docs/readme_imgs/erd.png)
 
 
 I have used `Mermaid` to generate an interactive ERD of my project.
@@ -357,7 +357,7 @@ erDiagram
     }
 ```
 
-
+source: [Mermaid](https://mermaid.live/edit#pako:eNqVVNtu4jAQ_ZXIzxQBCRDyttumLeK2akArrZAiNxmCRWxHttOWpfz7OgkBQtiK5iHyzJwzMz4ee4cCHgJyEIgHgiOB6ZIZ-ntypy-u8fl5d8d3xuNwPDEcY41lEczts5h3_-w-LMauxshgDWEaQ-gTVoC959nv-XDieuPZ_D8kLCWJmOYofipwjB84P2ez0XD6pOECJIi3sxILz32pwyjewKFhz_0xrwPKsgVm4k4Xxq5YZx9hyiCh8Wt0cr1hEayxMBimcPIq-FBGCDIQJFGEszqeUBxB3R1gBREX2yKyPxf-u33szw7mNq4iKv7WJhIuFYgLRoClOrlCvSF9OjFgCX5mVDsJU4GruV85jw0i_YQnaYxFPRBwSljkS36NtcKUxNu6fw2C-xeaZ_UjYAJ8rcfjqKJaZUK_Vk8RCoZUWCg_W9bEPw7t12ky14rE9LyZo0p4K32-8t8BNtWIjLm6ZOSSywQCsiLBheZFs2Ws1m9-KW4bFsHfqziW0tdyGA7pynt1487Lh-KaBBKwuuZP9b2_JkC-UX36G_0m4MM87lEDRYKEyFEihQaiICjOTJQ3uERqDVoQ5OhliMVmiZYs4ySY_eGcljTB02iNnBWOpbbSJCt3eCiPEGAhiHueMoUcq23mOZCzQx_IMc1uc9Drdzu9dqvfzX4NtEVOz2q2LLNndy3b7ti2Ze4b6G9etd1sm_3BwO50TLNl9S2720A4VdzbsqAouP8Hkkislg)
 
 
 
