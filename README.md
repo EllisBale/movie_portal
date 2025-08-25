@@ -455,7 +455,7 @@ The project should now be connected and deployed to Heroku!
 
 This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
 
-To obtain your own Cloudinary API key, create an account and log in.
+To obtain your own **Cloudinary API key**, create an account and log in.
 
 - For "Primary Interest", you can choose **Programmable Media for image and video API**.
 - *Optional*: edit your assigned cloud name to something more memorable.
@@ -465,17 +465,31 @@ To obtain your own Cloudinary API key, create an account and log in.
 - This will go into your own `env.py` file, and Heroku Config Vars, using the **key** of `CLOUDINARY_URL`.
 
 
+### PostgreSQL (via Neon)
+
+This project uses [Neon PostgrSQL Database](https://neon.com/) for the Relational Database with Django.
+
+To obtain your **Neon PostgreSQL Databse**, I followed these steps:
+
+- Go to [Neon](https://neon.com/) to create a **free account**.
+- From your **dashboard**, create a **new project**.
+- Once created, Neon will provide you with a **connection string**. It will look something like this: `postgresql://<username>:<password>@<host>/<dbname>`
+- Add it to your local **`env.py`** file: ` os.environ.setdefault( "DATABASE_URL", "postgresql://<username>:<password>@<host>/<dbname>"`
+- In Heroku, go Settings -> Config Vars and add the same string under the **key** `DATABASE_URL`.
+
+
+
 ### WhiteNoise
 
-This project uses the [WhiteNoise](https://whitenoise.readthedocs.io/en/latest/) to aid with static files temporarily hosted on the live Heroku site.
+This project uses the [WhiteNoise](https://whitenoise.readthedocs.io/en/latest/) to aid with **static files** temporarily hosted on the live **Heroku** site.
 
-To include WhiteNoise in your own projects:
+To include **WhiteNoise** in your own projects:
 
-- Install the latest WhiteNoise package:
+- **Install** the latest **WhiteNoise** package:
     - `pip install whitenoise`
-- Update the `requirements.txt` file with the newly installed package:
+- **Update** the **`requirements.txt`** file with the newly installed package:
     - `pip freeze --local > requirements.txt`
-- Edit your `settings.py` file and add WhiteNoise to the `MIDDLEWARE` list, above all other middleware (apart from Django’s "SecurityMiddleware"):
+- **Edit** your **`settings.py`** file and add **WhiteNoise** to the **`MIDDLEWARE`** list, above all other middleware (apart from Django’s **"SecurityMiddleware"**):
 
 ```python
 # settings.py
