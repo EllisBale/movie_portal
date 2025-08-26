@@ -36,6 +36,13 @@
                     <a class="nav-link text-white" href="{% url 'account_signup' %}"> Register <i class="fa-solid fa-user"></i></a>
                 </li>
                 {% endif %}
+                {% if user.is_staff %}
+                <li class="nav-item">
+                    <a class="nav-link text-warning fw-bold" href="{% url 'films' %}">
+                        Manage Films <i class="fa-solid fa-film"></i>
+                    </a>
+                </li>
+                {% endif %}
             </ul>
         </div>
     </div>

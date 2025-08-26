@@ -33,7 +33,7 @@ def film_create(request):
         form = FilmForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('films_list')
+            return redirect('films')
     else:
         form = FilmForm()
     return render(request, 'films_form.html', {'form': form})
@@ -46,10 +46,10 @@ def film_update(request, pk):
         form = FilmForm(request.POST, request.FILES, instance=film)
         if form.is_valid():
             form.save()
-            return redirect("films_list")
+            return redirect("films")
     else:
         form = FilmForm(instance=film)
-    return render(request, 'films/film_form.html', {'form': form})
+    return render(request, 'film_form.html', {'form': form})
 
 
 @staff_member_required
@@ -57,5 +57,5 @@ def film_delete(request, pk):
     film = get_object_or_404(Film, pk=pk)
     if request.method == "POST":
         film.delete()
-        return redirect('film_list')
-    return render(request, 'films/film_confirm_delete.html', {'film': film})
+        return redirect('films')
+    return render(request, 'film_confirm_delete.html', {'film': film})

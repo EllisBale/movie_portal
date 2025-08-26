@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% block carousel %} {% endblock %}
+<div class="container py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-10">
+            <div class="card bg-dark text-white">
+                <div class="card-body px-5 pb-5 text-center">
+                    <div class="mb-md-5 mt-md-4 pb-0">
+        
+                        <h2 class="text-center mb-4">Edit Movie</h2>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-8 col-sm-12">
+                                    <form method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        {{ form|crispy }}
+                                        <button type="submit" class="btn btn-success mt-3">Save Changes</button>
+                                            <a href="{% url 'films' %}" class="btn btn-secondary mt-3">Cancel</a>
+                                    </form>
+                                </div>
+                            </div>        
+                    </div>                    
+                </div>                          
+            </div>                        
+        </div>                       
+    </div>         
+</div>
+
+{% endblock %}
+
+
+
+<section>
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-6">
+        <div class="card bg-dark text-white">
+          <div class="card-body px-5 pb-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-0">
+              <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
+              <p class="text-white-50 mb-5">Please enter the information below</p>
+              <!-- Login Form (using Django Allauth's login form) -->
+              <form method="POST" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5 custom-btn" type="submit">
+                  Sign Up
+                </button>
+              </form>
+            </div>
+            <div>
+              <p class="mb-3 mt-3">Already have an account? <a href="{% url 'account_login' %}" class="text-white-50 fw-bold">login</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

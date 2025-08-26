@@ -7,6 +7,6 @@ urlpatterns = [
     path('<int:film_id>/', film_detail, name='film_detail'),
     path('schedules/<int:film_id>/',  film_schedules, name='film_schedules'),
     path('create/',  film_create, name='film_create'),
-    path('delete/<int:pk/',  film_delete, name='film_delete'),
-    path('update/<int:pk/',  film_update, name='film_update'),
+    path('delete/<int:pk>/',  film_delete, name='film_delete'),
+    path('update/<int:pk>/',  film_update, name='film_update'),
 ]
