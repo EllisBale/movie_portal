@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.admin.views.decorators import staff_member_required
 from .models import Film
+from .forms import FilmForm
 
 # Create your views here.
 
@@ -15,3 +17,45 @@ def film_list(request):
 def film_detail(request, film_id):
     film = get_object_or_404(Film, id=film_id)
     return render(request, 'films_detail.html', {'film': film})
+
+
+# Film CRUD
+
+@staff_member_required
+def films_list(request):
+    films = Film.objects.all()
+    return render(request, 'films_list.html', {'films': films})
+
+
+@staff_member_required
+def film_create(request):
+    if request.method == "POST":
+        form = FilmForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('films_list')
+    else:
+        form = FilmForm()
+    return render(request, 'films_form.html', {'form': form})
+
+
+@staff_member_required
+def film_update(request, pk):
+    film = get_object_or_404(Film, pk=pk)
+    if request.method == "POST":
+        form = FilmForm(request.POST, request.FILES, instance=film)
+        if form.is_valid():
+            form.save()
+            return redirect("films_list")
+    else:
+        form = FilmForm(instance=film)
+    return render(request, 'films/film_form.html', {'form': form})
+
+
+@staff_member_required
+def film_delete(request, pk):
+    film = get_object_or_404(Film, pk=pk)
+    if request.method == "POST":
+        film.delete()
+        return redirect('film_list')
+    return render(request, 'films/film_confirm_delete.html', {'film': film})
