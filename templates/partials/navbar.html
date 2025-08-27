@@ -10,32 +10,32 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav d-flex justify-content-evenly w-100">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link active text-white primary-hover" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'films' %}">Films</a>
+                    <a class="nav-link text-white primary-hover" href="{% url 'films' %}">Films</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="">Family</a>
+                    <a class="nav-link text-white primary-hover" href="">Family</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'menu' %}">Food & Drink </a>
+                    <a class="nav-link text-white primary-hover" href="{% url 'menu' %}">Food & Drink </a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'select_film' %}"> Booking</a>
+                    <a class="nav-link text-white primary-hover" href="{% url 'select_film' %}"> Booking</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'account_login' %}"> Login <i class="fas fa-sign-in-alt"></i></a>
+                    <a class="nav-link text-white dark-hover" href="{% url 'account_login' %}"> Login <i class="fas fa-sign-in-alt"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'account_signup' %}"> Register <i class="fas fa-user-plus"></i></a>
+                    <a class="nav-link text-white dark-hover" href="{% url 'account_signup' %}"> Register <i class="fas fa-user-plus"></i></a>
                 </li>
                 {% endif %}
                 {% if user.is_staff %}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="manageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-white dark-hover" href="#" id="manageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Manage
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="manageDropdown">
@@ -48,7 +48,7 @@
                 
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'account_logout' %}">
+                    <a class="nav-link text-white dark-hover" href="{% url 'account_logout' %}">
                         Logout <i class="fas fa-sign-out-alt"></i>
                     </a>
                 </li>

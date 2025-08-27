@@ -12,29 +12,32 @@
     --button-font: "Montserrat", sans-serif;
     /* Colours */
     --colour-primary: #000000;
-    --colour-secondary: #1a1a2e ;
-    --colour-accent: #00BFFF;
-
+    --colour-secondary: #1a1a2e;
+    --color-accent: #00BFFF;
+    /* Button */
+    --colour-accent-top:#1E90FF; 
+    --colour-accent-right:#00BFFF; 
+    --colour-accent-bottom:#00BFFF;
+    --colour-accent-left:#007ACC;
 }
 
 
 
 body {
     margin: 0 auto; 
-    background-color: #000000; /* solid black base */
+    background-color: #000000;
     background-image:
-  linear-gradient(70deg, rgba(43, 39, 39, 0.185) 25%, transparent 5%),
-  linear-gradient(-90deg, rgba(5, 5, 5, 0.603) 25%, transparent 5%);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #eee; 
-
+    linear-gradient(70deg, rgba(43, 39, 39, 0.185) 25%, transparent 5%),
+    linear-gradient(-90deg, rgba(5, 5, 5, 0.603) 25%, transparent 5%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #eee; 
 }
 
 h1, h2, h3, h4 {
-    color: white;
+    color: #ffffff;
     font-family: var(--heading-font);
     font-weight: 400;
 }
@@ -69,6 +72,11 @@ hr {
 a {
     color: white;
     text-decoration: none;
+    font-family: var(--main-font);
+}
+
+a:hover {
+    color: var(--color-accent)
 }
 
 .main-bg {
@@ -87,16 +95,27 @@ a {
 }
 
 
-
 .navbar {
     
     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
    
 }
 
-
 .nav-link {
     font-family: "Montserrat", sans-serif;
+}
+
+.primary-hover:hover {
+    color: var(--color-accent) !important;
+}
+
+.dark-hover:hover {
+    color: #000000 !important; 
+}
+
+
+.dropdown-item {
+    font-family: "Montserrat", sans-serif; 
 }
 
 
@@ -185,17 +204,29 @@ a {
 
 /* Buttons  */
 
-.custom-btn {
-    background-color: #000000;
-    border-color: var(--colour-accent) !important;
-}
-
-
 .btn {
   background-color: var(--colour-primary) !important;
   color: white !important;
   border: 2px solid ;
   font-family: var(--button-font);
+  border-radius: 2px;
+}
+
+
+.custom-btn {
+    background-color: var(--colour-primary) !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-top-color: var(--colour-accent-top) !important;
+    border-right-color: var(--colour-accent-right) !important;
+    border-bottom-color: var(--colour-accent-bottom) !important;
+    border-left-color: var(--colour-accent-left) !important;
+    color: white !important;
+    font-family: var(--button-font);
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    
+
 }
 
 
@@ -208,8 +239,11 @@ a {
  text-shadow: 0 0 3px #00BFFF;
  border-color: #00BFFF;
  background-color: transparent;
- color: #ff00ff;
 
+}
+
+.custom-btn:hover {
+    transition: all 0.4s ease !important;
 }
 
 
@@ -267,6 +301,10 @@ footer {
     font-size: 1.8rem;
     padding: 5px;
     
+}
+
+.fa-brands:hover {
+    color: var(--color-accent);
 }
 
 

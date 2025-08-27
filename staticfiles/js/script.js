@@ -21,6 +21,12 @@ const seatCheckBox = document.querySelectorAll(
 );
 
 
+// Delete button warning
+
+const deleteBtns = document.querySelectorAll(
+    ".delete-button" // Delete button
+);
+
 
 // Back to top function
 buttonToTop?.addEventListener("click", () => {
@@ -59,4 +65,11 @@ bookSeatForm?.addEventListener("submit", (event) => {
     }
 })
 
+deleteBtns.forEach(deleteBtn => {
+    deleteBtn.addEventListener("click", event => {
+        if (!confirm("Are you sure you want to delete this?")) {
+            event.preventDefault(); 
+        }
+    });
+});
 
