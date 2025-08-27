@@ -120,6 +120,11 @@ a:hover {
 
 
 .section {
+    padding-top: 180px;
+    padding-bottom: 50px;
+}
+
+.menu-section {
     padding-top: 100px;
     padding-bottom: 50px;
 }
