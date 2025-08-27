@@ -22,9 +22,9 @@ def film_detail(request, film_id):
 # Film CRUD
 
 @staff_member_required
-def films_list(request):
-    films = Film.objects.all()
-    return render(request, 'films_list.html', {'films': films})
+def manage_films(request):
+    films = Film.objects.all().order_by("title")
+    return render(request, "manage_films.html", {"films": films})
 
 
 @staff_member_required
