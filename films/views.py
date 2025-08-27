@@ -55,7 +55,6 @@ def film_update(request, pk):
 @staff_member_required
 def film_delete(request, pk):
     film = get_object_or_404(Film, pk=pk)
-    if request.method == "POST":
-        film.delete()
-        return redirect('films')
-    return render(request, 'film_confirm_delete.html', {'film': film})
+    film.delete()
+    return redirect('manage_films')
+    
