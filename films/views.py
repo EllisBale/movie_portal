@@ -36,7 +36,7 @@ def film_create(request):
             return redirect('films')
     else:
         form = FilmForm()
-    return render(request, 'films_form.html', {'form': form})
+    return render(request, 'film_form.html', {'form': form})
 
 
 @staff_member_required
