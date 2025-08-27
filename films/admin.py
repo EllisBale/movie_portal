@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Genre, Film, FilmSchedule, ShowtimeSlot
 
+
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
     list_display = ('name',)
@@ -11,13 +12,13 @@ class ShowtimeSlotAdmin(admin.ModelAdmin):
     list_display = ('start_time',)
     ordering = ('start_time',)
 
-# Inline for FilmSchedule
+# FilmSchedule
 class FilmScheduleInline(admin.TabularInline):
     model = FilmSchedule
     extra = 1
     fields = ('days_of_week', 'slot', 'specific_date', 'specific_time')
 
-# Film admin with inline
+# Film admin
 @admin.register(Film)
 class FilmAdmin(admin.ModelAdmin):
     list_display = ('title', 'genre', 'release_date', 'is_popular')
@@ -25,7 +26,7 @@ class FilmAdmin(admin.ModelAdmin):
     search_fields = ('title', 'cast', 'description')
     inlines = [FilmScheduleInline]
 
-# Separate admin for FilmSchedule (optional)
+# FilmSchedule admin 
 @admin.register(FilmSchedule)
 class FilmScheduleAdmin(admin.ModelAdmin):
     list_display = ('film', 'display_schedule')

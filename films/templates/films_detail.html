@@ -12,13 +12,13 @@
         <h1 class="mb-3 text-center">{{ film.title }}</h1>
         <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
         {% if not film.is_coming_soon %}
-        <a href="{% url 'film_schedules' film.id %}" class="btn btn-outline-light custom-btn align-self-center mt-3">BOOK NOW</a>
+        <a href="{% url 'film_schedules' film.id %}" class=" custom-btn align-self-center mt-3">BOOK NOW</a>
         {% endif %}
 
         {% if user.is_staff %}
           <div class="d-flex justify-content-center gap-2 mt-3">
             <a href="{% url 'film_update' film.id %}" class="btn btn-warning btn-sm">Edit</a>
-            <a href="{% url 'film_delete' film.id %}" class="btn btn-danger btn-sm">Delete</a>
+            <a href="{% url 'film_delete' film.id %}" class="btn btn-danger btn-sm delete-button">Delete</a>
           </div>
         {% endif %}
       </div>
