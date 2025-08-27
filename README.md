@@ -597,7 +597,6 @@ There are no remaining major differences between the local version when compared
 | [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
-| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
 | [Pixabay:](https://pixabay.com/) Used for downloading copyright free images to use for my website.|
 | [capitalizemytitle:](https://capitalizemytitle.com/) Used for creating the description of movies in this project.|
 | [name-generator:](https://www.name-generator.org.uk/) Used for generating the names for the cast in the films.|

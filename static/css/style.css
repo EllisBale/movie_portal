@@ -100,6 +100,12 @@ a {
 }
 
 
+.dropdown-item {
+    font-family: "Montserrat", sans-serif; 
+}
+
+
+
 .section {
     padding-top: 100px;
     padding-bottom: 50px;
