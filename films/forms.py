@@ -7,3 +7,4 @@ class FilmForm(forms.ModelForm):
         fields = ['title', 'description', 'poster', 'cast', 'genre', 'release_date',
                   'duration', 'is_popular', 'is_coming_soon', 'is_family', 'is_hero_image']
         
+

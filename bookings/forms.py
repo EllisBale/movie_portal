@@ -40,3 +40,18 @@ class BookingForm(forms.Form):
 
 class FilmSelectForm(forms.Form):
     film = forms.ModelChoiceField(queryset=Film.objects.all(), label="Select a Film")
+
+
+
+
+class FilmScheduleForm(forms.ModelForm):
+    class Meta:
+        model = FilmSchedule
+        fields = ['film', 'days_of_week', 'slot', 'specific_date', 'specific_time']
+        widgets = {
+            'film': forms.Select(attrs={'class': 'form-select'}),
+            'days_of_week': forms.Select(attrs={'class': 'form-select'}),
+            'slot': forms.Select(attrs={'class': 'form-select'}),
+            'specific_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+            'specific_time': forms.TimeInput(attrs={'class': 'form-control', 'type': 'time'}),
+        }

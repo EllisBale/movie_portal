@@ -9,5 +9,5 @@ urlpatterns = [
     path('create/',  film_create, name='film_create'),
     path('delete/<int:pk>/',  film_delete, name='film_delete'),
     path('update/<int:pk>/',  film_update, name='film_update'),
-    path('manage/', manage_films, name="manage_films"),
+    path('manage/films/', manage_films, name="manage_films"),
 ]

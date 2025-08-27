@@ -19,6 +19,9 @@ def film_detail(request, film_id):
     return render(request, 'films_detail.html', {'film': film})
 
 
+
+# Admin/staff
+
 # Film CRUD
 
 @staff_member_required
