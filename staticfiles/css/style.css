@@ -13,7 +13,7 @@
     /* Colours */
     --colour-primary: #000000;
     --colour-secondary: #1a1a2e;
-    --color-accent: #00BFFF;
+    --colour-accent: #00BFFF;
     /* Button */
     --colour-accent-top:#1E90FF; 
     --colour-accent-right:#00BFFF; 
@@ -76,7 +76,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-accent)
+    color: var(--colour-accent)
 }
 
 .main-bg {
@@ -106,7 +106,7 @@ a:hover {
 }
 
 .primary-hover:hover {
-    color: var(--color-accent) !important;
+    color: var(--colour-accent) !important;
 }
 
 .dark-hover:hover {
@@ -251,7 +251,7 @@ a:hover {
 /* Booking Form Seats */
 
 .screen {
-    border: 2px solid var(--colour-accent);
+    border: 2px solid var(--colour-accent) !important;
     border-radius: 0 0 100% 100%;
     box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
 }
@@ -304,7 +304,7 @@ footer {
 }
 
 .fa-brands:hover {
-    color: var(--color-accent);
+    color: var(--colour-accent);
 }
 
 
