@@ -120,8 +120,12 @@ a:hover {
 
 
 .section {
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
+.section-top {
     padding-top: 180px;
-    padding-bottom: 50px;
 }
 
 .menu-section {
@@ -252,6 +256,10 @@ a:hover {
 }
 
 
+.btn-top-margin {
+    margin-top: 150px;
+}
+
 
 /* Booking Form Seats */
 
@@ -330,6 +338,10 @@ footer {
 .details-heading {
     color: #acb0b6;
 }
+
+
+
+/* Media screen widths */
 
 
 /* Laptop and below */

@@ -3,12 +3,10 @@
 {% block content %}
 
 
-
-
 <!-- Popular Films Section-->
 
 
-<div class="container my-5 mt-5 section mt-lg-5">
+<div class="container my-5 mt-5  section-top mt-lg-5">
   <!-- Heading -->
   <div class="row mb-3">
     <div class="col-md-12">
@@ -23,9 +21,6 @@
     {% endfor %}
   </div>
 </div>
-
-
-
   
 <div class="container my-5 section mt-lg-5">
   <!-- Heading -->
@@ -44,48 +39,10 @@
 </div>
 
 
-
 {% if user.is_authenticated %}
-<!-- Films for the family section-->
-<div class="container-fluid pt-5 mt-5 section g-0">
-  <div class="row align-items-stretch g-0">
-    <div class="col-12 col-lg-6 mb-4 order-1 order-lg-2">
-      <img src="{% static 'images/couple-watching-horror-movie.jpg' %}" class="img-fluid w-100 h-100 object-fit-cover" alt="Descriptive Alt Text">
-    </div>
-    <div class="col-12 col-lg-6 mb-4 d-flex order-2 order-lg-1">
-      <div class="neon-blue p-4 bg-dark text-white w-100 d-flex flex-column justify-content-center">
-        <h3>Films For The Family!</h3>
-        <p>Sign Up To Book Now</p>
-        <div class="mt-3 d-flex gap-2 flex-wrap">
-          <a href="#" class="btn btn-primary custom-btn">SIGN UP</a>
-          <a href="#" class="btn btn-outline-light custom-btn">VIEW FILMS</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+{% include "partials/book_section_user.html" %}
 {% else %}
-
-<!-- Films for the family section-->
-<div class="container-fluid pt-5 mt-5 mb-5 section g-0">
-  <div class="row align-items-stretch g-0">
-    <div class="col-12 col-lg-6 mb-0 order-1 order-lg-2">
-      <img src="{% static 'images/couple-watching-horror-movie.jpg' %}" class="img-fluid w-100 h-100 object-fit-cover" alt="Descriptive Alt Text">
-    </div>
-    <div class="col-12 col-lg-6 mb-0 d-flex order-2 order-lg-1">
-      <div class="neon-blue p-5 bg-dark text-white w-100 d-flex flex-column justify-content-center">
-        <h3>Films For The Family!</h3>
-        <p>Sign Up To Book Now</p>
-        <div class="mt-3 d-flex gap-2 flex-wrap">
-          <a href="{% url 'account_signup' %}" class="btn btn-primary custom-btn">SIGN UP</a>
-          <a href="#" class="btn btn-outline-light custom-btn">VIEW FILMS</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+  {% include "partials/family_section_guest.html" %}
 {% endif %}
 
 {% endblock %}

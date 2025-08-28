@@ -4,11 +4,11 @@
 {% block carousel %}{% endblock %}
 <section>
   <div class="container mb-5 py-5">
-    <h2>Select a Film</h2>
-    <form method="post">
+    <h2 class="text-center mb-5">Select a Film</h2>
+    <form method="post" class="text-center mb-5">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit" class="btn btn-primary custom-btn">Next</button>
+      <button type="submit" class="btn btn-primary custom-btn mt-5">Next</button>
     </form>
   </div>
 </section>

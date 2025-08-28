@@ -39,7 +39,7 @@ class BookingForm(forms.Form):
 
 
 class FilmSelectForm(forms.Form):
-    film = forms.ModelChoiceField(queryset=Film.objects.all(), label="Select a Film")
+    film = forms.ModelChoiceField(queryset=Film.objects.all(), label="Choose A Film")
 
 
 

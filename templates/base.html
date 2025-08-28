@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
+<body class="d-flex flex-column min-vh-100 main-bg">
 
     <!-- Navigation -->
      {% include "partials/navbar.html" %}
@@ -32,7 +32,7 @@
     {% endblock %}
     
 
-    <main>
+    <main class="flex-grow-1">
         {% block content %}
         <!-- Content goes here -->
         {% endblock content %}
@@ -41,7 +41,7 @@
 
     {% block button %} 
     <!-- Button to top -->
-    <div class="container-fluid text-end p-2"> 
+    <div class="container-fluid text-end p-2 btn-top-margin"> 
         <button id="btn-to-top" class="btn custom-btn"><i class="fa-solid fa-arrow-up fa-lg"></i></button>
     </div>
     {% endblock %}
