@@ -3,7 +3,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking, Seat
 from films.models import Film, FilmSchedule
-from .forms import FilmSelectForm, FilmScheduleForm, BookingForm
+from .forms import FilmSelectForm, FilmScheduleForm, StaffBookingForm
 
 @login_required
 def select_film(request):
@@ -130,19 +130,19 @@ def manage_bookings(request):
 
 
 @staff_member_required
-def booking_edit(request, pk):
+def booking_update(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
     if request.method == 'POST':
-        form = BookingForm(request.POST, instance=booking)
+        form = StaffBookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
             return redirect("manage_bookings")
     else:
-        form = BookingForm(instance=booking)
-    return render(request, 'booking_form.html', {'form': form})
+        form = StaffBookingForm(instance=booking)
+    return render(request, 'manage_booking_update.html', {'form': form})
         
 @staff_member_required
-def booking_cancel(request, pk):
+def booking_delete(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
     booking.delete()
     return redirect('manage_bookings')
