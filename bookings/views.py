@@ -77,6 +77,11 @@ def booking_success(request):
     return render(request, 'bookings_success.html')
 
 
+
+# Admin/staff
+
+# Staff Schedule Management (CRUD)
+
 @staff_member_required
 def manage_schedules(request):
     schedules = FilmSchedule.objects.select_related("film", "slot")
@@ -113,3 +118,12 @@ def schedule_delete(request, pk):
     schedule = get_object_or_404(FilmSchedule, pk=pk)
     schedule.delete()
     return redirect('manage_schedules')
+
+
+
+# Staff Booking Management (CRUD)
+
+@staff_member_required
+def manage_bookings(request):
+    bookings = Booking.objects.select_related('film_schedule__film', 'seat', 'user')
+    return render(request, 'manage_bookings.html', {'bookings': bookings})

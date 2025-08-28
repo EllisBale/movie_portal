@@ -596,11 +596,11 @@ There are no remaining major differences between the local version when compared
 | [Cloudinary API](https://cloudinary.com) | Cloud storage for static/media files |
 | [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
-| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
-| [Pixabay:](https://pixabay.com/) Used for downloading copyright free images to use for my website.|
-| [capitalizemytitle:](https://capitalizemytitle.com/) Used for creating the description of movies in this project.|
-| [name-generator:](https://www.name-generator.org.uk/) Used for generating the names for the cast in the films.|
-| [TempMail:](https://temp-mail.org/) Used for creating temporary emails for testing account signup/login.|
+| [ChatGPT](https://chatgpt.com) | Help with code logic, explanations and some movie posters. |
+| [Pixabay:](https://pixabay.com/) | Used for downloading copyright free images to use for my website.|
+| [capitalizemytitle:](https://capitalizemytitle.com/) | Used for creating the description of movies in this project.|
+| [name-generator:](https://www.name-generator.org.uk/) | Used for generating the names for the cast in the films.|
+| [TempMail:](https://temp-mail.org/) | Used for creating temporary emails for testing account signup/login.|
 
 
 ### Media
