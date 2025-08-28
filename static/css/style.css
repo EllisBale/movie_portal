@@ -137,7 +137,9 @@ a:hover {
 
 .neon-blue {
     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
-    
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    will-change: background-position;
 }
 
 
@@ -340,8 +342,15 @@ footer {
 }
 
 
+/* Animation for Neon blue */
+@keyframes gradientShift{
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
 
-/* Media screen widths */
+
+/* Media Queries */
 
 
 /* Laptop and below */
