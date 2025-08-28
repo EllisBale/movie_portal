@@ -65,8 +65,9 @@ INSTALLED_APPS = [
 
 
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',   
+    'django.contrib.auth.backends.ModelBackend'
+    
 ]
 
 SITE_ID = 1
