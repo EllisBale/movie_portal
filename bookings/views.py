@@ -141,3 +141,8 @@ def booking_edit(request, pk):
         form = BookingForm(instance=booking)
     return render(request, 'booking_form.html', {'form': form})
         
+@staff_member_required
+def booking_cancel(request, pk):
+    booking = get_object_or_404(Booking, pk=pk)
+    booking.delete()
+    return redirect('manage_bookings')
