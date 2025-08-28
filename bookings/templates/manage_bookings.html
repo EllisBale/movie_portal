@@ -4,6 +4,7 @@
 {% block content %}
 {% block carousel %}{% endblock %}
 
+
 <div class="container my-5">
   <div class="row">
     <!-- Booking List -->
@@ -15,18 +16,18 @@
             {% for booking in bookings %}
               <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-white border-secondary">
                 <div class="mx-2">
-                  <strong>{{ Booking.user.username }}</strong> 
-                  <span class="text-info">{{ booking.seat }}</span>
-                  for <strong> {{ booking.user.username }} </strong> Booked
-                  {% if bookings.film_schedule.specific_date and booking.film_schedule.specific_time %}
+                  <strong>{{ booking.user.username }}</strong> booked 
+                  <span class="text-info">{{ booking.seat }}</span> 
+                  for <strong>{{ booking.film_schedule.film.title }}</strong>
+                  {% if booking.film_schedule.specific_date and booking.film_schedule.specific_time %}
                     on {{ booking.film_schedule.specific_date }} at {{ booking.film_schedule.specific_time }}
                   {% else %}
                     on {{ booking.film_schedule.get_days_of_week_display }} at {{ booking.film_schedule.slot.start_time }}
                   {% endif %}
-                  <small class="d-block text-black">Booked at: {{ booking.booked_at }}</small>
+                  <small class="d-block text-muted">Booked at: {{ booking.booked_at }}</small>
                 </div>
                 <div class="col-7 col-md-4 col-lg-4">
-                    <a href="{% url 'booking_update' booking.id %}" class="btn btn-sm btn-outline-light">
+                    <a href="{% url 'booking_update' booking.id %}" class="btn btn-sm btn-outline-warning">
                     Edit
                     </a>
                     <a href="{% url 'booking_delete' booking.id %}" class="btn btn-sm btn-outline-danger delete-button">
@@ -35,12 +36,13 @@
                 </div>
               </li>
             {% empty %}
-              <li class="list-group-item bg-dark text-white border-secondary">No schedules available.</li>
+              <li class="list-group-item bg-dark text-white border-secondary">No bookings available.</li>
             {% endfor %}
           </ul>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 {% endblock %}
