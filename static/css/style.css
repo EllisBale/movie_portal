@@ -159,6 +159,7 @@ a:hover {
   max-height: 50vh;
   min-height: 50vh;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -187,12 +188,14 @@ a:hover {
     border: 0 !important;
     width: 232px;
     max-width: 100%;
+    
 
 }
 
 .card-poster-hover {
     transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
     will-change: transform;
+    
     
 }
 

@@ -16,7 +16,8 @@ class Genre(models.Model):
 class Film(models.Model):
     title = models.CharField(max_length=200, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
-    poster = CloudinaryField('image', default='placeholder')
+    poster = CloudinaryField('Poster Image', default='placeholder')
+    hero_image = CloudinaryField('Hero Image', null=True, blank=True, help_text= "Optional Hero Image for carousel")
     cast = models.TextField(
         help_text="Comma-separated list of actors"
     )

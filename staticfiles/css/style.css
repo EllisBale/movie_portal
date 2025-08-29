@@ -137,7 +137,9 @@ a:hover {
 
 .neon-blue {
     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
-    
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    will-change: background-position;
 }
 
 
@@ -157,6 +159,7 @@ a:hover {
   max-height: 50vh;
   min-height: 50vh;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -185,12 +188,14 @@ a:hover {
     border: 0 !important;
     width: 232px;
     max-width: 100%;
+    
 
 }
 
 .card-poster-hover {
     transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
     will-change: transform;
+    
     
 }
 
@@ -340,8 +345,15 @@ footer {
 }
 
 
+/* Animation for Neon blue */
+@keyframes gradientShift{
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
 
-/* Media screen widths */
+
+/* Media Queries */
 
 
 /* Laptop and below */
