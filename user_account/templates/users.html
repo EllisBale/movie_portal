@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% block carousel %}{% endblock %}
+
+<div class="container my-5">
+  <div class="row">
+    <!-- Schedules List -->
+    <div class="col-md-8">
+      <h2 class="mb-4">User List</h2>
+      <div class="card bg-dark text-white">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            {% for schedule in schedules %}
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-white border-secondary">
+                <div class="mx-2">
+                  <strong>{{ schedule.film.title }}</strong> 
+                  {% if schedule.specific_date and schedule.specific_time %}
+                    on {{ schedule.specific_date }} at {{ schedule.specific_time }}
+                  {% else %}
+                    on {{ schedule.get_days_of_week_display }} at {{ schedule.slot.start_time }}
+                  {% endif %}
+                </div>
+                <div class="col-7 col-md-4 col-lg-4">
+                  <a href="{% url 'schedule_delete' schedule.id %}" class="btn btn-sm btn-outline-danger delete-button">
+                    Delete
+                  </a>
+                </div>
+              </li>
+            {% empty %}
+              <li class="list-group-item bg-dark text-white border-secondary">No schedules available.</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
