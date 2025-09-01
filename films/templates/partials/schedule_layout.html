@@ -1,0 +1,27 @@
+<!-- Schedules -->
+<div class="row g-3 mt-5 justify-content-center">
+    <h2 class="text-white text-center mt-5"> Upcoming Showings</h2>
+    {% for schedule in film.schedules.all %}
+        <div class="col-md-4">
+            <div class="card text-center bg-dark text-white border-secondary shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">
+                    {% if schedule.specific_date and schedule.specific_time %}
+                        {{ schedule.specific_date }}
+                    {% else %}
+                        {{ schedule.get_days_of_week_display }}
+                    {% endif %}
+                    </h3>
+                    <p class="card-text">
+                        <i class="fa-solid fa-clock"></i> {% if schedule.specific_time %} {{ schedule.specific_time }} {% else %} {{ schedule.slot.start_time }} {% endif %}
+                    </p>
+                    {% if user.is_staff %}
+                        <a href="{% url 'schedule_delete' schedule.id %}" class="btn btn-sm btn-outline-danger delete-button">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% empty %}
+            <p class="text-center text-white">No schedules available.</p>
+  {% endfor %}
+</div>

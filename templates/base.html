@@ -1,64 +1,62 @@
 {% load static %}
-
 {% url 'home' as home_url %}
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoviePortal</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MoviePortal</title>
 
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/98a92d70f6.js" crossorigin="anonymous"></script>
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/98a92d70f6.js" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-    <!-- Custom CSS -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-</head>
+    </head>
 
-<body class="d-flex flex-column min-vh-100 main-bg">
+    <body class="d-flex flex-column min-vh-100 main-bg">
 
-    
-     {% include "partials/navbar.html" %}
-     
-    
-    
-    {% block carousel %}
-        {% include "partials/carousel.html" %}
-    {% endblock %}
-    
+        
+        {% include "partials/navbar.html" %}
+        
+        
+        
+        {% block carousel %}
+            {% include "partials/carousel.html" %}
+        {% endblock %}
+        
 
-    <main class="flex-grow-1">
-        {% block content %}
-        <!-- Content goes here -->
-        {% endblock content %}
-    </main>
+        <main class="flex-grow-1">
+            {% block content %}
+            <!-- Content goes here -->
+            {% endblock content %}
+        </main>
 
 
-    {% block button %} 
-    <!-- Button to top -->
-    <div class="container-fluid text-end p-2 btn-top-margin"> 
-        <button id="btn-to-top" class="btn custom-btn"><i class="fa-solid fa-arrow-up fa-lg"></i></button>
-    </div>
-    {% endblock %}
-    
+        {% block button %} 
+        <!-- Button to top -->
+        <div class="container-fluid text-end p-2 btn-top-margin"> 
+            <button id="btn-to-top" class="btn custom-btn"><i class="fa-solid fa-arrow-up fa-lg"></i></button>
+        </div>
+        {% endblock %}
+        
 
-    
-    {% include "partials/footer.html" %}
+        
+        {% include "partials/footer.html" %}
 
-    
-    <!-- Bootstrap Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    
-    {% block scripts %}
-    <!-- JS Scripts -->
-    <script src="{% static 'js/script.js' %}"></script>
-    {% endblock %}
-    
-    
-</body>
+        
+        <!-- Bootstrap Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        
+        {% block scripts %}
+        <!-- JS Scripts -->
+        <script src="{% static 'js/script.js' %}"></script>
+        {% endblock %}
+        
+        
+    </body>
 </html>
