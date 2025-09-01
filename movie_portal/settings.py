@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'menu',
     'films',
     'user_account',
+    'management',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
