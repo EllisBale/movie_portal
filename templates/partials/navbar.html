@@ -1,5 +1,5 @@
 {% load static %} 
-
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
         <img class="navbar-brand" src="{% static 'images\logo.png' %}" alt="Movie Portal Logo" width="80" height="80">
@@ -16,7 +16,7 @@
                     <a class="nav-link text-white primary-hover" href="{% url 'films' %}">Films</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white primary-hover" href="">Family</a>
+                    <a class="nav-link text-white primary-hover" href="{% url 'family' %}">Family</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white primary-hover" href="{% url 'menu' %}">Food & Drink </a>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="container my-5 section mt-lg-5 section-top">
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h2 class="pb-5 text-center"> Family Films </h2>
+      </div>
+    </div>
+
+    
+    <!-- Films -->
+    <div class="row justify-content-start g-4">
+      {% for film in family_film %}
+        {% include 'partials/film_poster_layout.html' with film=film %}
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}

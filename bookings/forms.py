@@ -55,6 +55,7 @@ class FilmScheduleForm(forms.ModelForm):
             'specific_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
             'specific_time': forms.TimeInput(attrs={'class': 'form-control', 'type': 'time'}),
         }
+    
 
 
 class StaffBookingForm(forms.ModelForm):

@@ -6,7 +6,7 @@ from .forms import FilmForm
 # Create your views here.
 
 def film_list(request):
-    films = Film.objects.all()
+    films = Film.objects.filter(is_coming_soon=False)
     hero_films = Film.objects.filter(is_hero_image=True)
     return render(request, 'films.html', {
         'films': films,
