@@ -1,6 +1,12 @@
 <!-- Schedules -->
-<div class="row g-3 mt-5 justify-content-center">
-    <h2 class="text-white text-center mt-5"> Upcoming Showings</h2>
+ <!-- Heading -->
+<div class="container my-5 mt-lg-5">
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h2 class="pb-5 text-center heading"> Upcoming Shows</h2>
+      </div>
+    </div>
+<div class="row g-3 mt-4 justify-content-center">
     {% for schedule in film.schedules.all %}
         <div class="col-md-4">
             <div class="card text-center bg-dark text-white border-secondary shadow-sm">
