@@ -84,7 +84,19 @@ class FilmSchedule(models.Model):
     specific_time = models.TimeField(null=True, blank=True)
 
     class Meta:
-        unique_together = ('film', 'days_of_week', 'slot', 'specific_date', 'specific_time')
+
+        constraints = [
+            models.UniqueConstraint(
+                fields=['film', 'days_of_week', 'slot'],
+                name='unique_film_weekly_schedule'
+            ),
+
+            models.UniqueConstraint(
+                fields=['film', 'specific_date','specific_time'],
+                name='unique_film_specific_schedule'
+            ),
+        ]
+
 
     def __str__(self):
         if self.specific_date and self.specific_time:
