@@ -1,9 +1,8 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking, Seat
 from films.models import Film, FilmSchedule
-from .forms import FilmSelectForm, FilmScheduleForm, StaffBookingForm
+from .forms import FilmSelectForm
 
 @login_required
 def select_film(request):
@@ -75,74 +74,3 @@ def booking_success(request):
     """
 
     return render(request, 'bookings_success.html')
-
-
-
-# Admin/staff
-
-# Staff Schedule Management (CRUD)
-
-@staff_member_required
-def manage_schedules(request):
-    schedules = FilmSchedule.objects.select_related("film", "slot")
-    return render(request, 'manage_schedules.html', {'schedules': schedules})
-
-
-@staff_member_required
-def schedule_create(request):
-    if request.method == "POST":
-        form = FilmScheduleForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('manage_schedules')
-    else:
-        form = FilmScheduleForm()
-    return render(request, 'schedule_form.html', {'form': form})
-
-
-@staff_member_required
-def schedule_update(request, pk):
-    schedule = get_object_or_404(FilmSchedule, pk=pk)
-    if request.method == "POST":
-        form = FilmScheduleForm(request.POST, instance=schedule)
-        if form.is_valid():
-            form.save()
-            return redirect("manage_schedules")
-    else:
-        form = FilmScheduleForm(instance=schedule)
-    return render(request, 'schedule_form.html', {'form': form})
-
-
-@staff_member_required
-def schedule_delete(request, pk):
-    schedule = get_object_or_404(FilmSchedule, pk=pk)
-    schedule.delete()
-    return redirect('manage_schedules')
-
-
-
-# Staff Booking Management (Edit and delete)
-
-@staff_member_required
-def manage_bookings(request):
-    bookings = Booking.objects.select_related('film_schedule__film', 'seat', 'user')
-    return render(request, 'manage_bookings.html', {'bookings': bookings})
-
-
-@staff_member_required
-def booking_update(request, pk):
-    booking = get_object_or_404(Booking, pk=pk)
-    if request.method == 'POST':
-        form = StaffBookingForm(request.POST, instance=booking)
-        if form.is_valid():
-            form.save()
-            return redirect("manage_bookings")
-    else:
-        form = StaffBookingForm(instance=booking)
-    return render(request, 'manage_booking_update.html', {'form': form})
-        
-@staff_member_required
-def booking_delete(request, pk):
-    booking = get_object_or_404(Booking, pk=pk)
-    booking.delete()
-    return redirect('manage_bookings')

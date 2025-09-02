@@ -58,12 +58,3 @@ class FilmScheduleForm(forms.ModelForm):
     
 
 
-class StaffBookingForm(forms.ModelForm):
-    class Meta:
-        model = Booking
-        fields = ['film_schedule', 'seat', 'user']
-        widgets = {
-            'film_schedule': forms.Select(attrs={'class': 'form-select'}),
-            'seat': forms.Select(attrs={'class': 'form-select'}),
-            'user': forms.Select(attrs={'class': 'form-select'}),
-        }
