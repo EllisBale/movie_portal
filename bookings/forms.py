@@ -39,8 +39,11 @@ class BookingForm(forms.Form):
 
 
 class FilmSelectForm(forms.Form):
-    film = forms.ModelChoiceField(queryset=Film.objects.all(), label="Choose A Film")
-
+    film = forms.ModelChoiceField(
+        queryset=Film.objects.all(),
+        label=False,
+        widget=forms.Select(attrs={'class': "form-select form-select-lg mb-3"})   
+    )
 
 
 

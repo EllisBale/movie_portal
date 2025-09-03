@@ -405,4 +405,8 @@ footer {
     height: 100%;
     padding: 4px;
   }
+
+  #id_film {
+    font-size: 0.8rem;
+  }
 }
