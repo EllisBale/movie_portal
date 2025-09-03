@@ -136,3 +136,10 @@ User = get_user_model()
 def manage_user(request):
     users = User.objects.all()
     return render(request, 'management/user_list.html', {'users': users})
+
+
+@staff_member_required
+def user_delete(request, pk):
+    user = get_object_or_404(User, pk=pk)
+    user.delete()
+    return redirect('user_list')

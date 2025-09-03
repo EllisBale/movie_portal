@@ -140,6 +140,7 @@ a:hover {
     background-size: 400% 400%;
     animation: gradientShift 12s ease infinite;
     will-change: background-position;
+    
 }
 
 

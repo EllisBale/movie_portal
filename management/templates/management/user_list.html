@@ -19,7 +19,7 @@
                   <strong>{{ user.username }}</strong>
                 </div>
                 <div class="col-7 col-md-4 col-lg-4">
-                  <a href="" class="btn btn-sm btn-outline-danger delete-button">
+                  <a href="{% url 'user_delete' user.id %}" class="btn btn-sm btn-outline-danger delete-button">
                     Delete
                   </a>
                 </div>
