@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% block carousel %}{% endblock %}
+
+<div class="container my-5">
+  <div class="row">
+
+    <!-- User List -->
+    <div class="col-md-8">
+      <h2 class="mb-4">User List</h2>
+      <div class="card bg-dark text-white">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            {% for user in users %}
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-white border-secondary">
+                <div class="mx-2">
+                  <strong>{{ user.username }}</strong>
+                </div>
+                <div class="col-7 col-md-4 col-lg-4">
+                  <a href="" class="btn btn-sm btn-outline-danger delete-button">
+                    Delete
+                  </a>
+                </div>
+              </li>
+            {% empty %}
+              <li class="list-group-item bg-dark text-white border-secondary">
+                No Users
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

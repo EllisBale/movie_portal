@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 # Models
 from films.models import Film
@@ -124,3 +126,13 @@ def booking_delete(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
     booking.delete()
     return redirect('bookings_list')
+
+
+# User Management (CRUD)
+
+User = get_user_model()
+
+@staff_member_required
+def manage_user(request):
+    users = User.objects.all()
+    return render(request, 'management/user_list.html', {'users': users})
