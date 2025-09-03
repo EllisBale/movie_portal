@@ -1,7 +1,8 @@
+from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
-from django.contrib.auth.models import User
-from django.contrib.auth import get_user_model
+
+
 
 # Models
 from films.models import Film
@@ -152,8 +153,8 @@ def user_update(request, pk):
         form = UserForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
-            return redirect("user_list")
+            return redirect('user_list')
     else:
         form = UserForm(instance=user)
 
-    return render(request, "management/user_form.html")
+    return render(request, 'management/user_form.html', {'form': form})

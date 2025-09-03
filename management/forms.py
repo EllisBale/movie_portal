@@ -2,8 +2,9 @@ from django import forms
 from films.models import Film
 from bookings.models import Booking
 from django.contrib.auth import get_user_model
-
 User = get_user_model()
+
+
 
 class FilmForm(forms.ModelForm):
     class Meta:
@@ -26,8 +27,13 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = [
-            'username',
+            'first_name',
+            'last_name',
             'email',
             'is_active',
             'is_staff'
         ]
+        help_texts = {
+            'is_active': None,
+            'is_staff': None,
+        }
