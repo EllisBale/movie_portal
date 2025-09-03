@@ -1,6 +1,9 @@
 from django import forms 
 from films.models import Film
 from bookings.models import Booking
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 class FilmForm(forms.ModelForm):
     class Meta:
@@ -18,3 +21,13 @@ class StaffBookingForm(forms.ModelForm):
             'seat': forms.Select(attrs={'class': 'form-select'}),
             'user': forms.Select(attrs={'class': 'form-select'}),
         }
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = [
+            'username',
+            'email',
+            'is_active',
+            'is_staff'
+        ]

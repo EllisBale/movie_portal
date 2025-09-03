@@ -10,12 +10,14 @@ from bookings.models import Booking
 
 
 # Forms
-from .forms import FilmForm, StaffBookingForm
+from .forms import FilmForm, StaffBookingForm, UserForm
 from bookings.forms import FilmScheduleForm
+
 
 
 # Create your views here.
 
+User = get_user_model()
 
 # Film CRUD
 
@@ -130,7 +132,6 @@ def booking_delete(request, pk):
 
 # User Management (CRUD)
 
-User = get_user_model()
 
 @staff_member_required
 def manage_user(request):
@@ -143,3 +144,16 @@ def user_delete(request, pk):
     user = get_object_or_404(User, pk=pk)
     user.delete()
     return redirect('user_list')
+
+@staff_member_required
+def user_update(request, pk):
+    user = get_object_or_404(User, pk=pk)
+    if request.method == 'POST':
+        form = UserForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect("user_list")
+    else:
+        form = UserForm(instance=user)
+
+    return render(request, "management/user_form.html")

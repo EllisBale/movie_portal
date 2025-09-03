@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import film_create, film_delete, film_update, manage_films, manage_schedules, schedule_create, schedule_delete, manage_bookings, booking_update , booking_delete, manage_user, user_delete
+from .views import film_create, film_delete, film_update, manage_films, manage_schedules, schedule_create, schedule_delete, manage_bookings, booking_update , booking_delete, manage_user, user_delete, user_update
 
 
 urlpatterns = [
@@ -19,6 +19,7 @@ urlpatterns = [
     # User
     path('user_list/', manage_user, name="user_list"),
     path('user_list/<int:pk>/delete/', user_delete, name="user_delete"),
+    path('user_list/<int:pk>/edit/', user_update, name="user_update"),
 
 
 ]
