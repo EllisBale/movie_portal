@@ -164,6 +164,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | |  Feature is expected to allow users to select a seat/seats to finish booking. | Logged in users goes and selects a seat/seats to finish booking. | User can select seats successfully to finish booking.| ![screenshot](docs/defensive_programming_imgs/select_seat_test.gif) |
 | Guest Access | Guests should be able to view film information but not book. | Tried booking as a guest and clicking on book button. | User can view film information but not be able to book without logging in. | ![screenshot](docs/defensive_programming_imgs/guest_view_film_test.gif) |
 | Security | Unauthorized users should not access admin pages. | Tried to access the URL as a guest & non-admin user. | Non-admin users can't access admin pages through URL links.  | ![screenshot](docs/defensive_programming_imgs/security_test.png) |
+| 404 Error Page | Feature is expected to display a 404 error page for non-existent pages with a "Go Back Home" link. | Navigated to an invalid URL (e.g., `/test`). | A custom 404 error page was displayed as expected.  | ![screenshot](docs/defensive_programming_imgs/404_test.png) |
 
 
 
