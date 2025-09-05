@@ -81,3 +81,11 @@ def booking_success(request):
 def user_booking(request):
     booking_list = Booking.objects.filter(user=request.user).select_related('film_schedule__film', 'seat')
     return render(request, 'user_booking.html', {'booking_list': booking_list})
+
+
+
+@login_required
+def user_booking_delete(request, pk):
+    bookings = get_object_or_404(Booking, pk=pk)
+    bookings.delete()
+    return redirect('user_bookings')
