@@ -5,11 +5,11 @@
 {% block carousel %}{% endblock %}
 <section>
   <div class="container mb-5 py-5">
-    <h2 class="text-center mb-5">Select a Film</h2>
+    <h2>Select a Film</h2>
     <form method="post" class="text-center mb-5 text-white">
       {% csrf_token %}
       {{ form|crispy }}
-      <button type="submit" class="btn btn-primary custom-btn mt-5">Next</button>
+      <button type="submit" class="btn btn-primary custom-btn">Next</button>
     </form>
   </div>
 </section>

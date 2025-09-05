@@ -5,7 +5,7 @@
         {% for film in hero_films %}
         <div class="carousel-item {% if forloop.first %}active{% endif %}">
             <a href="{% url 'film_detail' film.id %}">
-                <img src="{% if film.hero_image %}{{ film.hero_image.url }}{% else %}{{ film.poster.url }}{% endif %} " class="d-block w-100 carousel-img" alt="{{ film.title }}">
+                <img src="{% if film.hero_image %}{{ film.hero_image.url }}{% else %}{{ film.poster.url }}{% endif %} " class="d-block carousel-img" alt="{{ film.title }}">
             </a>
             <div class="container px-5 pt-4 text-start">
                 <h2>{{ film.title }}</h2>

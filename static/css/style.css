@@ -167,8 +167,9 @@ a:hover {
 
 /* Hero carousel index.html */
 
-.carousel {
+#heroCarousel{
     height: 50vh;
+    background: #000;
 }
 
 .carousel-inner,
@@ -178,11 +179,11 @@ a:hover {
 
 .carousel-img {
   width: 100%;
-  max-height: 50vh;
   min-height: 50vh;
+  max-height: 50vh;
   object-fit: cover;
   object-position: center;
-  display: block;
+  display:block ;
 }
 
 
