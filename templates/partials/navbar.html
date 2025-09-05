@@ -25,6 +25,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-white primary-hover" href="{% url 'select_film' %}"> Booking</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white primary-hover" href="{% url 'user_bookings' %}"> My Bookings</a>
+                </li>
                 {% else %}
                 <li class="nav-item">
                     <a class="nav-link text-white dark-hover" href="{% url 'account_login' %}"> Login <i class="fas fa-sign-in-alt"></i></a>
