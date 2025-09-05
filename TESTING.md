@@ -146,24 +146,26 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Page | Expectation | Test | Result | Screenshot |
 | --- | --- | --- | --- | --- |
-| Blog Management | Feature is expected to allow the blog owner to create new posts with a title, featured image, and content. | Created a new post with valid title, image, and content data. | Post was created successfully and displayed correctly in the blog. | ![screenshot](documentation/defensive/create-post.png) |
-| | Feature is expected to allow the blog owner to update existing posts. | Edited the content of an existing blog post. | Post was updated successfully with the new content. | ![screenshot](documentation/defensive/update-post.png) |
-| | Feature is expected to allow the blog owner to delete blog posts. | Attempted to delete a blog post, confirming the action before proceeding. | Blog post was deleted successfully. | ![screenshot](documentation/defensive/delete-post.png) |
-| | Feature is expected to retrieve a list of all published posts. | Accessed the blog owner dashboard to view all published posts. | All published posts were displayed in a list view. | ![screenshot](documentation/defensive/published-posts.png) |
-| | Feature is expected to preview posts as drafts before publishing. | Created a draft post and previewed it. | Draft was displayed correctly in preview mode. | ![screenshot](documentation/defensive/preview-draft.png) |
-| Comments Management | Feature is expected to allow the blog owner to approve or reject comments. | Approved and rejected comments from the dashboard. | Approved comments were published; rejected comments were removed. | ![screenshot](documentation/defensive/review-comments.png) |
-| | Feature is expected to allow the blog owner to edit or delete comments. | Edited and deleted existing comments. | Comments were updated or removed successfully. | ![screenshot](documentation/defensive/edit-delete-comments.png) |
-| User Authentication | Feature is expected to allow registered users to log in to the site. | Attempted to log in with valid and invalid credentials. | Login was successful with valid credentials; invalid credentials were rejected. | ![screenshot](documentation/defensive/login.png) |
-| | Feature is expected to allow users to register for an account. | Registered a new user with unique credentials. | User account was created successfully. | ![screenshot](documentation/defensive/register.png) |
-| | Feature is expected to allow users to log out securely. | Logged out and tried accessing a restricted page. | Access was denied after logout, as expected. | ![screenshot](documentation/defensive/logout.png) |
-| User Comments | Feature is expected to allow registered users to leave comments on blog posts. | Logged in and added comments to a blog post. | Comments were successfully added and marked as pending approval. | ![screenshot](documentation/defensive/add-comment.png) |
-| | Feature is expected to display a notification that comments are pending approval. | Added a comment and checked the notification message. | Notification was displayed as expected. | ![screenshot](documentation/defensive/pending-approval.png) |
-| | Feature is expected to allow users to edit their own comments. | Edited personal comments. | Comments were updated as expected. | ![screenshot](documentation/defensive/edit-user-comments.png) |
-| | Feature is expected to allow users to delete their own comments. | Deleted personal comments. | Comments were removed as expected. | ![screenshot](documentation/defensive/delete-user-comments.png) |
-| Guest Features | Feature is expected to allow guest users to read blog posts without registering. | Opened blog posts as a guest user. | Blog posts were fully accessible without logging in. | ![screenshot](documentation/defensive/view-posts-guest.png) |
-| | Feature is expected to display the names of other commenters on posts. | Checked the names of commenters on posts as a guest user. | Commenter names were displayed as expected. | ![screenshot](documentation/defensive/commenter-names.png) |
-| | Feature is expected to block standard users from brute-forcing admin pages. | Attempted to navigate to admin-only pages by manipulating the URL (e.g., `/admin`). | Access was blocked, and a message was displayed showing denied access. | ![screenshot](documentation/defensive/brute-force.png) |
-| 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL (e.g., `/test`). | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
+| Film Management | Feature is expected to allow admin/staff to add new films with title, poster, description, and cast. | Create a new film film with valid details and poster image.  | Film was added successfully and displayed in films list. | ![screenshot](docs/defensive_programming_imgs/add_film_test.png) |
+| | Feature is expected to allow admin/staff to be able to edit existing film details.| Update film's title and description.| Changes appeared correctly on the films page and details page.  | ![screenshot](docs/defensive_programming_imgs/update_film_test.png) |
+| | Feature is expected to allow admin/staff to be able to delete films. | Delete a film from the film list. | Film was removed successfully. | ![screenshot](docs/defensive_programming_imgs/delete_film_test.gif) |
+| Schedule Management| Feature is expected to allow admin/staff to be able to create film schedules (date, time & film) | Add film schedule to a film. | Schedule was added. | ![screenshot](docs/defensive_programming_imgs/add_schedule_test.gif) |
+| | Feature is expected to allow admin/staff to be able to delete schedules. | Delete an existing schedule. | Schedule was removed successfully. | ![screenshot](docs/defensive_programming_imgs/delete_schedule_test.gif) |
+| Booking Management| Feature is expected to allow admin/staff to be able to view all bookings. | Checked the bookings list as staff. | All bookings were displayed with user, film, time and seat details. | ![screenshot](docs/defensive_programming_imgs/view_bookings_test.png) |
+| | Feature is expected to allow admin/staff to be able to edit bookings (change film schedule, seat and user). | Updated a booking seat. | Booking was updated successfully. | ![screenshot](docs/defensive_programming_imgs/update_booking_test.gif) |
+| | Feature is expected to allow admin/staff to be able to delete bookings. | Delete a booking from the list. | Booking was deleted successfully. | ![screenshot](docs/defensive_programming_imgs/delete_booking_test.gif) |
+| User Management | Feature is expected to allow admin/staff to view all users. | Accessed the user list page. | All registered users were displayed. | ![screenshot](docs/defensive_programming_imgs/view_users_test.png) |
+| | Feature is expected to allow admin/staff to be able to delete users. | Deleted a test user account. | User was deleted successfully. | ![screenshot](docs/defensive_programming_imgs/delete_user_test.gif) |
+| Authentication | Users should be able to register an account. | Go to register page and make an account. | Registration was successful and user was logged in. | ![screenshot](docs/defensive_programming_imgs/register_test.gif) |
+| | Feature is expected to allow users to log in securely. | Logged in with valid credentials. | Login was successful. | ![screenshot](docs/defensive_programming_imgs/login_test.gif) |
+| | Feature is expected to allow users to be able to logout securely. | Logged out after login and tried to access booking page. | Access was denied as expected. | ![screenshot](docs/defensive_programming_imgs/logout_test.gif) |
+| Booking as User | Feature is expected to allow users to select a film to book. | Logged in user goes to booking and selects film to move onto next page. | User can choose film to book as expected and move onto next page of booking.  | ![screenshot](docs/defensive_programming_imgs/select_film_test.gif) |
+| |  Feature is expected to allow users to select a schedule that is available for that movie. | Logged in users goes and selects a schedule that is available for the chosen film. | User can select a schedule and moves onto the select seats page.| ![screenshot](docs/defensive_programming_imgs/select_schedule_test.gif) |
+| |  Feature is expected to allow users to select a seat/seats to finish booking. | Logged in users goes and selects a seat/seats to finish booking. | User can select seats successfully to finish booking.| ![screenshot](docs/defensive_programming_imgs/select_seat_test.gif) |
+| Guest Access | Guests should be able to view film information but not book. | Tried booking as a guest and clicking on book button. | User can view film information but not be able to book without logging in. | ![screenshot](docs/defensive_programming_imgs/guest_view_film_test.gif) |
+
+
+
 
 
 ## User Story Testing
