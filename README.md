@@ -255,6 +255,17 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Promotional (call-to-action) section | I have this type of section for the homepage and the family page. The homepage features a "Films For The Family!" section with two buttons: "Sign Up" and "View Films". This section is only displayed to users who are not logged in. Its purpose is to encourage account creation by making it clear that an account is required to book films.
 For logged-in users, this section is replaced with a different one that promotes film booking directly, providing a more relevant experience based on the user’s status. Lastly, the third section is visible to all users and is located on the family page. This section promotes the Food & Drink page, encouraging visitors to explore available snacks and meals for their cinema visit. | ![screenshot](docs/readme_imgs/family_section.png) ![screenshot](docs/readme_imgs/book_section.png) ![screenshot](docs/readme_imgs/menu_section.png)  |
 | My Bookings page | My Bookings page allows logged in users to view their bookings and be able to delete/cancel bookings they want to remove by pressing the delete button to the right of the booking text. The delete button will give the user a warning just incase misclicks happen on the page. | ![screenshot](docs/readme_imgs/my_bookings_page.png) |
+| Admin Manage navbar dropdown | The Manage navbar dropdown links only appear when the user is a staff/admin user. This navabar dropdown was made for staff to find the CRUD functions easier for different pages. | ![screenshot](docs/readme_imgs/manage_dropdown.png) |
+| Admin manage films list  | This page is for staff/admin only and it allows for CRUD function for films. Staff/admin can edit a film through a form of any movie that is added. Staff/admin can edit title, descripition, poster image, hero image, cast, genre, release date and duration. This form also includes checkboxes for popular, coming soon, family and hero image which adds them to specific sections or pages. Staff/admin can add films with the same form they use for film edit as well as delete films. | ![screenshot](docs/readme_imgs/manage_films.png) ![screenshot](docs/readme_imgs/film_form.png)  |
+| Admin manage schedule list  | This page is for staff/admin only and it allows for adding, viewing and deleting schedules. When user clicks "Add schedule" it will open up a create schedule form containing film, days of week, slot, specific date and specific time. I have made it so it is on a weekly schedule to make it easier and quicker to add schedules.  | ![screenshot](docs/readme_imgs/manage_schedule.png) ![screenshot](docs/readme_imgs/schedule_form.png)  |
+| Admin manage booking list | This page is for staff/admin only and it allows for viewing, editing and deleting bookings. The edit booking form allows staff/admins to edit film schedule, seat and user. | ![screenshot](docs/readme_imgs/booking_list.png) ![screenshot](docs/readme_imgs/booking_form.png)  |
+| Admin manage user list | This page is for staff/admin only and it allows for viewing, editing and deleting users. Staff/admins can change first name, last name, email address and staff status.  | ![screenshot](docs/readme_imgs/manage_booking.png) ![screenshot](docs/readme_imgs/user_form.png)  |
+
+
+
+
+
+
 
 
 
