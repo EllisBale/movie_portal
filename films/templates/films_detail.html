@@ -18,7 +18,10 @@
           {% if user.is_staff %}
             <div class="d-flex justify-content-center gap-2 mt-3">
               <a href="{% url 'film_update' film.id %}" class="btn btn-warning btn-sm">Edit</a>
-              <a href="{% url 'film_delete' film.id %}" class="btn btn-danger btn-sm delete-button">Delete</a>
+              <form method="POST" action="{% url 'film_delete' film.id %}" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm delete-button">Delete</button>
+              </form>
             </div>
           {% endif %}
         </div>

@@ -30,9 +30,10 @@
                     <a href="{% url 'booking_update' booking.id %}" class="btn btn-sm btn-outline-warning">
                     Edit
                     </a>
-                    <a href="{% url 'booking_delete' booking.id %}" class="btn btn-sm btn-outline-danger delete-button">
-                        Delete
-                    </a>
+                    <form method="POST" action="{% url 'booking_delete' booking.id %}" class="d-inline">
+                      {% csrf_token %}
+                       <button type="submit" class="btn btn-sm btn-outline-danger delete-button">Delete</button>
+                    </form>
                 </div>
               </li>
             {% empty %}

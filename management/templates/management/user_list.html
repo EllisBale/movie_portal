@@ -31,7 +31,10 @@
                   <td>{{ user.is_staff|yesno:"Yes,No" }}</td>
                   <td class="text-end">
                     <a href="{% url 'user_update' user.pk %}" class="btn btn-sm btn-outline-warning me-1">Edit</a>
-                    <a href="{% url 'user_delete' user.pk %}" class="btn btn-sm btn-outline-danger delete-button">Delete</a>
+                    <form method="POST" action="{% url 'user_delete' user.pk %}" class="d-inline">
+                      {% csrf_token %}
+                      <button type="submit" class="btn btn-sm btn-outline-danger delete-button">Delete</button>
+                    </form>
                   </td>
                 </tr>
               {% endif %}
@@ -71,7 +74,10 @@
                   <td>{{ user.is_staff|yesno:"Yes,No" }}</td>
                   <td class="text-end">
                     <a href="{% url 'user_update' user.pk %}" class="btn btn-sm btn-outline-warning me-1">Edit</a>
-                    <a href="{% url 'user_delete' user.pk %}" class="btn btn-sm btn-outline-danger delete-button">Delete</a>
+                    <form method="POST" action="{% url 'user_delete' user.pk %}" class="d-inline">
+                      {% csrf_token %}
+                       <button type="submit" class="btn btn-sm btn-outline-danger delete-button"> Delete</button>
+                    </form>
                   </td>
                 </tr>
               {% endif %}

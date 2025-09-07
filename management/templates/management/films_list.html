@@ -21,9 +21,10 @@
               <a href="{% url 'film_update' film.id %}" class="btn btn-sm btn-outline-warning me-2">
                 Edit
               </a>
-              <a href="{% url 'film_delete' film.id %}" class="btn btn-sm btn-outline-danger delete-button">
-                Delete
-              </a>
+              <form method="POST" action="{% url 'film_delete' film.id %}" class="d-inline">
+                {% csrf_token %}
+                 <button type="submit" class="btn btn-sm btn-outline-danger delete-button"> Delete</button>
+              </form>
             </div>
           </li>
           {% empty %}

@@ -29,9 +29,10 @@
                 </div>
                 
                 <div class="col-4 col-md-4 col-lg-4 text-end">
-                  <a href="{% url 'user_booking_delete' booking.id %}" class="btn btn-sm btn-outline-danger delete-button">
-                    Delete
-                  </a>
+                  <form method="POST" action="{% url 'user_booking_delete' booking.id %}" class="d-inline">
+                    {% csrf_token %}
+                     <button type="submit" class="btn btn-sm btn-outline-danger delete-button">Delete</button>
+                  </form>
                 </div>
               </li>
             {% empty %}
