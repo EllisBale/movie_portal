@@ -20,7 +20,7 @@
             </button>
           {% else %}
             <!-- Available Seats -->
-            <input type="checkbox" name="seats" value="{{ seat.id }}" class="btn-check seat-checkbox" id="seat{{ seat.id }}"  name="seats" value="{{ seat.id }}">
+            <input type="checkbox" name="seats" value="{{ seat.id }}" class="btn-check seat-checkbox" id="seat{{ seat.id }}">
             <label class="btn btn-outline-light m-1 seat" for="seat{{ seat.id }}">
               {{ seat.row }}{{ seat.number }}
             </label>
