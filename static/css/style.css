@@ -1,19 +1,19 @@
-/* Google Fonts */
-
+/* =====  Google Fonts =====  */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-/* Global Styles */
-
+/* ===== Global Variables =====  */
 :root {
     /* Fonts */
     --main-font: "Roboto", sans-serif;
     --heading-font: "Barlow Condensed", sans-serif;
     --button-font: "Montserrat", sans-serif;
+
     /* Colours */
     --colour-primary: #000000;
     --colour-secondary: #1a1a2e;
     --colour-accent: #00BFFF;
+
     /* Button */
     --colour-accent-top:#1E90FF; 
     --colour-accent-right:#00BFFF; 
@@ -22,133 +22,99 @@
 }
 
 
-
+/* =====  Global Styles ===== */
 body {
     margin: 0 auto; 
+    color: #eee; 
     background-color: #000000;
     background-image:
-    linear-gradient(70deg, rgba(43, 39, 39, 0.185) 25%, transparent 5%),
-    linear-gradient(-90deg, rgba(5, 5, 5, 0.603) 25%, transparent 5%);
+        linear-gradient(70deg, rgba(43, 39, 39, 0.185) 25%, transparent 5%),
+        linear-gradient(-90deg, rgba(5, 5, 5, 0.603) 25%, transparent 5%);
     background-size: 40px 40px;
     background-position: 0 0, 20px 20px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #eee; 
 }
+
 
 h1, h2, h3, h4 {
-    color: #ffffff;
     font-family: var(--heading-font);
     font-weight: 400;
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: 600;
+    color: #ffffff;
 }
 
 
-h2 {
-    font-size: 1.75rem;
-}
+h1 { font-size: 2rem; font-weight: 600; }
 
-h3 {
-    font-size: 1.5rem;
-}
+h2 { font-size: 1.75rem; }
+
+h3 { font-size: 1.5rem; }
 
 
 p {
-    font-size: 1rem;
     font-family: var(--main-font);
+    font-size: 1rem;
     color: white;
 }
 
 
-hr {
-    color: white;
-    
-}
+hr { color: #ffffff; }
 
 a {
-    color: white;
-    text-decoration: none;
     font-family: var(--main-font);
+    text-decoration: none;
+    color: #ffffff;
 }
 
-a:hover {
-    color: var(--colour-accent)
-}
+a:hover { color: var(--colour-accent) }
 
-.main-bg {
-    background-color: #000000;  /* dark color example */
-    
-}
+.main-bg { background-color: #000000; }
 
 
-/* Navbar */
-
+/* ===== Navbar ===== */
 .navbar-brand {
-
-    font-size: 3rem;
     margin-left: 40px;
-
+    font-size: 3rem;
 }
 
 
-.navbar {
-    
+.navbar { 
     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
-   
-}
-
-.nav-link {
-    font-family: "Montserrat", sans-serif;
-}
-
-.primary-hover:hover {
-    color: var(--colour-accent) !important;
-}
-
-.dark-hover:hover {
-    color: #000000 !important; 
 }
 
 
-.dropdown-item {
-    font-family: "Montserrat", sans-serif; 
-}
+.nav-link { font-family: "Montserrat", sans-serif; }
 
 
-.section {
-    padding-top: 100px;
-    padding-bottom: 0px;
-}
+.primary-hover:hover { color: var(--colour-accent) !important; }
 
-.section-top {
-    padding-top: 180px;
-}
+.dark-hover:hover { color: #000000 !important; }
 
-.menu-section {
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
+
+.dropdown-item { font-family: "Montserrat", sans-serif; }
 
 
 
+/* ===== Section Spacing ===== */
+.section { padding-top: 100px; padding-bottom: 0px; }
+
+.section-top { padding-top: 180px; }
+
+.menu-section { padding-top: 100px; padding-bottom: 50px; }
+
+
+/* ===== Background Effects ===== */
 .neon-blue {
     background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #00f0ff);
     background-size: 400% 400%;
     animation: gradientShift 12s ease infinite;
-    will-change: background-position;
-    
+    will-change: background-position; 
 }
 
-
+/* ===== Headings with Accent Line ===== */
 .heading {
     position: relative;
-    text-align: center;
-    
-    
+    text-align: center; 
 }
 
 .heading::after {
@@ -157,69 +123,46 @@ a:hover {
   left: 50%;
   bottom: 10px;
   margin: 0 auto 12px;
+  border-radius: 2px;
   transform: translateX(-50%);
   width: 80px;   
   height: 3px;   
   background: linear-gradient(135deg, #00BFFF, #1E90FF);
-  border-radius: 2px;
 }
 
 
-/* Hero carousel index.html */
+/* ===== Hero Carousel ===== */
+#heroCarousel { height: 50vh; background: #000; }
 
-#heroCarousel{
-    height: 50vh;
-    background: #000;
-}
-
-.carousel-inner,
-.carousel-item {
-  height: auto;
-}
+.carousel-inner, .carousel-item { height: auto; }
 
 .carousel-img {
-  width: 100%;
-  min-height: 50vh;
-  max-height: 50vh;
-  object-fit: cover;
-  object-position: center;
-  display:block ;
+    display:block ;
+    width: 100%;
+    min-height: 50vh;
+    max-height: 50vh;
+    object-fit: cover;
+    object-position: center;
 }
 
+.carousel .carousel-item { transition: transform 1s ease-out, opacity 1s ease-out; }
 
-.carousel .carousel-item {
-  transition: transform 1s ease-out, opacity 1s ease-out;
-}
+.carousel-control-prev, .carousel-control-next { height: auto; }
 
-.carousel-control-prev,
-.carousel-control-next {
-  height: auto; 
-
-}
+.carousel-item .container { padding-top: 1rem; padding-bottom: 2rem; }
 
 
-.carousel-item .container {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
-
-/* Card Poster */
-
-
+/* =====  Movie Posters =====  */
 .card-poster {
-    background: none;
-    border: 0 !important;
     width: 232px;
     max-width: 100%;
-    
-
+    border: 0 !important;
+    background: none;
 }
 
 .card-poster-hover {
     transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
-    will-change: transform;
-    
-    
+    will-change: transform;     
 }
 
 .card-poster-hover.inactive {
@@ -229,68 +172,53 @@ a:hover {
     will-change: transform, opacity, filter;
 }
 
-
-.card-img-top {
-    border-radius: 0px !important; 
+.card-img-top { 
     width: 100%;
+    border-radius: 0px !important;
     aspect-ratio: 2 / 3;
-    object-fit: cover;
-   
+    object-fit: cover; 
 }
 
 
-/* Buttons  */
-
+/* =====  Buttons =====  */
 .btn {
-  background-color: var(--colour-primary) !important;
-  color: white !important;
-  border: 2px solid ;
-  font-family: var(--button-font);
-  border-radius: 2px;
+    border: 2px solid;   
+    border-radius: 2px; 
+    font-family: var(--button-font);
+    color: #ffffff !important;
+    background-color: var(--colour-primary) !important;    
 }
-
 
 .custom-btn {
-    background-color: var(--colour-primary) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
     border-width: 2px !important;
     border-style: solid !important;
     border-top-color: var(--colour-accent-top) !important;
     border-right-color: var(--colour-accent-right) !important;
     border-bottom-color: var(--colour-accent-bottom) !important;
     border-left-color: var(--colour-accent-left) !important;
+    background-color: var(--colour-primary) !important;
     color: white !important;
     font-family: var(--button-font);
-    padding: 0.5rem 1rem;
-    border-radius: 2px;
-    
-
 }
-
 
 .custom-btn:hover,
 .custom-btn:focus,
 .custom-btn:active {
- box-shadow: 
- 0 0 30px 0 rgba(0, 191, 255, 0.4), 
- inset 0 0 15px 0 rgba(0, 191, 255, 0.3); 
- text-shadow: 0 0 3px #00BFFF;
- border-color: #00BFFF;
- background-color: transparent;
-
+    text-shadow: 0 0 3px #00BFFF;
+    box-shadow:  0 0 30px 0 rgba(0, 191, 255, 0.4), 
+                inset 0 0 15px 0 rgba(0, 191, 255, 0.3); 
+    border-color: #00BFFF;
+    background-color: transparent;
 }
 
-.custom-btn:hover {
-    transition: all 0.4s ease !important;
-}
+.custom-btn:hover { transition: all 0.4s ease !important; }
+
+.btn-top-margin { margin-top: 150px; }
 
 
-.btn-top-margin {
-    margin-top: 150px;
-}
-
-
-/* Booking Form Seats */
-
+/* =====  Booking Form Seats =====  */
 .screen {
     border: 2px solid var(--colour-accent) !important;
     border-radius: 0 0 100% 100%;
@@ -304,9 +232,9 @@ a:hover {
 }
 
 .seat {
+    border: 1px solid;
     text-align: center;
     font-weight: bold;
-    border: 1px solid;
 }
 
 .btn-check:checked + .seat {
@@ -321,54 +249,35 @@ a:hover {
     opacity: 0.6;
 }
 
-.seat:hover {
-    border-color: var(--colour-accent) !important;
-}
+.seat:hover { border-color: var(--colour-accent) !important; }
 
 
+/* =====  Footer =====  */
+footer { background: var(--colour-secondary); }
 
 
-
-/* Footer */
-
-footer {
-    background: var(--colour-secondary);
-}
-
-
-/* FontAwesome icons */
-
+/* ===== FontAwesome Icons ===== */
 .fa-brands {
-    font-size: 1.8rem;
     padding: 5px;
-    
+    font-size: 1.8rem;
 }
 
-.fa-brands:hover {
-    color: var(--colour-accent);
-}
+.fa-brands:hover { color: var(--colour-accent); }
 
 
-/* Forms */
-
-.form-text {
-    color: white;
-}
-
+/* ===== Forms ===== */
+.form-text { color: white; }
 
 .form-check {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-around;
+    flex-direction: row-reverse;
 }
 
-
-.details-heading {
-    color: #acb0b6;
-}
+.details-heading { color: #acb0b6; }
 
 
-/* Animation for Neon blue */
+/* ===== Animations ===== */
 @keyframes gradientShift{
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
@@ -376,38 +285,20 @@ footer {
 }
 
 
-
-
-/* Media Queries */
-
-
-/* Laptop and below */
+/* ===== Media Queries ===== */
 @media (max-width: 1024px) {
-
-    .card-poster-hover {
-        transform: none;
-    }
-
-    .card-poster-hover.inactive {
-    opacity: 1;
-    filter: none;
-    transform: scale(1);
-    }
+    .card-poster-hover { transform: none; }
+    .card-poster-hover.inactive { opacity: 1; filter: none; transform: scale(1); }
 }
 
-
-/* Tablet and below */
 @media (max-width: 768px) {
+    .seat {
+        width: 100%;
+        height: 100%;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
 
-  .seat {
-    font-size: 0.8rem;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    padding: 4px;
-  }
-
-  #id_film {
-    font-size: 0.8rem;
-  }
+    #id_film { font-size: 0.8rem; }
 }
