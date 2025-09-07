@@ -154,11 +154,24 @@ def user_update(request, pk):
 
 # Menu Management (CRUD)
 
+
+@staff_member_required
+def menu_create(request):
+    if request.method == 'POST':
+        form = MenuForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return redirect('menu')
+    else:
+        form = MenuForm()
+    return render(request, 'management/menu_form.html', {'form': form})
+
+
 @staff_member_required
 def menu_update(request, pk):
     item = get_object_or_404(Menu, pk=pk)
     if request.method == 'POST':
-        form = MenuForm(request.POST, instance=item)
+        form = MenuForm(request.POST, request.FILES, instance=item)
         if form.is_valid():
             form.save()
             return redirect('menu')
@@ -171,6 +184,8 @@ def menu_update(request, pk):
 @staff_member_required
 def menu_delete(request, pk):
     item = get_object_or_404(Menu, pk=pk)
-    item.delete()
+    if request.method == 'POST':
+        item.delete()
     return redirect('menu')
+    
 
