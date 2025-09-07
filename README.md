@@ -204,7 +204,10 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | User Bookings | ![screenshot](docs/wireframes/user_bookings_mobile.png) | ![screenshot](docs/wireframes/user_bookings_tablet.png) | ![screenshot](docs/wireframes/user_bookings_desktop.png) |
 | Login | ![screenshot](docs/wireframes/login_mobile.png) | ![screenshot](docs/wireframes/login_tablet.png) | ![screenshot](docs/wireframes/login_desktop.png) |
 | Register | ![screenshot](docs/wireframes/signup_mobile.png) | ![screenshot](docs/wireframes/signup_tablet.png) | ![screenshot](docs/wireframes/signup_desktop.png) |
-
+| Admin Manage Films | ![screenshot](docs/wireframes/manage_films_mobile.png) | ![screenshot](docs/wireframes/manage_films_tablet.png) | ![screenshot](docs/wireframes/manage_films_desktop.png) |
+| Admin Manage Schedule | ![screenshot](docs/wireframes/manage_schedule_mobile%20.png) | ![screenshot](docs/wireframes/manage_schedule_tablet.png) | ![screenshot](docs/wireframes/manage_schedule_desktop.png) |
+| Admin Manage Bookings | ![screenshot](docs/wireframes/manage_bookings_mobile.png) | ![screenshot](docs/wireframes/manage_bookings_tablet.png) | ![screenshot](docs/wireframes/manage_bookings_desktop.png) |
+| Admin Manage Users | ![screenshot](docs/wireframes/manage_users_mobile.png) | ![screenshot](docs/wireframes/manage_users_tablet.png) | ![screenshot](docs/wireframes/manage_users_desktop.png) |
 
 
 
