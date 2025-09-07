@@ -115,7 +115,7 @@ The following features below are categorized by priority on what the users needs
 
 - **Film Management** - **Admin/Manager** can **create**, **update** and **delete films**.
 - **Booking Management** - **Admin/Manager** can **view/manage bookings**; **users** can **select seats and complete bookings**.
-- **User Account Features** - **Register, login/logout, update profile** and **view bookings**.
+- **User Account Features** - **Register, login/logout** and **view bookings**.
 - **Booking confirmation** - **User** gets **notified** when a **booking is confirmed**.
 - **Error Handling** - **404 page** for lost users.
 
@@ -277,7 +277,16 @@ For logged-in users, this section is replaced with a different one that promotes
 
 ### Future Features
 
-
+- **Admin/Staff Manage Search Bar**: Allow Admin/Staff to use a search bar on each management page. This will make it easier to find specific users, films, bookings, and schedules.
+- **Allauth Social Accounts**: Enable users to connect their social accounts for sign-up and login. Examples of supported platforms include Microsoft, Facebook, and Google.
+- **User Profiles**: Provide personalised user profiles where authenticated users can update their details such as name, surname, and password.
+- **Booking Notifications**: Send users an email confirmation upon a successful booking, including details such as the film, date, time, and seat number.
+- **QR Code Tickets**: Generate a QR code for each booking so users can scan it on entry to the cinema.
+- **Search Bar on Navbar**: Add a search function for users to quickly find specific films instead of scrolling. Search could include films, genres, food and drink items, and showtimes.
+- **Admin Dashboard Analytics**: Provide site admins/staff with an analytics dashboard displaying user activity and booking statistics.
+- **Payment Intergration**: Allow users to book and pay for tickets online without visiting the cinema. This feature would build on the seat booking system and could use a payment integration tool such as Stripe via the Django package `django-stripe-payments`.
+- **Memberships**: Introduce membership tiers offering benefits such as discounts on films and food & drink items, with higher tiers unlocking greater rewards.
+- **Movie Trailer**: Add the ability for users to watch film trailers, displayed on the `films_detail.html` page for each film.
 
 
 
