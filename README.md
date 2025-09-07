@@ -193,17 +193,18 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 | Page | Mobile | Tablet | Desktop |
 | --- | --- | --- | --- |
-| Home | ![screenshot](docs/wireframes/homemobile.png) | ![screenshot](documentation/wireframes/tablet-register.png) | ![screenshot](documentation/wireframes/desktop-register.png) |
-| Films | ![screenshot](documentation/wireframes/mobile-login.png) | ![screenshot](documentation/wireframes/tablet-login.png) | ![screenshot](documentation/wireframes/desktop-login.png) |
-| Family | ![screenshot](documentation/wireframes/mobile-home.png) | ![screenshot](documentation/wireframes/tablet-home.png) | ![screenshot](documentation/wireframes/desktop-home.png) |
-| Food & Drink | ![screenshot](documentation/wireframes/mobile-add-blog.png) | ![screenshot](documentation/wireframes/tablet-add-blog.png) | ![screenshot](documentation/wireframes/desktop-add-blog.png) |
-| Booking | ![screenshot](documentation/wireframes/mobile-edit-blog.png) | ![screenshot](documentation/wireframes/tablet-edit-blog.png) | ![screenshot](documentation/wireframes/desktop-register.png) |
-| Register | ![screenshot](documentation/wireframes/mobile-blog-post.png) | ![screenshot](documentation/wireframes/tablet-blog-post.png) | ![screenshot](documentation/wireframes/desktop-login.png) |
-| Login | ![screenshot](documentation/wireframes/mobile-404.png) | ![screenshot](documentation/wireframes/tablet-404.png) | ![screenshot](documentation/wireframes/desktop-404.png) |
-| Films.detail | ![screenshot](documentation/wireframes/mobile-register.png) | ![screenshot](documentation/wireframes/tablet-register.png) | ![screenshot](documentation/wireframes/desktop-register.png) |
-| Booking.schedule | ![screenshot](documentation/wireframes/mobile-register.png) | ![screenshot](documentation/wireframes/tablet-register.png) | ![screenshot](documentation/wireframes/desktop-register.png) |
-| Booking.seats | ![screenshot](documentation/wireframes/mobile-register.png) | ![screenshot](documentation/wireframes/tablet-register.png) | ![screenshot](documentation/wireframes/desktop-register.png) |
-| Booking.select_film | ![screenshot](documentation/wireframes/mobile-register.png) | ![screenshot](documentation/wireframes/tablet-register.png) | ![screenshot](documentation/wireframes/desktop-register.png) |
+| Home | ![screenshot](docs/wireframes/home_mobile.png) | ![screenshot](docs/wireframes/home_tablet.png) | ![screenshot](docs/wireframes/home_desktop.png) |
+| Films | ![screenshot](docs/wireframes/films_mobile.png) | ![screenshot](docs/wireframes/films_tablet.png) | ![screenshot](docs/wireframes/films_desktop.png) |
+| Films Details | ![screenshot](docs/wireframes/films_detail_mobile.png) | ![screenshot](docs/wireframes/films_detail_tablet.png) | ![screenshot](docs/wireframes/films_detail_desktop.png) |
+| Family | ![screenshot](docs/wireframes/family_mobile.png) | ![screenshot](docs/wireframes/family_tablet.png) | ![screenshot](docs/wireframes/family_desktop.png) |
+| Food & Drink | ![screenshot](docs/wireframes/menu_mobile.png) | ![screenshot](docs/wireframes/menu_tablet.png) | ![screenshot](docs/wireframes/menu_desktop.png) |
+| Booking Choose film | ![screenshot](docs/wireframes/choose_film_mobile.png) | ![screenshot](docs/wireframes/choose_film_tablet.png) | ![screenshot](docs/wireframes/choose_film_desktop.png) |
+| Booking Schedule | ![screenshot](docs/wireframes/schedules_mobile.png) | ![screenshot](docs/wireframes/schedules_tablet.png) | ![screenshot](docs/wireframes/schedules_desktop.png) |
+| Booking Seats | ![screenshot](docs/wireframes/seats_mobile.png) | ![screenshot](docs/wireframes/seats_tablet.png) | ![screenshot](docs/wireframes/seats_desktop.png) |
+| User Bookings | ![screenshot](docs/wireframes/user_bookings_mobile.png) | ![screenshot](docs/wireframes/user_bookings_tablet.png) | ![screenshot](docs/wireframes/user_bookings_desktop.png) |
+| Login | ![screenshot](docs/wireframes/login_mobile.png) | ![screenshot](docs/wireframes/login_tablet.png) | ![screenshot](docs/wireframes/login_desktop.png) |
+| Register | ![screenshot](docs/wireframes/signup_mobile.png) | ![screenshot](docs/wireframes/signup_tablet.png) | ![screenshot](docs/wireframes/signup_desktop.png) |
+
 
 
 
