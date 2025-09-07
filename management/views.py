@@ -3,20 +3,17 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 
 
-
 # Models
 from films.models import Film
 from films.models import FilmSchedule
 from bookings.models import Booking
+from menu.models import Menu
 
 
 # Forms
-from .forms import FilmForm, StaffBookingForm, UserForm
+from .forms import FilmForm, StaffBookingForm, UserForm, MenuForm
 from bookings.forms import FilmScheduleForm
 
-
-
-# Create your views here.
 
 User = get_user_model()
 
@@ -60,9 +57,6 @@ def film_delete(request, pk):
     return redirect('films_list')
 
 
-
-
-
 # Schedule Management (CRUD)
 
 @staff_member_required
@@ -103,7 +97,6 @@ def schedule_delete(request, pk):
     return redirect('schedule_list')
 
 
-
 # Booking Management (Edit and delete)
 
 @staff_member_required
@@ -133,7 +126,6 @@ def booking_delete(request, pk):
 
 # User Management (CRUD)
 
-
 @staff_member_required
 def manage_user(request):
     users = User.objects.all()
@@ -158,3 +150,27 @@ def user_update(request, pk):
         form = UserForm(instance=user)
 
     return render(request, 'management/user_form.html', {'form': form})
+
+
+# Menu Management (CRUD)
+
+@staff_member_required
+def menu_update(request, pk):
+    item = get_object_or_404(Menu, pk=pk)
+    if request.method == 'POST':
+        form = MenuForm(request.POST, instance=item)
+        if form.is_valid():
+            form.save()
+            return redirect('menu')
+    else:
+        form = MenuForm(instance=item)
+    
+    return render(request, 'management/menu_form.html', {'form': form})
+
+
+@staff_member_required
+def menu_delete(request, pk):
+    item = get_object_or_404(Menu, pk=pk)
+    item.delete()
+    return redirect('menu')
+

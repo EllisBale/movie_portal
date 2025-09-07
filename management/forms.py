@@ -1,7 +1,9 @@
 from django import forms 
 from films.models import Film
 from bookings.models import Booking
+from menu.models import Menu
 from django.contrib.auth import get_user_model
+
 User = get_user_model()
 
 
@@ -37,3 +39,13 @@ class UserForm(forms.ModelForm):
             'is_active': None,
             'is_staff': None,
         }
+
+class MenuForm(forms.ModelForm):
+    class Meta:
+        model = Menu
+        fields = [
+            'name',
+            'description',
+            'image',
+            'category'
+        ]
