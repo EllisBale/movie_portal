@@ -57,7 +57,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| static | [script.js](https://github.com/EllisBale/movie_portal/blob/main/static/js/script.js) |  | ![screenshot](documentation/validation/js-static-script.png) | ⚠️ Notes (if applicable) |
+| static | [script.js](https://github.com/EllisBale/movie_portal/blob/main/static/js/script.js) | [Link](https://movieportal-f2737f46bcb0.herokuapp.com/static/js/script.js)  | ![screenshot](docs/testing_imgs/validations/js_validation.png) | Delted an unused variable which I deleted. When using JShint, I needed to add `/* jshint esversion: 11 */` to the top of the file to allow ES11 syntax. |
 
 
 

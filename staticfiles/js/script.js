@@ -1,4 +1,4 @@
-/* jshint esversion: 11 */
+
 
 /* ===== DOM Elements ===== */
 const buttonToTop = document.getElementById("btn-to-top"); // Back to top button
