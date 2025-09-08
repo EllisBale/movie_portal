@@ -240,13 +240,12 @@ a:hover { color: var(--colour-accent) }
 .btn-check:checked + .seat {
   background-color: var(--colour-accent) !important; 
   color: #ffffff !important;
-  border-color: var(--colour-accent) !important;
+  border-color: var(--colour-secondary) !important;
 }
 
 .seat.booked {
     background-color: var(--colour-primary)!important;
-    border-color: var(--colour-primary) !important; 
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .seat:hover { border-color: var(--colour-accent) !important; }

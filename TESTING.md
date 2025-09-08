@@ -46,8 +46,18 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| static | [style.css](https://github.com/EllisBale/movie_portal/blob/main/static/css/style.css) | ⚠️ [Link](https://movieportal-f2737f46bcb0.herokuapp.com/static/css/style.css) | ![screenshot](documentation/validation/css-static-style.png) | ⚠️ Notes (if applicable) |
+| static | [style.css](https://github.com/EllisBale/movie_portal/blob/main/static/css/style.css) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/static/css/style.css) | ![screenshot](docs/testing_imgs/validations/css_validation.png) | There was no errors but there were 8 warnings. I didn't need to fix this because most of the warnings are coming from vendor extension and CSS variables not being statically checked.  |
 
+
+
+### JavaScript
+
+
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
+
+| Directory | File | URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| static | [script.js](https://github.com/EllisBale/movie_portal/blob/main/static/js/script.js) |  | ![screenshot](documentation/validation/js-static-script.png) | ⚠️ Notes (if applicable) |
 
 
 

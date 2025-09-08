@@ -1,40 +1,19 @@
+/* jshint esversion: 11 */
 
-// DOM Elements
-
-const buttonToTop = document.getElementById(
-    "btn-to-top" // Back to top button
-); 
-
-const posterHover = document.querySelectorAll(
-    '.card-poster-hover' // Poster hover
-);
+/* ===== DOM Elements ===== */
+const buttonToTop = document.getElementById("btn-to-top"); // Back to top button
+const posterHover = document.querySelectorAll(".card-poster-hover"); // Poster hover
+const bookSeatForm = document.getElementById("book_seats_form"); // Book seats form
+const deleteBtns = document.querySelectorAll(".delete-button"); // Delete button
 
 
-// Book_seats.html
-
-const bookSeatForm = document.getElementById(
-    "book_seats_form" // Book seats form
-);
-
-const seatCheckBox = document.querySelectorAll(
-    ".seat-checkbox" // Book seats checkbox
-);
-
-
-// Delete button warning
-
-const deleteBtns = document.querySelectorAll(
-    ".delete-button" // Delete button
-);
-
-
-// Back to top function
+/* ===== Back to Top ===== */
 buttonToTop?.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth"  }) 
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 
-// Hover effect for poster
+/* ===== Poster Hover Effect ===== */
 posterHover.forEach(poster => {
     poster.addEventListener('mouseenter', () => {
         posterHover.forEach(other => {
@@ -49,22 +28,22 @@ posterHover.forEach(poster => {
             other.classList.remove('inactive');
         });
     });
-
 });
 
 
-// Checks if seat has been selected before booking
-
+/* ===== Seat Booking Validation ===== */
 bookSeatForm?.addEventListener("submit", (event) => {
-    
-    const seatCheckBox = document.querySelectorAll(".seat-checkbox:checked");
 
-    if (seatCheckBox.length === 0) {
+    const selectedSeats = document.querySelectorAll(".seat-checkbox:checked");
+
+    if (selectedSeats.length === 0) {
         event.preventDefault();
-        alert(" Select at least one seat to book.")
+        alert(" Select at least one seat to book.");
     }
-})
+});
 
+
+/* ===== Delete Confirmation ===== */
 deleteBtns.forEach(deleteBtn => {
     deleteBtn.addEventListener("click", event => {
         if (!confirm("Are you sure you want to delete this?")) {
