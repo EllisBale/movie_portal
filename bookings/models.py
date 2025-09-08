@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from films.models import FilmSchedule
 
 class Seat(models.Model):
+    """
+    Represents a single seat.
+    """
     ROW_CHOICES = [(chr(i), chr(i)) for i in range(ord('A'), ord('F')+1)]
     row = models.CharField(max_length=1, choices=ROW_CHOICES)
     number = models.IntegerField()
@@ -15,6 +18,9 @@ class Seat(models.Model):
         return f"{self.row}{self.number}"
 
 class Booking(models.Model):
+    """
+    Stores booking information for a specific seat and film schedule.
+    """
     film_schedule = models.ForeignKey(FilmSchedule, on_delete=models.CASCADE, related_name='bookings')
     seat = models.ForeignKey(Seat, null=True, blank=True, on_delete=models.SET_NULL)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings') 

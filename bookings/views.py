@@ -7,8 +7,8 @@ from .forms import FilmSelectForm
 @login_required
 def select_film(request):
     """
-    Displays a form for film selection and redirects user to it
-    schedules
+    Displays a form for film selection and redirects the user
+    to the schedule page for the chosen film.
     """
     if request.method == 'POST':
         form = FilmSelectForm(request.POST)
@@ -22,6 +22,9 @@ def select_film(request):
 
 @login_required
 def film_schedules(request, film_id):
+    """
+    Shows all available schedules for the selected film.
+    """
     film = get_object_or_404(Film, id=film_id)
     schedules = FilmSchedule.objects.filter(film=film)
 
@@ -42,7 +45,7 @@ def booking_page(request, schedule_id):
 
     if request.method == 'POST':
         selected_seat_ids = request.POST.getlist('seats')  # list of Seat IDs
-
+        # Check if no seats selected
         if not selected_seat_ids:
             return render(request, 'book_seats.html', {
                 'schedule': schedule,
@@ -50,14 +53,31 @@ def booking_page(request, schedule_id):
                 'booked_seats': booked_seats,
                 'error': "You must select at least one seat to finish booking."
             })
-
+        
+        # Check for saet limit before creating bookings
+        if len(selected_seat_ids) > 8:
+            return render(request, 'book_seats.html', {
+                'schedule': schedule,
+                'seats': seats,
+                'booked_seats': booked_seats,
+                'error': "You can select a maximum of 8 seats."
+            })
+        
+        # Check if seat already booked
         for seat_id in selected_seat_ids:
-            seat = get_object_or_404(Seat, id=seat_id)  # always assigns seat
-            Booking.objects.create(
-                film_schedule=schedule,
-                seat=seat,
-                user=request.user
-            )
+            if int(seat_id) in booked_seats:
+                return render(request, 'book_seats.html', {
+                    'schedule': schedule,
+                    'seats': seats,
+                    'booked_seats': booked_seats,
+                    'error': f"Seat {seat_id} is already booked. Please choose another seat."
+                })
+            
+        # Create bookings    
+        for seat_id in selected_seat_ids:
+            seat = get_object_or_404(Seat, id=seat_id)
+            Booking.objects.create(film_schedule=schedule, seat=seat, user=request.user)
+            
         return redirect('booking_success')
 
     return render(request, 'book_seats.html', {
@@ -70,7 +90,7 @@ def booking_page(request, schedule_id):
 @login_required
 def booking_success(request):
     """
-    Confirmation page after booking 
+    Displays a confirmation page after booking is successful.
     """
 
     return render(request, 'bookings_success.html')
@@ -79,6 +99,9 @@ def booking_success(request):
 
 @login_required
 def user_booking(request):
+    """
+    Lists all bookings for the currently logged-in user.
+    """
     booking_list = Booking.objects.filter(user=request.user).select_related('film_schedule__film', 'seat')
     return render(request, 'user_booking.html', {'booking_list': booking_list})
 
@@ -86,6 +109,10 @@ def user_booking(request):
 
 @login_required
 def user_booking_delete(request, pk):
+    """
+    Deletes a users booking by its primary key
+    and redirects back to the booking list.
+    """
     bookings = get_object_or_404(Booking, pk=pk)
     bookings.delete()
     return redirect('user_bookings')

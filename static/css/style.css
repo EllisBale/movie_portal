@@ -83,7 +83,7 @@ a:hover { color: var(--colour-accent) }
 }
 
 
-.nav-link { font-family: "Montserrat", sans-serif; }
+.nav-link { font-family: var(--button-font); }
 
 
 .primary-hover:hover { color: var(--colour-accent) !important; }
@@ -91,7 +91,7 @@ a:hover { color: var(--colour-accent) }
 .dark-hover:hover { color: #000000 !important; }
 
 
-.dropdown-item { font-family: "Montserrat", sans-serif; }
+.dropdown-item { font-family: var(--button-font) }
 
 
 

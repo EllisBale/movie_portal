@@ -4,6 +4,10 @@ from .seats import ALL_SEATS
 from films.models import FilmSchedule, Film
 
 class BookingForm(forms.Form):
+    """
+    Form for selecting a film schedule and 
+    """
+
     schedule = forms.ModelChoiceField(
         queryset=FilmSchedule.objects.all(),
         label="Select Showtime",
