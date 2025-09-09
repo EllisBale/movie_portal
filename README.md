@@ -102,6 +102,9 @@ The following features below are categorized by priority on what the users needs
 
 - View upcoming movies.
 
+- Immersive homepage experience
+
+- Family film listing
 
 
 **Could-Have Features:**
@@ -124,25 +127,29 @@ The following features below are categorized by priority on what the users needs
 #### 3. Structure
 
 **Information Architecture**
-
-**Navigation Menu**:
-
-**User (Guests)**
-- Links to Home, Films, Family, Food & Drink, login and register.
-
-**Logged-in-user**
-- Links to Home, Films, Family, Food & Drink, Booking and logout.
-
-**Admin/Managers**
-
+- **Navigation Menu**:
+    - User (Guest)
+        - Links to Home, Films, Family, Food & Drink, Login, Register.
+    - User (Logged-in)
+        - Links to Home, Films, Family, Food & Drink, Booking, Account, Logout
+    - User (Admin/Staff)
+        - Links to Home, Films, Family, Food & Drink, Booking, Account, Manage, Logout
 
 **User Flow**
 
-1. Guest users browse films -> view film general information.
-2. Gust users register for an account -> log in to access booking features.
-3. Registered users select a film, choose schedule, choose seats and complete booking -> receive booking confirmation.
-4. Admin/Managers create, update and manage film schedule, film information, film listings and seat availability.
-5. Admin/Managers view and manage bookings -> ensure smooth cinema operations and user satisfaction. 
+1. Guest users browse the homepage → view popular films, coming soon movies, and family films.
+
+2. Guest users explore films → read film details and see schedules.
+
+3. Guest users register for an account → log in to make bookings.
+
+4. Logged-in users select a film → choose a schedule and seats → confirm booking → receive confirmation.
+
+5. Logged-in users view and manage their bookings → update profile or change password if needed.
+
+6. Admin/Manager accesses the management panel → add, edit, or delete films, schedules, bookings, or users → update menu items.
+
+
 
 
 
