@@ -40,6 +40,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | user_account | [signup.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/signup.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/signup/) | ![screenshot](docs/testing_imgs/validations/signup_html_validation.png) | No Errors |
 
 
+
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
