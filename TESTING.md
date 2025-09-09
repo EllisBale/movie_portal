@@ -38,6 +38,10 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | user_account | [password_reset.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/password_reset.html) | [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/password/reset/)   | ![screenshot](docs/testing_imgs/validations/reset_html_validation.png) | No Errors |
 | user_account | [password_reset_done.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/password_reset_done.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/password/reset/done/) | ![screenshot](docs/testing_imgs/validations/reset_done_html_validation.png) | No Errors |
 | user_account | [signup.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/signup.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/signup/) | ![screenshot](docs/testing_imgs/validations/signup_html_validation.png) | No Errors |
+| user_account | [profile.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/user_account/profile.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/profile/) | ![screenshot](docs/testing_imgs/validations/profile_html_validation.png) | No Errors |
+| user_account | [profile_update.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/user_account/profile_update.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/profile/update/) | ![screenshot](docs/testing_imgs/validations/profile_update_html_validation.png) | No Errors |
+| user_account | [change_password.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/user_account/profile_update.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/profile/change_password/) | ![screenshot](docs/testing_imgs/validations/change_password_html_validation.png) | No Errors |
+
 
 
 
