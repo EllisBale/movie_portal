@@ -315,6 +315,7 @@ For logged-in users, this section is replaced with a different one that promotes
 | [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
 | [![badge](https://img.shields.io/badge/Mermaid-grey?logo=mermaid&logoColor=FF3670)](https://mermaid.live) | Generate an interactive diagram for the data/schema. |
 | [![badge](https://img.shields.io/badge/W3Schools-grey?logo=w3schools&logoColor=04AA6D)](https://www.w3schools.com) | Tutorials/Reference Guide |
+| [![badge](https://img.shields.io/badge/StackOverflow-grey?logo=stackoverflow&logoColor=F48024)](https://stackoverflow.com/questions) | Tutorials/Reference Guide |
 
 
 

@@ -25,8 +25,14 @@
                 <li class="nav-item">
                     <a class="nav-link text-white primary-hover" href="{% url 'select_film' %}"> Booking</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white primary-hover" href="{% url 'user_bookings' %}"> My Bookings</a>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white dark-hover" href="#" id="manageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Manage
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="manageDropdown">
+                        <li><a class="dropdown-item" href="{% url 'profile' %}">Account <i class="fa-solid fa-film"></i></a></li>
+                        <li><a class="dropdown-item" href="{% url 'user_bookings' %}"> My Bookings</a></li>
+                    </ul>
                 </li>
                 {% else %}
                 <li class="nav-item">
