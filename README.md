@@ -287,6 +287,7 @@ For logged-in users, this section is replaced with a different one that promotes
 - **Payment Intergration**: Allow users to book and pay for tickets online without visiting the cinema. This feature would build on the seat booking system and could use a payment integration tool such as Stripe via the Django package `django-stripe-payments`.
 - **Memberships**: Introduce membership tiers offering benefits such as discounts on films and food & drink items, with higher tiers unlocking greater rewards.
 - **Movie Trailer**: Add the ability for users to watch film trailers, displayed on the `films_detail.html` page for each film.
+- **Delete Modal**: Add a custom modal instead of the alert function in js to give users better user experience.
 
 
 
