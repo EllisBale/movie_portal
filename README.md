@@ -77,38 +77,39 @@ The following features below are categorized by priority on what the users needs
 
  **Must-Have Features:**
 
-- User registration and login
+- User registration and login.
 
-- Film listing page
+- Film listing page.
 
-- Booking form with seat selection
+- Booking form with seat selection.
 
-- Admin/Manager panel to manage film listings
+- Admin/Manager panel to manage film listings.
 
 - Admin/Manager panel to view/manage bookings.
 
 
  **Should-Have Features:**
 
-- Logout feature
+- Logout feature.
 
-- Admin/Manager edit menu items
+- Admin/Manager edit menu items.
 
-- Confirmation of booking
+- Confirmation of booking.
 
-- User can update profile information
+- User can update profile information.
 
-- User can view menu (food & drinks)
+- User can view menu (food & drinks).
 
-- View upcoming movies
+- View upcoming movies.
 
 
 
 **Could-Have Features:**
 
-- User can cancel booking
+- User can cancel booking.
 
-- User can filter movies by genre
+- Admin can edit food & snack items.
+
 
 
 **Content Requirements**
@@ -218,14 +219,16 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | --- | --- | --- |
 | As a User | I want to be able to make an account,| so that I can view my bookings and make bookings. |
 | As a User | I want to be able to view a selection of films, | so that I have a variety of films to choose to watch. |
-| As a User | When visting the home page, I want to feel immersive and engaging,  | so that I can get excited about the movies and cinema atmosphere |
+| As a User | I want to feel immersive and engaging when visting the homepage,  | so that I can get excited about the movies and cinema atmosphere |
 | As a User | I want to view upcoming movies, | so I can decide to make a booking. |
 | As a User | I want to be able to view drinks and snacks, | so that I know what snacks the cinema offers. |
 | As a User | I want to receive confirmation of booking, | so that I know the booking went through. |
-| As a logged in User | I want to be able to make bookings for films,  |  so that I can make a booking from home. |
+| As a User | I want to view family films, | so I can view films that are suitable for watching with the family. |
+| As a logged in User | I want to be able to make bookings for films,  |  so that I can make a booking from home to watch movie. |
 | As a logged in User | I want to be able to view available seats, |  so that I decide If I want to book that seat. |
-| As a logged in User | I want to change my profile information, | so that I can change name, email address, phone number and password. |
+| As a logged in User | I want to change my profile information, | so that I can change name, email address and password. |
 | As a logged in User | I want to be able to cancel a booking, | so that in case plans change. |
+| As a Admin/Manager | I want to be able to access the admin controls through the navbar, | so I can quickly edit, add and delete films, bookings, schedules and more. |
 | As a Admin/Manager | I want to be able to view users bookings, | so that I can remove bookings, see how busy cinema gets and verify seat numbers. |
 | As a Admin/Manager  | I want to be able to edit, delete and add films from the lists, | so that I can change movie image, change description and change movie name. |
 | As a Admin/Manager | I want to be able to update the menu, | so that I can add new snacks/drinks to the menu and remove items the cinema no longer sells. |
@@ -280,7 +283,7 @@ For logged-in users, this section is replaced with a different one that promotes
 
 - **Admin/Staff Manage Search Bar**: Allow Admin/Staff to use a search bar on each management page. This will make it easier to find specific users, films, bookings, and schedules.
 - **Allauth Social Accounts**: Enable users to connect their social accounts for sign-up and login. Examples of supported platforms include Microsoft, Facebook, and Google.
-- **User Profiles**: Provide personalised user profiles where authenticated users can update their details such as name, surname, and password.
+- **User Profiles**: Provide personalised user profiles such as profile pictures and film preferences.
 - **Booking Notifications**: Send users an email confirmation upon a successful booking, including details such as the film, date, time, and seat number.
 - **QR Code Tickets**: Generate a QR code for each booking so users can scan it on entry to the cinema.
 - **Search Bar on Navbar**: Add a search function for users to quickly find specific films instead of scrolling. Search could include films, genres, food and drink items, and showtimes.
