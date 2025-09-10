@@ -71,7 +71,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| bookings | [admin.py](https://github.com/EllisBale/movie_portal/blob/main/bookings/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EllisBale/movie_portal/main/bookings/admin.py) | ![screenshot](documentation/validation/py-bookings-admin.png) | ⚠️ Notes (if applicable) |
+| bookings | [admin.py](https://github.com/EllisBale/movie_portal/blob/main/bookings/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EllisBale/movie_portal/main/bookings/admin.py) | ![screenshot](docs) | ⚠️ Notes (if applicable) |
 | bookings | [forms.py](https://github.com/EllisBale/movie_portal/blob/main/bookings/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EllisBale/movie_portal/main/bookings/forms.py) | ![screenshot](documentation/validation/py-bookings-forms.png) | ⚠️ Notes (if applicable) |
 | bookings | [models.py](https://github.com/EllisBale/movie_portal/blob/main/bookings/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EllisBale/movie_portal/main/bookings/models.py) | ![screenshot](documentation/validation/py-bookings-models.png) | ⚠️ Notes (if applicable) |
 | bookings | [seats.py](https://github.com/EllisBale/movie_portal/blob/main/bookings/seats.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EllisBale/movie_portal/main/bookings/seats.py) | ![screenshot](documentation/validation/py-bookings-seats.png) | ⚠️ Notes (if applicable) |
