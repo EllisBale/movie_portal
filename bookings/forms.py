@@ -3,9 +3,10 @@ from .models import Booking
 from .seats import ALL_SEATS
 from films.models import FilmSchedule, Film
 
+
 class BookingForm(forms.Form):
     """
-    Form for selecting a film schedule and 
+    Form for selecting a film schedule and
     """
 
     schedule = forms.ModelChoiceField(
@@ -28,8 +29,14 @@ class BookingForm(forms.Form):
 
         if schedule:
             # Remove seats already booked for this schedule
-            booked_seats = Booking.objects.filter(film_schedule=schedule).values_list('seat__seat_number', flat=True)
-            available_seats = [(seat, seat) for seat in ALL_SEATS if seat not in booked_seats]
+            booked_seats = Booking.objects.filter(
+                film_schedule=schedule).values_list(
+                    'seat__seat_number', flat=True)
+
+            available_seats = [
+                (seat, seat) for seat in ALL_SEATS
+                if seat not in booked_seats
+                ]
 
         self.fields['seat_numbers'].choices = available_seats
 
@@ -46,22 +53,28 @@ class FilmSelectForm(forms.Form):
     film = forms.ModelChoiceField(
         queryset=Film.objects.all(),
         label=False,
-        widget=forms.Select(attrs={'class': "form-select form-select-lg mb-3"})   
+        widget=forms.Select(attrs={'class': "form-select form-select-lg mb-3"})
     )
-
 
 
 class FilmScheduleForm(forms.ModelForm):
     class Meta:
         model = FilmSchedule
-        fields = ['film', 'days_of_week', 'slot', 'specific_date', 'specific_time']
+        fields = [
+            'film', 'days_of_week',
+            'slot', 'specific_date',
+            'specific_time'
+            ]
+
         widgets = {
             'film': forms.Select(attrs={'class': 'form-select'}),
             'days_of_week': forms.Select(attrs={'class': 'form-select'}),
             'slot': forms.Select(attrs={'class': 'form-select'}),
-            'specific_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
-            'specific_time': forms.TimeInput(attrs={'class': 'form-control', 'type': 'time'}),
+            'specific_date': forms.DateInput(attrs={
+                'class': 'form-control',
+                'type': 'date'}),
+
+            'specific_time': forms.TimeInput(attrs={
+                'class': 'form-control',
+                'type': 'time'}),
         }
-    
-
-

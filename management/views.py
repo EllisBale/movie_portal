@@ -21,13 +21,15 @@ User = get_user_model()
 #   Film Management (CRUD)
 # ----------------------------
 
+
 @staff_member_required
 def manage_films(request):
     """
     Displays a list of all films for staff management.
     """
     films_list = Film.objects.all().order_by("title")
-    return render(request, "management/films_list.html", {"films_list": films_list})
+    return render(request, "management/films_list.html",
+                  {"films_list": films_list})
 
 
 @staff_member_required
@@ -71,8 +73,9 @@ def film_delete(request, pk):
     return redirect('films_list')
 
 # ----------------------------
-#  Schedule Management (CRUD) 
+#  Schedule Management (CRUD)
 # ----------------------------
+
 
 @staff_member_required
 def manage_schedules(request):
@@ -80,7 +83,8 @@ def manage_schedules(request):
     Display a list of all film schedules for staff management.
     """
     schedule_list = FilmSchedule.objects.select_related("film", "slot")
-    return render(request, 'management/schedule_list.html', {'schedule_list': schedule_list})
+    return render(request, 'management/schedule_list.html', {
+        'schedule_list': schedule_list})
 
 
 @staff_member_required
@@ -125,7 +129,7 @@ def schedule_delete(request, pk):
 
 
 # ----------------------------
-#  Booking Management (Edit and delete) 
+#  Booking Management (Edit and delete)
 # ----------------------------
 
 @staff_member_required
@@ -133,8 +137,10 @@ def manage_bookings(request):
     """
     Display a list of all bookings for staff management.
     """
-    bookings_list = Booking.objects.select_related('film_schedule__film', 'seat', 'user')
-    return render(request, 'management/bookings_list.html', {'bookings_list': bookings_list})
+    bookings_list = Booking.objects.select_related(
+        'film_schedule__film', 'seat', 'user')
+    return render(request, 'management/bookings_list.html', {
+        'bookings_list': bookings_list})
 
 
 @staff_member_required
@@ -151,7 +157,8 @@ def booking_update(request, pk):
     else:
         form = StaffBookingForm(instance=booking)
     return render(request, 'management/booking_update.html', {'form': form})
-        
+
+
 @staff_member_required
 def booking_delete(request, pk):
     """
@@ -164,6 +171,7 @@ def booking_delete(request, pk):
 # ----------------------------
 # User Management (CRUD)
 # ----------------------------
+
 
 @staff_member_required
 def manage_user(request):
@@ -233,7 +241,7 @@ def menu_update(request, pk):
             return redirect('menu')
     else:
         form = MenuForm(instance=item)
-    
+
     return render(request, 'management/menu_form.html', {'form': form})
 
 
@@ -246,5 +254,3 @@ def menu_delete(request, pk):
     if request.method == 'POST':
         item.delete()
     return redirect('menu')
-    
-

@@ -3,8 +3,9 @@ from cloudinary.models import CloudinaryField
 from datetime import time
 from django.utils import timezone
 
+
 class Genre(models.Model):
-    name = models.CharField(max_length=100, null=False, blank=False)
+    name = models.CharField(max_length=100)
 
     class Meta:
         ordering = ['name']
@@ -14,18 +15,20 @@ class Genre(models.Model):
 
 
 class Film(models.Model):
-    title = models.CharField(max_length=200, null=False, blank=False)
-    description = models.TextField(null=False, blank=False)
+    title = models.CharField(max_length=200)
+    description = models.TextField()
     poster = CloudinaryField('Poster Image', default='placeholder')
-    hero_image = CloudinaryField('Hero Image', null=True, blank=True, help_text= "Optional Hero Image for carousel")
-    cast = models.TextField(
-        help_text="Comma-separated list of actors"
+    hero_image = CloudinaryField(
+        'Hero Image',
+        null=True,
+        blank=True,
+        help_text="Optional Hero Image for carousel"
     )
+    cast = models.TextField(help_text="Comma-separated list of actors")
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
-    release_date = models.DateField(null=False, blank=False)
+    release_date = models.DateField()
     duration = models.PositiveIntegerField(
-        help_text="Total duration in minutes",
-        null=False, blank=False
+        help_text="Total duration in minutes"
     )
     is_popular = models.BooleanField(default=False)
     is_coming_soon = models.BooleanField(default=False)
@@ -41,18 +44,11 @@ class Film(models.Model):
     def get_duration_display(self):
         hours = self.duration // 60
         minutes = self.duration % 60
-        if hours:
-            return f"{hours}h {minutes}m"
-        return f"{minutes}m"
-    
+        return f"{hours}h {minutes}m" if hours else f"{minutes}m"
+
     def save(self, *args, **kwargs):
-        if self.release_date <= timezone.now().date():
-            self.is_coming_soon = False
-        else: 
-            self.is_coming_soon = True
+        self.is_coming_soon = self.release_date > timezone.now().date()
         super().save(*args, **kwargs)
-
-
 
 
 class ShowtimeSlot(models.Model):
@@ -61,46 +57,48 @@ class ShowtimeSlot(models.Model):
     def __str__(self):
         end_hour = (self.start_time.hour + 2) % 24
         end_time = time(hour=end_hour, minute=self.start_time.minute)
-        return f"{self.start_time.strftime('%H:%M')} - {end_time.strftime('%H:%M')}"
-    
+        return (
+            f"{self.start_time.strftime('%H:%M')} - "
+            f"{end_time.strftime('%H:%M')}"
+        )
+
+
 class FilmSchedule(models.Model):
-    film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name='schedules')
-    
+    film = models.ForeignKey(
+        Film, on_delete=models.CASCADE, related_name='schedules'
+    )
+
     # Film schedule days
     DAYS_OF_WEEK = [
-        (0, 'Monday'),
-        (1, 'Tuesday'),
-        (2, 'Wednesday'),
-        (3, 'Thursday'),
-        (4, 'Friday'),
-        (5, 'Saturday'),
-        (6, 'Sunday'),
+        (0, 'Monday'), (1, 'Tuesday'), (2, 'Wednesday'), (3, 'Thursday'),
+        (4, 'Friday'), (5, 'Saturday'), (6, 'Sunday')
     ]
-    days_of_week = models.IntegerField(choices=DAYS_OF_WEEK, null=True, blank=True)
-    slot = models.ForeignKey(ShowtimeSlot, on_delete=models.CASCADE, null=True, blank=True)
-    
+    days_of_week = models.IntegerField(
+        choices=DAYS_OF_WEEK, null=True, blank=True)
+    slot = models.ForeignKey(ShowtimeSlot, on_delete=models.CASCADE,
+                             null=True, blank=True)
+
     # Specific schedule
     specific_date = models.DateField(null=True, blank=True)
     specific_time = models.TimeField(null=True, blank=True)
 
     class Meta:
-
         constraints = [
             models.UniqueConstraint(
                 fields=['film', 'days_of_week', 'slot'],
                 name='unique_film_weekly_schedule'
             ),
-
             models.UniqueConstraint(
-                fields=['film', 'specific_date','specific_time'],
+                fields=['film', 'specific_date', 'specific_time'],
                 name='unique_film_specific_schedule'
             ),
         ]
 
-
     def __str__(self):
         if self.specific_date and self.specific_time:
-            return f"{self.film.title} on {self.specific_date} at {self.specific_time.strftime('%H:%M')}"
-        else:
-            day = dict(self.DAYS_OF_WEEK).get(self.days_of_week, 'Unknown day')
-            return f"{self.film.title} on {day} at {self.slot}"
+            return (
+                f"{self.film.title} on {self.specific_date} at "
+                f"{self.specific_time.strftime('%H:%M')}"
+            )
+        day = dict(self.DAYS_OF_WEEK).get(self.days_of_week, 'Unknown day')
+        return f"{self.film.title} on {day} at {self.slot}"

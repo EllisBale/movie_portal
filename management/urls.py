@@ -1,5 +1,23 @@
 from django.urls import path
-from .views import film_create, film_delete, film_update, manage_films, manage_schedules, schedule_create, schedule_delete, manage_bookings, booking_update , booking_delete, manage_user, user_delete, user_update, menu_update, menu_delete, menu_create, schedule_update
+from .views import (
+    film_create,
+    film_delete,
+    film_update,
+    manage_films,
+    manage_schedules,
+    schedule_create,
+    schedule_delete,
+    manage_bookings,
+    booking_update,
+    booking_delete,
+    manage_user,
+    user_delete,
+    user_update,
+    menu_update,
+    menu_delete,
+    menu_create,
+    schedule_update
+    )
 
 
 urlpatterns = [
@@ -11,7 +29,8 @@ urlpatterns = [
     # Schedule
     path('schedule_list/', manage_schedules, name="schedule_list"),
     path('schedules/create/', schedule_create, name="schedule_create"),
-    path('schedules/<int:pk>/delete/', schedule_delete, name="schedule_delete"),
+    path('schedules/<int:pk>/delete/', schedule_delete, name="schedule_delete"
+         ),
     path('schedules/<int:pk>/edit/', schedule_update, name="schedule_update"),
     # Booking
     path('bookings_list/', manage_bookings, name="bookings_list"),

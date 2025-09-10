@@ -3,16 +3,16 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import ProfileUpdateForm 
+from .forms import ProfileUpdateForm
 
 
 @login_required
 def profile_view(request):
     """
-    Displays the user's profile with options to update details or change password.
+    Displays the user's profile
+    with options to update details or change password.
     """
     return render(request, "user_account/profile.html")
-
 
 
 @login_required

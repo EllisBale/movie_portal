@@ -1,4 +1,4 @@
-from django import forms 
+from django import forms
 from films.models import Film
 from bookings.models import Booking
 from menu.models import Menu
@@ -7,13 +7,16 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-
 class FilmForm(forms.ModelForm):
     class Meta:
         model = Film
-        fields = ['title', 'description', 'poster', 'hero_image', 'cast', 'genre', 'release_date',
-                  'duration', 'is_popular', 'is_coming_soon', 'is_family', 'is_hero_image']
-        
+        fields = [
+            'title', 'description', 'poster',
+            'hero_image', 'cast', 'genre',
+            'release_date', 'duration',
+            'is_popular', 'is_coming_soon',
+            'is_family', 'is_hero_image']
+
 
 class StaffBookingForm(forms.ModelForm):
     class Meta:
@@ -24,6 +27,7 @@ class StaffBookingForm(forms.ModelForm):
             'seat': forms.Select(attrs={'class': 'form-select'}),
             'user': forms.Select(attrs={'class': 'form-select'}),
         }
+
 
 class UserForm(forms.ModelForm):
     class Meta:
@@ -39,6 +43,7 @@ class UserForm(forms.ModelForm):
             'is_active': None,
             'is_staff': None,
         }
+
 
 class MenuForm(forms.ModelForm):
     class Meta:

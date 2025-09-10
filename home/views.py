@@ -1,14 +1,14 @@
 from django.shortcuts import render
 from films.models import Film
-# Create your views here.
+
 
 def index(request):
-    """ 
+    """
     Renders the home page with cateogorised films.
     """
 
     popular_films = Film.objects.filter(is_popular=True)
-    coming_soon = Film.objects.filter(is_coming_soon =True)
+    coming_soon = Film.objects.filter(is_coming_soon=True)
     hero_films = Film.objects.filter(is_hero_image=True)
 
     context = {
@@ -18,7 +18,6 @@ def index(request):
     }
 
     return render(request, 'home/index.html', context)
-
 
 
 def film_family(request):
@@ -35,4 +34,3 @@ def film_family(request):
     }
 
     return render(request, 'family.html', context)
-    

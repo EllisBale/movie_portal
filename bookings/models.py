@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from films.models import FilmSchedule
 
+
 class Seat(models.Model):
     """
     Represents a single seat.
@@ -17,13 +18,25 @@ class Seat(models.Model):
     def __str__(self):
         return f"{self.row}{self.number}"
 
+
 class Booking(models.Model):
     """
     Stores booking information for a specific seat and film schedule.
     """
-    film_schedule = models.ForeignKey(FilmSchedule, on_delete=models.CASCADE, related_name='bookings')
-    seat = models.ForeignKey(Seat, null=True, blank=True, on_delete=models.SET_NULL)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings') 
+    film_schedule = models.ForeignKey(
+        FilmSchedule,
+        on_delete=models.CASCADE,
+        related_name='bookings'
+        )
+
+    seat = models.ForeignKey(
+        Seat, null=True,
+        blank=True, on_delete=models.SET_NULL
+        )
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE,
+        related_name='bookings')
+
     booked_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -31,3 +44,4 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.seat} for {self.film_schedule}"
+
