@@ -9,7 +9,7 @@
   <div class="row">
     <!-- My Bookings -->
     <div class="col-md-8">
-      <h2 class="mb-4">My Bookings</h2>
+      <h1 class="mb-4">My Bookings</h1>
       <div class="card bg-dark text-white">
         <div class="card-body">
           <ul class="list-group list-group-flush">
@@ -25,7 +25,7 @@
                     on {{ booking.film_schedule.get_days_of_week_display }} at {{ booking.film_schedule.slot.start_time }}
                   {% endif %}
                   
-                  <small class="d-block text-muted">Booked at: {{ booking.booked_at }}</small>
+                  <small class="d-block text-white">Booked at: {{ booking.booked_at }}</small>
                 </div>
                 
                 <div class="col-4 col-md-4 col-lg-4 text-end">

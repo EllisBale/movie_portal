@@ -6,7 +6,7 @@
   <div class="container mb-5 py-5">
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-12">
-        <h2>Times & date for {{ film.title }}</h2>
+        <h1>Times & date for {{ film.title }}</h1>
         <div class="list-group">
           {% for schedule in schedules %}
           <a href="{% url 'booking_page' schedule.id %}" class="list-group-item list-group-item-action">
