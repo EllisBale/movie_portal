@@ -5,10 +5,13 @@
         {% for film in hero_films %}
         <div class="carousel-item {% if forloop.first %}active{% endif %}">
             <a href="{% url 'film_detail' film.id %}">
-                <img src="{% if film.hero_image %}{{ film.hero_image.url }}{% else %}{{ film.poster.url }}{% endif %} " class="d-block carousel-img" alt="{{ film.title }}">
+                <img src="{% if film.hero_image %}{{ film.hero_image.url }}{% else %}{{ film.poster.url }}{% endif %}"
+                    class="d-block carousel-img"
+                    alt="{{ film.title }}"
+                    {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}>
             </a>
             <div class="container px-5 pt-4 text-start">
-                <h2>{{ film.title }}</h2>
+                <h1>{{ film.title }}</h1>
                 <a href="{% url 'film_schedules' film.id %}" class="btn btn-outline-light custom-btn">BOOK NOW</a>
             </div>
         </div>
