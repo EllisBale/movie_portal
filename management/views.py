@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
-
+from django.contrib import messages
 
 # Models
 from films.models import Film
@@ -58,6 +58,7 @@ def film_update(request, pk):
         form = FilmForm(request.POST, request.FILES, instance=film)
         if form.is_valid():
             form.save()
+            messages.success(request, "Film successfully updated")
             return redirect("films_list")
     else:
         form = FilmForm(instance=film)
@@ -71,6 +72,7 @@ def film_delete(request, pk):
     """
     film = get_object_or_404(Film, pk=pk)
     film.delete()
+    messages.success(request, "Film successfully deleted")
     return redirect('films_list')
 
 # ----------------------------
@@ -97,6 +99,7 @@ def schedule_create(request):
         form = FilmScheduleForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, "Schedule created successfully")
             return redirect('schedule_list')
     else:
         form = FilmScheduleForm()
@@ -113,6 +116,7 @@ def schedule_update(request, pk):
         form = FilmScheduleForm(request.POST, instance=schedule)
         if form.is_valid():
             form.save()
+            messages.success(request, "Schedule updated successfully")
             return redirect("schedule_list")
     else:
         form = FilmScheduleForm(instance=schedule)
@@ -126,6 +130,7 @@ def schedule_delete(request, pk):
     """
     schedule = get_object_or_404(FilmSchedule, pk=pk)
     schedule.delete()
+    messages.success(request, "Schedule deleted successfully")
     return redirect('schedule_list')
 
 
@@ -154,6 +159,7 @@ def booking_update(request, pk):
         form = StaffBookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
+            messages.success(request, "Booking updated successfully")
             return redirect("bookings_list")
     else:
         form = StaffBookingForm(instance=booking)
@@ -167,6 +173,7 @@ def booking_delete(request, pk):
     """
     booking = get_object_or_404(Booking, pk=pk)
     booking.delete()
+    messages.success(request, "Booking deleted successfully")
     return redirect('bookings_list')
 
 # ----------------------------
@@ -190,6 +197,7 @@ def user_delete(request, pk):
     """
     user = get_object_or_404(User, pk=pk)
     user.delete()
+    messages.success(request, "User deleted successfully")
     return redirect('user_list')
 
 
@@ -203,6 +211,7 @@ def user_update(request, pk):
         form = UserForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
+            messages.success(request, "User updated successfully")
             return redirect('user_list')
     else:
         form = UserForm(instance=user)
@@ -223,7 +232,8 @@ def menu_create(request):
         form = MenuForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-        return redirect('menu')
+            messages.success(request, "Menu item created successfully")
+            return redirect('menu')
     else:
         form = MenuForm()
     return render(request, 'management/menu_form.html', {'form': form})
@@ -239,6 +249,7 @@ def menu_update(request, pk):
         form = MenuForm(request.POST, request.FILES, instance=item)
         if form.is_valid():
             form.save()
+            messages.success(request, "Menu item updated successfully")
             return redirect('menu')
     else:
         form = MenuForm(instance=item)
@@ -254,4 +265,5 @@ def menu_delete(request, pk):
     item = get_object_or_404(Menu, pk=pk)
     if request.method == 'POST':
         item.delete()
+        messages.success(request, "Menu item deleted successfully")
     return redirect('menu')

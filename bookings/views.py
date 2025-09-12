@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking, Seat
 from films.models import Film, FilmSchedule
 from .forms import FilmSelectForm
+from django.contrib import messages
 
 
 @login_required
@@ -130,4 +131,5 @@ def user_booking_delete(request, pk):
     """
     bookings = get_object_or_404(Booking, pk=pk)
     bookings.delete()
+    messages.success(request, 'Your booking was deleted successfully')
     return redirect('user_bookings')
