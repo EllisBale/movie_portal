@@ -27,12 +27,14 @@ class TestFilmModel(TestCase):
         )
         self.assertEqual(str(film), "Jack Pond")
 
+
     def test_get_duration_display_hours_and_minutes(self):
         film = Film.objects.create(
             **self.common_film_data,
             release_date=date.today()
         )
         self.assertEqual(film.get_duration_display(), "2h 5m")
+
 
     def test_is_coming_soon(self):
         future_date = date.today() + timedelta(days=10)
@@ -42,6 +44,7 @@ class TestFilmModel(TestCase):
         )
         self.assertTrue(film.is_coming_soon)
 
+
     def test_is_family_true(self):
         film = Film.objects.create(
             **self.common_film_data,
@@ -49,6 +52,7 @@ class TestFilmModel(TestCase):
             is_family=True
         )
         self.assertTrue(film.is_family)
+
 
     def test_is_hero_image_true(self):
         film = Film.objects.create(
