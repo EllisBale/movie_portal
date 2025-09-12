@@ -94,6 +94,14 @@ a:hover { color: var(--colour-accent) }
 .dropdown-item { font-family: var(--button-font) }
 
 
+/* ===== Alert Message ===== */
+
+.alert {
+    margin-bottom: 0 !important;
+    background: #1a1a2e;
+    border: none;
+}
+
 
 /* ===== Section Spacing ===== */
 .section { padding-top: 100px; padding-bottom: 0px; }

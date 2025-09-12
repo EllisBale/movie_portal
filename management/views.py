@@ -41,6 +41,7 @@ def film_create(request):
         form = FilmForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, "Film successfully created")
             return redirect('films_list')
     else:
         form = FilmForm()

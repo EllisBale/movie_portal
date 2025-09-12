@@ -6,9 +6,15 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
+class DateInput(forms.DateInput):
+    input_type = "date"
+
 
 class FilmForm(forms.ModelForm):
     class Meta:
+        widgets = {
+            "release_date": DateInput(),
+        }
         model = Film
         fields = [
             'title', 'description', 'poster',
@@ -16,7 +22,6 @@ class FilmForm(forms.ModelForm):
             'release_date', 'duration',
             'is_popular', 'is_coming_soon',
             'is_family', 'is_hero_image']
-
 
 class StaffBookingForm(forms.ModelForm):
     class Meta:
@@ -26,6 +31,7 @@ class StaffBookingForm(forms.ModelForm):
             'film_schedule': forms.Select(attrs={'class': 'form-select'}),
             'seat': forms.Select(attrs={'class': 'form-select'}),
             'user': forms.Select(attrs={'class': 'form-select'}),
+            
         }
 
 
