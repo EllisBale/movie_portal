@@ -18,6 +18,7 @@ class BookingForm(forms.Form):
         choices=[],
         widget=forms.CheckboxSelectMultiple,
         label="Select your seats (max 8)",
+        required=False,
     )
 
     def __init__(self, *args, **kwargs):
@@ -28,17 +29,16 @@ class BookingForm(forms.Form):
         available_seats = [(seat, seat) for seat in ALL_SEATS]
 
         if schedule:
-            # Remove seats already booked for this schedule
-            booked_seats = Booking.objects.filter(
-                film_schedule=schedule).values_list(
-                    'seat__seat_number', flat=True)
+             # Get seats already booked for this schedule
+            booked_seats_qs = Booking.objects.filter(film_schedule=schedule).select_related('seat')
+            booked_seats = [f"{b.seat.row}{b.seat.number}" for b in booked_seats_qs]
 
+            # Filter out booked seats
             available_seats = [
-                (seat, seat) for seat in ALL_SEATS
-                if seat not in booked_seats
-                ]
+                (seat, seat) for seat in ALL_SEATS if seat not in booked_seats
+        ]
 
-        self.fields['seat_numbers'].choices = available_seats
+            self.fields['seat_numbers'].choices = available_seats
 
     def clean_seat_numbers(self):
         seats = self.cleaned_data.get('seat_numbers')
