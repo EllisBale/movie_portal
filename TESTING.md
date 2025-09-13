@@ -106,15 +106,22 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Page | Chrome | Firefox | Safari | Notes |
+| Page | Chrome | Firefox | Microsoft Edge | Notes |
 | --- | --- | --- | --- | --- |
-| Register | ![screenshot](documentation/browsers/chrome-register.png) | ![screenshot](documentation/browsers/firefox-register.png) | ![screenshot](documentation/browsers/safari-register.png) | Works as expected |
-| Login | ![screenshot](documentation/browsers/chrome-login.png) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/safari-login.png) | Works as expected |
-| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
-| Add Blog | ![screenshot](documentation/browsers/chrome-add-blog.png) | ![screenshot](documentation/browsers/firefox-add-blog.png) | ![screenshot](documentation/browsers/safari-add-blog.png) | Works as expected |
-| Edit Blog | ![screenshot](documentation/browsers/chrome-edit-blog.png) | ![screenshot](documentation/browsers/firefox-edit-blog.png) | ![screenshot](documentation/browsers/safari-edit-blog.png) | Works as expected |
-| Blog Post | ![screenshot](documentation/browsers/chrome-blog-post.png) | ![screenshot](documentation/browsers/firefox-blog-post.png) | ![screenshot](documentation/browsers/safari-blog-post.png) | Works as expected |
-| 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | Works as expected |
+| Register | ![screenshot](docs/testing_imgs/browser/chrome_register.png) | ![screenshot](docs/testing_imgs/browser/fox_register.png) | ![screenshot](docs/testing_imgs/browser/edge_register.png) | Works as expected |
+| Login | ![screenshot](docs/testing_imgs/browser/chrome_login.png) | ![screenshot](docs/testing_imgs/browser/fox_login.png) | ![screenshot](docs/testing_imgs/browser/edge_login.png) | Works as expected |
+| Home | ![screenshot](docs/testing_imgs/browser/chrome_home.png) | ![screenshot](docs/testing_imgs/browser/fox_home.png) | ![screenshot](docs/testing_imgs/browser/edge_home.png) | Works as expected |
+| films | ![screenshot](docs/testing_imgs/browser/chrome_films.png) | ![screenshot](docs/testing_imgs/browser/fox_films.png) | ![screenshot](docs/testing_imgs/browser/edge_films.png) | Works as expected |
+| films_details | ![screenshot](docs/testing_imgs/browser/chrome_films_details.png) | ![screenshot](docs/testing_imgs/browser/fox_film_details.png) | ![screenshot](docs/testing_imgs/browser/edge_film_detail.png) | Works as expected |
+| Family | ![screenshot](docs/testing_imgs/browser/chrome_family.png) | ![screenshot](docs/testing_imgs/browser/fox_family.png) | ![screenshot](docs/testing_imgs/browser/edge_family.png) | Works as expected |
+| Food & drink | ![screenshot](docs/testing_imgs/browser/chrome_menu.png) | ![screenshot](docs/testing_imgs/browser/fox_menu.png) | ![screenshot](docs/testing_imgs/browser/edge_menu.png) | Works as expected |
+| select_film | ![screenshot](docs/testing_imgs/browser/chrome_film_select.png) | ![screenshot](docs/testing_imgs/browser/fox_film_select.png) | ![screenshot](docs/testing_imgs/browser/edge_film_select.png) | Works as expected |
+| schedules | ![screenshot](docs/testing_imgs/browser/chrome_schedule.png) | ![screenshot](docs/testing_imgs/browser/fox_schedule.png) | ![screenshot](docs/testing_imgs/browser/edge_schedule.png) | Works as expected |
+| Seat bookings | ![screenshot](docs/testing_imgs/browser/chrome_seats.png) | ![screenshot](docs/testing_imgs/browser/fox_seat.png) | ![screenshot](docs/testing_imgs/browser/edge_seat.png) | Works as expected |
+| Profile | ![screenshot](docs/testing_imgs/browser/chrome_profile.png) | ![screenshot](docs/testing_imgs/browser/fox_profile.png) | ![screenshot](docs/testing_imgs/browser/edge_profile.png) | Works as expected |
+| Profile update | ![screenshot](docs/testing_imgs/browser/chrome_update.png) | ![screenshot](docs/testing_imgs/browser/fox_update.png) | ![screenshot](docs/testing_imgs/browser/edge_update.png) | Works as expected |
+| Change password| ![screenshot](docs/testing_imgs/browser/chrome_password.png) | ![screenshot](docs/testing_imgs/browser/fox_password.png) | ![screenshot](docs/testing_imgs/browser/edge_password.png) | Works as expected |
+| 404 | ![screenshot](docs/testing_imgs/browser/chrome_404.png) | ![screenshot](docs/testing_imgs/browser/fox_404.png) | ![screenshot](docs/testing_imgs/browser/edge_404.png) | Works as expected |
 
 
 
