@@ -92,8 +92,6 @@ The following features below are categorized by priority on what the users needs
 
 - Logout feature.
 
-- Admin/Manager edit menu items.
-
 - Confirmation of booking.
 
 - User can update profile information.
@@ -267,7 +265,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Food & Drink Page | All users can view the cinemas food & drink items. Each item displays an image, name and description giving visitors a clear idea of what's available before they arrive. Users can plan what snack they want in advance because they know what the cinema others. | ![screenshot](docs/readme_imgs/food_drink_page.png) |
 | Family Page | This page contains only family films which is sorted out by admin/staff. The hero carousel on this page only displays hero images of family films, which helps with audience relevance since the page is dedicated to family-friendly content.  | ![screenshot](docs/readme_imgs/family_page.png) |
 | Promotional (call-to-action) section | I have this type of section for the homepage and the family page. The homepage features a "Films For The Family!" section with two buttons: "Sign Up" and "View Films". This section is only displayed to users who are not logged in. Its purpose is to encourage account creation by making it clear that an account is required to book films.
-For logged-in users, this section is replaced with a different one that promotes film booking directly, providing a more relevant experience based on the user’s status. Lastly, the third section is visible to all users and is located on the family page. This section promotes the Food & Drink page, encouraging visitors to explore available snacks and meals for their cinema visit. | ![screenshot](docs/readme_imgs/family_section.png) ![screenshot](docs/readme_imgs/book_section.png) ![screenshot](docs/readme_imgs/menu_section.png)  |
+For logged-in users, this section is replaced with a different one that promotes film booking directly, providing a more relevant experience based on the user’s status. Lastly, the third section is visible to all users and is located on the family page. This section promotes the Food & Drink page, encouraging visitors to explore available snacks and meals for their cinema visit.| | ![screenshot](docs/readme_imgs/family_section.png) ![screenshot](docs/readme_imgs/book_section.png) ![screenshot](docs/readme_imgs/menu_section.png)  |
 | User Account management | Allows logged in users to update their information such as email, password, name and last name. | ![screenshot](docs/readme_imgs/profile.png) ![screenshot](docs/readme_imgs/update_profile.png) ![screenshot](docs/readme_imgs/change_password.png) |
 | My Bookings page | My Bookings page allows logged in users to view their bookings and be able to delete/cancel bookings they want to remove by pressing the delete button to the right of the booking text. The delete button will give the user a warning just incase misclicks happen on the page. | ![screenshot](docs/readme_imgs/my_bookings_page.png) |
 | Admin Manage navbar dropdown | The Manage navbar dropdown links only appear when the user is a staff/admin user. This navabar dropdown was made for staff to find the CRUD functions easier for different pages. | ![screenshot](docs/readme_imgs/manage_dropdown.png) |
@@ -646,6 +644,7 @@ There are no remaining major differences between the local version when compared
 | [capitalizemytitle:](https://capitalizemytitle.com/) | Used for creating the description of movies in this project.|
 | [name-generator:](https://www.name-generator.org.uk/) | Used for generating the names for the cast in the films.|
 | [TempMail:](https://temp-mail.org/) | Used for creating temporary emails for testing account signup/login.|
+| [pixelcut:](https://www.pixelcut.ai/create) | Used for AI expand for hero poster images. |
 
 
 ### Media
@@ -665,12 +664,40 @@ There are no remaining major differences between the local version when compared
 
 Film Images Used:
 
-- 
-- 
-- 
+- [Cat](https://pixabay.com/illustrations/cat-circle-poster-design-drawing-8185712/) by BiancaVanDijk
+- [Toad](https://pixabay.com/illustrations/ai-generated-toad-cowboy-frog-8716832/) by 1tamara2
+- [Dog](https://pixabay.com/illustrations/dog-animal-puppy-mammal-animated-8161641/) by Vikingopsy666
+- [Clown](https://pixabay.com/illustrations/ai-generated-clown-balloons-hat-8221365/) by Humpty22
+- [Paws](https://pixabay.com/illustrations/water-swimming-cat-pet-summer-3088972/) by burchcreations
+- [Sword](https://pixabay.com/illustrations/character-fantasy-warrior-armor-8786449/) by Echonn
+- [Test Image](https://pixabay.com/illustrations/man-druid-wizard-ancient-medieval-8182047/) by Quirkjunkjournals
+- [Starborn Drift](https://pixabay.com/illustrations/leadership-alien-soldier-warrior-7834929/) by Infinite_ai777
+- [Full Throttle](https://pixabay.com/vectors/car-racer-retro-mountain-poster-8799460/) by andsproject
+- [Captain Jack: Lost Beyond the Stars](https://pixabay.com/illustrations/ai-generated-astronaut-vintage-8663386/) by TyliJura
+- [Captain Jack: Lost Beyond the Stars (hero image)](https://pixabay.com/illustrations/ai-generated-astronaut-vintage-8663393/) by TyliJura
+- [Light Over the Horizon](https://pixabay.com/vectors/florida-travel-poster-landscape-5257191/) by GDJ
+- [Jack Pond](https://pixabay.com/illustrations/ai-generated-spy-agent-fbi-cia-8612733/) by TheDigitalArtist
+- [Marvin Bumblefizz](https://pixabay.com/illustrations/man-library-arcane-magic-8796734/) by Land_of_Books_YouTube
+- [Panda Adventure](https://pixabay.com/illustrations/ai-generated-super-hero-panda-9699448/) by Kyraxys
 
 
+Food & Drink Images Used:
 
+- [Popcorn](https://pixabay.com/illustrations/food-snack-popcorn-container-7908758/) by Secoura
+- [Candy](https://pixabay.com/illustrations/sweets-chocolate-candy-lollipop-7705343/)
+- [Ice Cream](https://pixabay.com/illustrations/ai-generated-ice-cream-food-8867435/) by Manik
+- [Chocolate](https://pixabay.com/illustrations/chocolate-flavor-cocoa-close-up-8919274/) by u_he12qucmwq
+- [Juices](https://pixabay.com/illustrations/ai-generated-drink-juice-8527256/) by myshoun
+- [Soft Drinks](https://pixabay.com/illustrations/ai-generated-soda-drink-cola-coke-8947090/) by rosiproductorseguros
+- [Hotdogs](https://pixabay.com/illustrations/hot-dog-food-sandwich-bread-fries-7605754/) by Hansuan_Fabregas
+- [Hot Drinks](https://pixabay.com/illustrations/disposable-coffee-drink-water-8748932/) by Claudio-Duart-Designer
+
+
+Other Images Used:
+
+- [Couple watching horror movie](https://www.freepik.com/free-photo/couple-watching-horror-movie_2278012.htm#fromView=search&page=1&position=18&uuid=5c8fe42e-c239-49bf-a576-01e3cd780bd1&query=cinema) by freepik
+- [Laughing men eating popcorn in cinema](https://www.freepik.com/free-photo/laughing-men-eating-popcorn-cinema_2273216.htm) by freepik
+- [Popcorn](https://pixabay.com/photos/corn-popcorn-snack-food-movie-7048855/) by MolnarSzabolcsErdely
 
 ### Acknowledgements
 
