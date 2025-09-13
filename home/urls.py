@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, film_family
+from home.views import *
 
 urlpatterns = [
     path('', index, name='home'),

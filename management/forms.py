@@ -4,7 +4,9 @@ from bookings.models import Booking
 from menu.models import Menu
 from django.contrib.auth import get_user_model
 
+
 User = get_user_model()
+
 
 class DateInput(forms.DateInput):
     input_type = "date"
@@ -23,6 +25,7 @@ class FilmForm(forms.ModelForm):
             'is_popular', 'is_coming_soon',
             'is_family', 'is_hero_image']
 
+
 class StaffBookingForm(forms.ModelForm):
     class Meta:
         model = Booking
@@ -31,7 +34,7 @@ class StaffBookingForm(forms.ModelForm):
             'film_schedule': forms.Select(attrs={'class': 'form-select'}),
             'seat': forms.Select(attrs={'class': 'form-select'}),
             'user': forms.Select(attrs={'class': 'form-select'}),
-            
+
         }
 
 

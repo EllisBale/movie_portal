@@ -29,14 +29,16 @@ class BookingForm(forms.Form):
         available_seats = [(seat, seat) for seat in ALL_SEATS]
 
         if schedule:
-             # Get seats already booked for this schedule
-            booked_seats_qs = Booking.objects.filter(film_schedule=schedule).select_related('seat')
-            booked_seats = [f"{b.seat.row}{b.seat.number}" for b in booked_seats_qs]
+            booked_seats_qs = Booking.objects.filter(
+                film_schedule=schedule).select_related('seat')
+            booked_seats = [
+                f"{b.seat.row}{b.seat.number}" for b in booked_seats_qs
+                ]
 
             # Filter out booked seats
             available_seats = [
                 (seat, seat) for seat in ALL_SEATS if seat not in booked_seats
-        ]
+            ]
 
             self.fields['seat_numbers'].choices = available_seats
 

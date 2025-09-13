@@ -1,23 +1,5 @@
 from django.urls import path
-from .views import (
-    film_create,
-    film_delete,
-    film_update,
-    manage_films,
-    manage_schedules,
-    schedule_create,
-    schedule_delete,
-    manage_bookings,
-    booking_update,
-    booking_delete,
-    manage_user,
-    user_delete,
-    user_update,
-    menu_update,
-    menu_delete,
-    menu_create,
-    schedule_update
-    )
+from management.views import *
 
 
 urlpatterns = [

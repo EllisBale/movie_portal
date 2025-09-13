@@ -1,12 +1,5 @@
 from django.urls import path
-from .views import (
-    booking_page,
-    select_film,
-    booking_success,
-    film_schedules,
-    user_booking,
-    user_booking_delete
-)
+from bookings.views import *
 
 
 urlpatterns = [

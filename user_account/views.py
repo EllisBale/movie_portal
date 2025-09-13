@@ -17,6 +17,9 @@ def profile_view(request):
 
 @login_required
 def profile_update(request):
+    """
+    Allows users to update there profile information on a form.
+    """
     if request.method == 'POST':
         form = ProfileUpdateForm(request.POST, instance=request.user)
         if form.is_valid():

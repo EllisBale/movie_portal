@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import film_list, film_detail
+from films.views import *
 from bookings.views import film_schedules
 
 urlpatterns = [
