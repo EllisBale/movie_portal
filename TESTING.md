@@ -191,26 +191,22 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Target | Expectation | Outcome | Screenshot |
 | --- | --- | --- | --- |
-| As a blog owner | I would like to create new blog posts with a title, featured image, and content | so that I can share my experiences with my audience. | ![screenshot](documentation/features/feature01.png) |
-| As a blog owner | I would like to update existing blog posts | so that I can correct or add new information to my previous stories. | ![screenshot](documentation/features/feature02.png) |
-| As a blog owner | I would like to delete blog posts | so that I can remove outdated or irrelevant content from my blog. | ![screenshot](documentation/features/feature03.png) |
-| As a blog owner | I would like to retrieve a list of all my published blog posts | so that I can manage them from a central dashboard. | ![screenshot](documentation/features/feature04.png) |
-| As a blog owner | I would like to preview a post as draft before publishing it | so that I can ensure formatting and content appear correctly. | ![screenshot](documentation/features/feature05.png) |
-| As a blog owner | I would like to review comments before they are published | so that I can filter out spam or inappropriate content. | ![screenshot](documentation/features/feature06.png) |
-| As a blog owner | I would like to approve or reject comments from users | so that I can maintain control over the discussion on my posts. | ![screenshot](documentation/features/feature07.png) |
-| As a blog owner | I would like to view a list of all comments (both approved and pending) | so that I can manage user engagement effectively. | ![screenshot](documentation/features/feature08.png) |
-| As a blog owner | I would like to edit or delete user comments | so that I can clean up or remove inappropriate responses after they've been posted. | ![screenshot](documentation/features/feature09.png) |
-| As a registered user | I would like to log in to the site | so that I can leave comments on blog posts. | ![screenshot](documentation/features/feature10.png) |
-| As a registered user | I would like to register for an account | so that I can become part of the community and engage with the blog. | ![screenshot](documentation/features/feature11.png) |
-| As a registered user | I would like to leave a comment on a blog post | so that I can share my thoughts or ask questions about the owner's experiences. | ![screenshot](documentation/features/feature12.png) |
-| As a registered user | I would like my comment to show my name and the timestamp | so that others can see who I am and when I left the comment. | ![screenshot](documentation/features/feature13.png) |
-| As a registered user | I would like to receive a notification or message saying my comment is pending approval | so that I understand it hasn't been posted immediately. | ![screenshot](documentation/features/feature14.png) |
-| As a registered user | I would like to edit or delete my own comments | so that I can fix mistakes or retract my statement. | ![screenshot](documentation/features/feature15.png) |
-| As a guest user | I would like to read blog posts without registering | so that I can enjoy the content without needing to log in. | ![screenshot](documentation/features/feature16.png) |
-| As a guest user | I would like to browse past posts | so that I can explore the blog's full content history. | ![screenshot](documentation/features/feature17.png) |
-| As a guest user | I would like to register for an account | so that I can participate in the community by leaving comments on posts. | ![screenshot](documentation/features/feature18.png) |
-| As a guest user | I would like to see the names of other commenters on posts | so that I can get a sense of community interaction before registering. | ![screenshot](documentation/features/feature19.png) |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/feature20.png) |
+| As a User | I want to be able to make an account,| so that I can view my bookings and make bookings. | ![screenshot](docs/testing_imgs/user_stories/user_story_1.png)  |
+| As a User | I want to be able to view a selection of films, | so that I have a variety of films to choose to watch. | ![screenshot](docs/testing_imgs/user_stories/user_story_2.png)  |
+| As a User | I want to feel immersive and engaging when visting the homepage,  | so that I can get excited about the movies and cinema atmosphere | ![screenshot](docs/testing_imgs/user_stories/user_story_3.png) |
+| As a User | I want to view upcoming movies, | so I can decide to make a booking. | ![screenshot](docs/testing_imgs/user_stories/user_story_4.png) |
+| As a User | I want to be able to view drinks and snacks, | so that I know what snacks the cinema offers. | ![screenshot](docs/testing_imgs/user_stories/user_story_5.png) |
+| As a User | I want to receive confirmation of booking, | so that I know the booking went through. | ![screenshot](docs/testing_imgs/user_stories/user_story_6.png) |
+| As a User | I want to view family films, | so I can view films that are suitable for watching with the family. | ![screenshot](docs/testing_imgs/user_stories/user_story_7.png) |
+| As a logged in User | I want to be able to make bookings for films,  |  so that I can make a booking from home to watch movie. | ![screenshot](docs/testing_imgs/user_stories/user_story_8.png) |
+| As a logged in User | I want to be able to view available seats, |  so that I decide If I want to book that seat. | ![screenshot](docs/testing_imgs/user_stories/user_story_9.png) |
+| As a logged in User | I want to change my profile information, | so that I can change name, email address and password. | ![screenshot](docs/testing_imgs/user_stories/user_story_10.png) | 
+| As a logged in User | I want to be able to cancel a booking, | so that in case plans change. | ![screenshot](docs/testing_imgs/user_stories/user_story_11.png) |
+| As a Admin/Manager | I want to be able to access the admin controls through the navbar, | so I can quickly edit, add and delete films, bookings, schedules and more. | ![screenshot](docs/testing_imgs/user_stories/user_story_12.png)  |
+| As a Admin/Manager | I want to be able to view users bookings, | so that I can remove bookings, see how busy cinema gets and verify seat numbers. | ![screenshot](docs/testing_imgs/user_stories/user_story_13.png) |
+| As a Admin/Manager  | I want to be able to edit, delete and add films from the lists, | so that I can change movie image, change description and change movie name. | ![screenshot](docs/testing_imgs/user_stories/user_story_14.png) |
+| As a Admin/Manager | I want to be able to update the menu, | so that I can add new snacks/drinks to the menu and remove items the cinema no longer sells. | ![screenshot](docs/testing_imgs/user_stories/user_story_15.png) |
+
 
 ## Automated Testing
 
