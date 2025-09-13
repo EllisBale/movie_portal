@@ -6,6 +6,9 @@ from datetime import date, time
 
 
 class TestSeatAndBookingModels(TestCase):
+    """
+    Test for Seat and Booking models.
+    """
     def setUp(self):
         self.genre = Genre.objects.create(name="Action")
         self.film = Film.objects.create(
@@ -44,9 +47,15 @@ class TestSeatAndBookingModels(TestCase):
         )
 
     def test_seat_str(self):
+        """
+        Test that Seat __str__ method returns th correct row and number.
+        """
         self.assertEqual(str(self.seat), "A1")
 
     def test_booking_str(self):
+        """
+        Test that Booking __str__ returns username and seat for schedule.
+        """
         self.assertEqual(
             str(self.booking),
             f"{self.user.username} - {self.seat} for {self.schedule}")
