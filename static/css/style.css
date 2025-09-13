@@ -100,6 +100,7 @@ a:hover { color: var(--colour-accent) }
     margin-bottom: 0 !important;
     background: #1a1a2e;
     border: none;
+    color: #fff;
 }
 
 
