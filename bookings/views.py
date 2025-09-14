@@ -38,7 +38,7 @@ def film_schedules(request, film_id):
 
 
 @login_required
-def booking_page(request, schedule_id):
+def booking_seat(request, schedule_id):
     """
     Handles the seat selection and creates booking for a film schedule
     """

@@ -455,6 +455,7 @@ Deployment steps are as follows, after account setup:
 | `DATABASE_URL` | user-inserts-own-postgres-database-url |
 | `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
 | `SECRET_KEY` | any-random-secret-key |
+| `HOST` | your-heroku-app-name.herokuapp.com |
 
 Heroku needs some additional files in order to deploy properly.
 
@@ -568,6 +569,7 @@ import os
 os.environ.setdefault("SECRET_KEY", "any-random-secret-key")
 os.environ.setdefault("DATABASE_URL", "user-inserts-own-postgres-database-url")
 os.environ.setdefault("CLOUDINARY_URL", "user-inserts-own-cloudinary-url")  # only if using Cloudinary
+os.environ.setdefault("HOST", "127.0.0.1")
 
 # local environment only (do not include these in production/deployment!)
 os.environ.setdefault("DEBUG", "True")

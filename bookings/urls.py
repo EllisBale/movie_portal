@@ -8,7 +8,7 @@ urlpatterns = [
         'film/<int:film_id>/schedules/',
         film_schedules, name='film_schedules'),
 
-    path('<int:schedule_id>/', booking_page, name='booking_page'),
+    path('<int:schedule_id>/', booking_seat, name='booking_seat'),
     path('success/', booking_success, name='booking_success'),
     path('my_bookings/', user_booking, name='user_bookings'),
     path(
