@@ -8,7 +8,7 @@ Developer: EllisBale ([EllisBale](https://www.github.com/EllisBale))
 [![badge](https://img.shields.io/badge/deployment-Heroku-purple)](https://movieportal-f2737f46bcb0.herokuapp.com)
 
 
-![screenshot](documentation/mockup.png)
+![screenshot](docs/readme_imgs/amiresponsive.png)
 
 source: [movie_portal amiresponsive](https://ui.dev/amiresponsive?url=https://movieportal-f2737f46bcb0.herokuapp.com)
 
