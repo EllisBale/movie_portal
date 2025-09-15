@@ -99,6 +99,37 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | user_account | [urls.py](https://github.com/EllisBale/movie_portal/blob/main/user_account/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EllisBale/movie_portal/main/user_account/urls.py) | ![screenshot](docs/testing_imgs/validations/user_account_urls_python.png) | ⚠️ Notes (if applicable) |
 
 
+## Responsiveness
+
+
+I've tested my deployed project to check for responsiveness issues.
+
+| Page | Mobile | Tablet | Desktop | Notes |
+| --- | --- | --- | --- | --- |
+| Register | ![screenshot](docs/testing_imgs/responsiveness/register_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/register_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/register_desktop.png) | Works as expected |
+| Login | ![screenshot](docs/testing_imgs/responsiveness/login_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/login_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/login_desktop.png) | Works as expected |
+| Home | ![screenshot](docs/testing_imgs/responsiveness/home_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/home_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/home_desktop.png) | Works as expected |
+| Films | ![screenshot](docs/testing_imgs/responsiveness/films_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/films_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/films_desktop.png) | Works as expected |
+| Films_detail | ![screenshot](docs/testing_imgs/responsiveness/films_detail_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/films_detail_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/films_detail_desktop.png) | Works as expected |
+| Family | ![screenshot](docs/testing_imgs/responsiveness/family_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/family_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/family_desktop.png) | Works as expected |
+| Menu | ![screenshot](docs/testing_imgs/responsiveness/menu_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/menu_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/menu_desktop.png) | Works as expected |
+| Booking select_film | ![screenshot](docs/testing_imgs/responsiveness/select_film_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/select_film_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/select_film_desktop.png) | Works as expected |
+| Booking schedules | ![screenshot](docs/testing_imgs/responsiveness/schedule_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/schedule_tablet.png)  | ![screenshot](docs/testing_imgs/responsiveness/schedule_desktop.png)  | Works as expected |
+| Booking Seats | ![screenshot](docs/testing_imgs/responsiveness/seat_mobile.png)  | ![screenshot](docs/testing_imgs/responsiveness/seat_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/seat_desktop.png) | Works as expected |
+| Booking Success | ![screenshot](docs/testing_imgs/responsiveness/success_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/success_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/success_desktop.png) | Works as expected |
+| My Bookings | ![screenshot](docs/testing_imgs/responsiveness/user_bookings_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/user_bookings_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/user_bookings_desktop.png) | Works as expected |
+| Profile | ![screenshot](docs/testing_imgs/responsiveness/profile_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/profile_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/profile_desktop.png) | Works as expected |
+| Profile Update | ![screenshot](docs/testing_imgs/responsiveness/update_profile_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/update_profile_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/update_profile_desktop.png) | Works as expected |
+| Profile Change Password | ![screenshot](docs/testing_imgs/responsiveness/password_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/password_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/password_desktop.png) | Works as expected |
+| Film management | ![screenshot](docs/testing_imgs/responsiveness/film_manage_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/film_manage_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/film_manage_desktop.png) | Works as expected |
+| Film management form | ![screenshot](docs/testing_imgs/responsiveness/film_form_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/film_form_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/film_form_desktop.png) | Works as expected |
+| Schedule management| ![screenshot](docs/testing_imgs/responsiveness/schedule_manage_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/schedule_manage_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/schedule_manage_desktop.png) | Works as expected |
+| Schedule management form | ![screenshot](docs/testing_imgs/responsiveness/schedule_form_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/schedule_form_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/schedule_form_desktop.png) | Works as expected |
+| Bookings management | ![screenshot](docs/testing_imgs/responsiveness/bookings_manage_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/bookings_manage_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/bookings_manage_desktop.png) | Works as expected |
+| Bookings management form | ![screenshot](docs/testing_imgs/responsiveness/bookings_form_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/bookings_form_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/bookings_form_desktop.png) | Works as expected |
+| User management| ![screenshot](docs/testing_imgs/responsiveness/user_manage_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/user_manage_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/user_manage_desktop.png) | Works as expected |
+| User management form | ![screenshot](docs/testing_imgs/responsiveness/user_form_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/user_form_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/user_form_desktop.png) | Works as expected |
+| 404 | ![screenshot](docs/testing_imgs/responsiveness/404_mobile.png) | ![screenshot](docs/testing_imgs/responsiveness/404_tablet.png) | ![screenshot](docs/testing_imgs/responsiveness/404_desktop.png) | Works as expected |
 
 
 ## Browser Compatibility
@@ -242,6 +273,25 @@ Below are the results from the full coverage report on my application that I've 
 ![screenshot](docs/testing_imgs/automation/coverage_1.png) ![screenshot](docs/testing_imgs/automation/coverage_2.png)
 
 #### Unit Test Issues
+
+**Description**
+
+Ran into an issue with films_detail view because of Cloudinary.
+
+**Steps to Reproduce**
+`  def test_film_details_page(self):
+        """
+        Test that the film_details page returns 200 status code.
+        """
+        response = self.client.get(reverse('film_detail', args=[self.film_id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'films_detail.html')`.
+
+**Expected Behaviour**
+The test responds with in the terminal "OK".
+
+**Actual Behaviour**
+`raise ValueError("Must supply cloud_name in tag or in configuration") ValueError: Must supply cloud_name in tag or in configuration.`
 
 
 
