@@ -10,7 +10,7 @@
       <div class="col-lg-3 col-md-12 mb-4 mb-lg-0 d-flex justify-content-center">
         <div class="card card-poster text-center">
           <h1 class="mb-3 text-center">{{ film.title }}</h1>
-          <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}">
+          <img src="{{ film.poster.url }}" class="card-img-top" alt="{{ film.title }}" loading="eager" fetchpriority="high">
           {% if not film.is_coming_soon %}
           <a href="{% url 'film_schedules' film.id %}" class=" custom-btn align-self-center mt-3">BOOK NOW</a>
           {% endif %}
