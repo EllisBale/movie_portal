@@ -330,7 +330,7 @@ All previously closed/fixed bugs can be tracked [here](https://www.github.com/El
 
 Any remaining open issues can be tracked [here](https://www.github.com/EllisBale/movie_portal/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
-![screenshot](documentation/bugs/gh-issues-open.png)
+![screenshot](docs/testing_imgs/bugs/unfixed_bug.png)
 
 
 ### Known Issues
