@@ -34,13 +34,13 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | menu | [menu.html](https://github.com/EllisBale/movie_portal/blob/main/menu/templates/menu.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/menu/) | ![screenshot](docs/testing_imgs/validations/menu_html_validation.png) | No Errors |
 | templates | [404.html](https://github.com/EllisBale/movie_portal/blob/main/templates/404.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/404) | ![screenshot](docs/testing_imgs/validations/404_html_validation.png) | No Errors |
 | user_account | [login.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/login.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/login/) | ![screenshot](docs/testing_imgs/validations/login_html_validation.png) | No Errors |
-| user_account | [logout.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/logout.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/logout/) | ![screenshot](docs/testing_imgs/validations/logout_html_validation.png) | No Errors |
-| user_account | [password_reset.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/password_reset.html) | [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/password/reset/)   | ![screenshot](docs/testing_imgs/validations/reset_html_validation.png) | No Errors |
-| user_account | [password_reset_done.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/password_reset_done.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/password/reset/done/) | ![screenshot](docs/testing_imgs/validations/reset_done_html_validation.png) | No Errors |
+| user_account | [logout.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/logout.html) | ⚠️ Need to login [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/logout/) | ![screenshot](docs/testing_imgs/validations/logout_html_validation.png) | No Errors |
+| user_account | [password_reset.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/password_reset.html) | ⚠️ Need to login [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/password/reset/)   | ![screenshot](docs/testing_imgs/validations/reset_html_validation.png) | No Errors |
+| user_account | [password_reset_done.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/password_reset_done.html) | ⚠️ Need to login  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/password/reset/done/) | ![screenshot](docs/testing_imgs/validations/reset_done_html_validation.png) | No Errors |
 | user_account | [signup.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/account/signup.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/accounts/signup/) | ![screenshot](docs/testing_imgs/validations/signup_html_validation.png) | No Errors |
-| user_account | [profile.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/user_account/profile.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/profile/) | ![screenshot](docs/testing_imgs/validations/profile_html_validation.png) | No Errors |
-| user_account | [profile_update.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/user_account/profile_update.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/profile/update/) | ![screenshot](docs/testing_imgs/validations/profile_update_html_validation.png) | No Errors |
-| user_account | [change_password.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/user_account/profile_update.html) |  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/profile/change_password/) | ![screenshot](docs/testing_imgs/validations/change_password_html_validation.png) | No Errors |
+| user_account | [profile.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/user_account/profile.html) | ⚠️ Need to login [Link](https://movieportal-f2737f46bcb0.herokuapp.com/profile/) | ![screenshot](docs/testing_imgs/validations/profile_html_validation.png) | No Errors |
+| user_account | [profile_update.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/user_account/profile_update.html) | ⚠️ Need to login  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/profile/update/) | ![screenshot](docs/testing_imgs/validations/profile_update_html_validation.png) | No Errors |
+| user_account | [change_password.html](https://github.com/EllisBale/movie_portal/blob/main/user_account/templates/user_account/profile_update.html) | ⚠️ Need to login  [Link](https://movieportal-f2737f46bcb0.herokuapp.com/profile/change_password/) | ![screenshot](docs/testing_imgs/validations/change_password_html_validation.png) | No Errors |
 
 
 
@@ -308,7 +308,7 @@ I've used [GitHub Issues](https://www.github.com/EllisBale/movie_portal/issues) 
 
 All previously closed/fixed bugs can be tracked [here](https://www.github.com/EllisBale/movie_portal/issues?q=is%3Aissue+is%3Aclosed+label%3Abug).
 
-![screenshot](documentation/bugs/gh-issues-closed.png)
+![screenshot](docs/testing_imgs/bugs/fixed_bugs.png)
 
 
 ### Unfixed Bugs
@@ -325,9 +325,8 @@ Any remaining open issues can be tracked [here](https://www.github.com/EllisBale
 
 | Issue | Screenshot |
 | --- | --- |
-| On devices smaller than 375px, the page starts to have horizontal `overflow-x` scrolling. | ![screenshot](documentation/issues/overflow.png) |
-| When validating HTML with a semantic `<section>` element, the validator warns about lacking a header `h2-h6`. This is acceptable. | ![screenshot](documentation/issues/section-header.png) |
-| Validation errors on "signup.html" coming from the Django Allauth package. | ![screenshot](documentation/issues/allauth.png) |
+| On mobile devices 320px wide the password help text is not centered. | ![screenshot](docs/testing_imgs/known_issues/password_layout_issue.png) |
+
 
 > [!IMPORTANT]  
 > There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
