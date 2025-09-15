@@ -277,9 +277,7 @@ footer { background: var(--colour-secondary); }
 .form-text { color: white; }
 
 .form-check {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row-reverse;
+    display: inline-block;
 }
 
 .details-heading { color: #acb0b6; }
