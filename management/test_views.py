@@ -61,6 +61,27 @@ class TestManagementViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'management/film_form.html')
 
+    def test_film_create_view_post(self):
+        """
+        Test that film_create view returns 302 status code.
+        """
+        data = {
+            "title": "New Film",
+            "description": "Desc",
+            "cast": "Actor1",
+            "genre": self.genre.id,
+            "duration": 100,
+            "poster": "placeholder",
+            "release_date": date.today(),
+            "is_popular": False,
+            "is_coming_soon": False,
+            "is_family": False,
+            "is_hero_image": False
+        }
+        response = self.client.post(reverse("film_create"), data)
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(Film.objects.filter(title="New Film").exists())
+
     def test_manage_schedules_view(self):
         """
         Test that the schedule page returns 200 status code.
@@ -76,6 +97,20 @@ class TestManagementViews(TestCase):
         response = self.client.get(reverse('schedule_create'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'management/schedule_form.html')
+
+    def test_schedule_create_view_post(self):
+        """
+        Test that schedule_create returns 302 status code.
+        """
+        new_film = Film.objects.create(
+            title="Shedule Film", description="Desc",
+            cast="Actor", genre=self.genre,
+            duration=90, poster="placeholder", release_date=date.today()
+        )
+        data = {"film": new_film.id, "days_of_week": 1, "slot": self.slot.id}
+        response = self.client.post(reverse("schedule_create"), data)
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(FilmSchedule.objects.filter(film=new_film).exists())
 
     def test_manage_bookings_view(self):
         """
