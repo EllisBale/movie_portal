@@ -163,21 +163,25 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Mobile | Desktop |
 | --- | --- | --- |
-| Home | ![screenshot](docs/lighthouse/) | ![screenshot](docs/lighthouse/) |
-| Films | ![screenshot](documentation/lighthouse/mobile-login.png) | ![screenshot](documentation/lighthouse/desktop-login.png) |
-| Film Detail | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home.png) |
-| Family | ![screenshot](documentation/lighthouse/mobile-add-blog.png) | ![screenshot](documentation/lighthouse/desktop-add-blog.png) |
-| Food & Drink (Menu) | ![screenshot](documentation/lighthouse/mobile-edit-blog.png) | ![screenshot](documentation/lighthouse/desktop-edit-blog.png) |
-| Login| ![screenshot](documentation/lighthouse/mobile-blog-post.png) | ![screenshot](documentation/lighthouse/desktop-blog-post.png) |
-| Register | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
-| Select Film | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
-| Select Schedule | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
-| Select Seat | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
-| Profile | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
-| Profile Update | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
-| Profile Change Password | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
-| User Bookings | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
-| 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
+| Home | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_home_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_home_desktop.png) |
+| Films | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_films_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_films_desktop.png) |
+| Film Detail | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_details_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_details_desktop.png) |
+| Family | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_family_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_family_desktop.png) |
+| Food & Drink (Menu) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_menu_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_menu_desktop.png) |
+| Login| ![screenshot](docs/testing_imgs/lighthouse/lighthouse_login_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_login_desktop.png) |
+| Register | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_sign_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_sign_desktop.png) |
+| Select Film | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_selectfilm_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse-selectfilm_desktop.png) |
+| Select Schedule | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_schedule_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_schedule_desktop.png) |
+| Select Seat | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_seat_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_seat_desktop.png) |
+| Profile | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_profile_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_profile_desktop.png) |
+| Profile Update | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_profile_update_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_profile_update_desktop.png) |
+| Profile Change Password | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_password_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_password_desktop.png) |
+| User Bookings | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_user_bookings_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_user_bookings_desktop.png) |
+| Film Management| ![screenshot](docs/testing_imgs/lighthouse/lighthouse_manage_film_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_user_bookings_desktop.png) |
+| Schedule Management| ![screenshot](docs/testing_imgs/lighthouse/lighthouse_manage_schedule_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_manage_schedule_desktop.png) |
+| Bookings Management| ![screenshot](docs/testing_imgs/lighthouse/lighthouse_manage_bookings_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_manage_bookings_desktop.png) |
+| User Management| ![screenshot](docs/testing_imgs/lighthouse/lighthouse_manage_users_mobile.png) | ![screenshot](docs/testing_imgs/lighthouse/lighthouse_manage_users_desktop.png) |
+
 
 
 
