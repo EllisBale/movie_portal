@@ -20,7 +20,7 @@ source: [movie_portal amiresponsive](https://ui.dev/amiresponsive?url=https://mo
 
 The website also provides **cinema managers** with efficient tools to manage **film listings**, **schedules** and **bookings**.
 
-The target audience would be for **casual and frequent moviegoers** of all different age groups, particularly **families and young adults**. The platform also works for **mobile users,** considering how many people have mobiles compared more than computers, making mobile users more likely to visit the site.
+The target audience would be for **casual and frequent moviegoers** of all different age groups, particularly **families and young adults**. The platform also works for **mobile users,** considering how many people have mobiles compared to computers, making mobile users more likely to visit the site.
 
 I chose to develop an **online cinema booking system** because I wanted to create something **practical and useful**, a **real-world application** that people can use every day. **Cinema-going** is a popular recreational activity, yet many users face **inconveniences** when it comes to **booking tickets, selecting seats** and **viewing available films**. By developing this project, I aim to **enhance the cinema experience** and make it more **accessible, convenient and user-friendly** for a wide audience.
 
@@ -28,7 +28,7 @@ Another reason I chose this project is that it gave me a great opportunity to wo
 
 
 
-For this project, I researched popular cinema websites such as **Vue, Odeon and Cineworld**. When looking at these websites, I noticed a common trend in which all of the websites had a landing page with **hero carousel images**. They would include **current movies showing in cinemas** which would seem to grab a user's attention. It would benefit my website to have a **carousel hero images** on my landing page, as it will show the user what the website is about. Most of the websites I visited had a **dark theme** to it to match the **cinematic tone**, which makes it immersive. From this I will be using more **dark tones** for this project.
+For this project, I researched popular cinema websites such as **Vue, Odeon and Cineworld**. When looking at these websites, I noticed a common trend in which all of the websites had a landing page with **hero carousel images**. They would include **current movies showing in cinemas** which would seem to grab a user's attention. It would benefit my website to have a **carousel hero images** on my landing page, as it will show the user what the website is about. Most of the websites I visited had a **dark theme**, which matches the **cinematic tone** and makes it immersive. From this I will be using more **dark tones** for this project.
 
 
 **Websites Visited:**
@@ -54,9 +54,9 @@ The project's purpose is to provide an **immersive** and **user-friendly** platf
 
 This platform also provides an administrative interface that allows cinema managers to:
 
-- **Create new films** and add details such as **title, genre, duration, showtimes, posters and etc.**
+- **Create new films** and add details such as **title, genre, duration, showtimes, posters, etc.**
 - **Update existing films** to modify **schedules and film details.**
-- **Delete films** that **no longer are showing in cinemas.**
+- **Delete films** that are **no longer are showing in cinemas.**
 
 
 **Business Goals**
@@ -72,7 +72,7 @@ This platform also provides an administrative interface that allows cinema manag
 #### 2. Scope
 
 
-The following features below are categorized by priority on what the users needs and development goals are.
+The following features below are categorised by priority on what the users needs and development goals are.
 
 
  **Must-Have Features:**
@@ -224,19 +224,19 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | --- | --- | --- |
 | As a User | I want to be able to make an account,| so that I can view my bookings and make bookings. |
 | As a User | I want to be able to view a selection of films, | so that I have a variety of films to choose to watch. |
-| As a User | I want to feel immersive and engaging when visting the homepage,  | so that I can get excited about the movies and cinema atmosphere |
+| As a User | I want it to feel immersive and engaging when visiting the homepage,  | so that I can get excited about the movies and cinema atmosphere |
 | As a User | I want to view upcoming movies, | so I can decide to make a booking. |
 | As a User | I want to be able to view drinks and snacks, | so that I know what snacks the cinema offers. |
 | As a User | I want to receive confirmation of booking, | so that I know the booking went through. |
 | As a User | I want to view family films, | so I can view films that are suitable for watching with the family. |
 | As a logged in User | I want to be able to make bookings for films,  |  so that I can make a booking from home to watch movie. |
-| As a logged in User | I want to be able to view available seats, |  so that I decide If I want to book that seat. |
+| As a logged in User | I want to be able to view available seats, |  so that I decide if I want to book that seat. |
 | As a logged in User | I want to change my profile information, | so that I can change name, email address and password. |
 | As a logged in User | I want to be able to cancel a booking, | so that in case plans change. |
-| As a Admin/Manager | I want to be able to access the admin controls through the navbar, | so I can quickly edit, add and delete films, bookings, schedules and more. |
-| As a Admin/Manager | I want to be able to view users bookings, | so that I can remove bookings, see how busy cinema gets and verify seat numbers. |
-| As a Admin/Manager  | I want to be able to edit, delete and add films from the lists, | so that I can change movie image, change description and change movie name. |
-| As a Admin/Manager | I want to be able to update the menu, | so that I can add new snacks/drinks to the menu and remove items the cinema no longer sells. |
+| As an Admin/Manager | I want to be able to access the admin controls through the navbar, | so I can quickly edit, add and delete films, bookings, schedules and more. |
+| As an Admin/Manager | I want to be able to view users bookings, | so that I can remove bookings, see how busy cinema gets and verify seat numbers. |
+| As an Admin/Manager  | I want to be able to edit, delete and add films from the lists, | so that I can change movie image, change description and change movie name. |
+| As an Admin/Manager | I want to be able to update the menu, | so that I can add new snacks/drinks to the menu and remove items the cinema no longer sells. |
 
 
 
@@ -252,24 +252,24 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Register | Authentication is handled by allauth, allowing users to register accounts. I have added a custom form to it, so that I can add first name and last name. | ![screenshot](docs/readme_imgs/register_page.png) |
 | Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](docs/readme_imgs/login.png) |
 | Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](docs/readme_imgs/logout_page.png) |
-| Home page | The hompage displays a list of current popular movies that are currently available at the cinema. Each film uses a reusable `film_poster_layout.html` partial for consistency in design and layout. Users can view more details about the film by clicking on the poster, carousel and text. Underneath the popular movie display, it displays coming soon movies. These are movies that are not listed in the film list because they aren't showing in cinema yet. The coming soon movies uses the `film_poster_layout.html` partial for consistency. Users are able to click on the coming soon movies to view more details about them. The difference between the `films_detail.html` for coming soon movies is that the button is removed to show users you can't book them.   | ![screenshot](docs/readme_imgs/hompage.png) |
+| Home page | The homepage displays a list of current popular movies that are currently available at the cinema. Each film uses a reusable `film_poster_layout.html` partial for consistency in design and layout. Users can view more details about the film by clicking on the poster, carousel and text. Underneath the popular movie display, it displays coming soon movies. These are movies that are not listed in the film list because they aren't showing in cinema yet. The coming soon movies uses the `film_poster_layout.html` partial for consistency. Users are able to click on the coming soon movies to view more details about them. The difference between the `films_detail.html` for coming soon movies is that the button is removed to show users you can't book them.   | ![screenshot](docs/readme_imgs/hompage.png) |
 | Film Listings | Displays all current films with title and posters. The film listing can be found on films page, homepage and Family page. This feature is enabled for all the user types. The posters contains a hover effect, the hover effect makes the other posters scale down in size slightly and adds a slight greyscale to it. This hover effect lets the user focus on the poster they are hovered over. The layout used for movies is from the `film_poster_layout.html` which made it useful for using it for other pages.   | ![screenshot](docs/readme_imgs/films_page.png) |
 | View Film details | Users can view more information about a film if they click on the films poster or title. When the user has clicked on a film, they can view information such as genre, cast, description, runtime and release date. The films detail page includes a book now button so that logged-in-users can book. If you are a user that is not logged in and clicks "Book Now", they will be sent to the login page. Schedules are added at the bottom of the details page to show all user types what schedules are on for that film. | ![screenshot](docs/readme_imgs/film_details.png) |
-| Seat booking | Logged-in users can select their preferred seats from an interactive seating layout. Booked seats are clearly marked as unavailable, while available seats can be selected individually or in groups. Chosen seats highlight in blue and a hover effect helps users see which seat they are about to pick. This gives users a clear, visual and intuitive way to secure their spots. Once the user has selected the seat/seats and finish booking, their seats will be disabled so other users can't book them and it will be saved to the database. Seat booking page includes a modal that pops up to let user know if they have selected more than the max seats or less then one seat. | ![screenshot](docs/readme_imgs/seats_page.png) |
+| Seat booking | Logged-in users can select their preferred seats from an interactive seating layout. Booked seats are clearly marked as unavailable, while available seats can be selected individually or in groups. Chosen seats are highlight in blue and a hover effect helps users see which seat they are about to pick. This gives users a clear, visual and intuitive way to secure their spots. Once the user has selected the seat/seats and finished booking, their seats will be disabled so other users can't book them and it will be saved to the database. Seat booking page includes a modal that pops up to let user know if they have selected more than the max seats or less than one seat. | ![screenshot](docs/readme_imgs/seats_page.png) |
 | Navigation bar | A fully responsive navigation bar built with Bootstrap. On mobile and tablet devices, it collapses into a burger menu for easier access. The navbar is present on every page, ensuring consistent and intuitive site navigation. It includes links to **Home, Films, Family, Food & Drink, Booking, My Booking, Profile, Manage, Login, Register and Logout**. The **Booking** link is only visible to logged-in users, making the experience tailored to user status. The navbar contains the companies logo which remains top left at all times.  | ![screenshot](docs/readme_imgs/nav.png) |
 | Carousel (Hero Section)| Admin/Managers can add any film to the hero section. Having hero carousel with films engages users with visuals as well as highlighting current releases. The carousel moves onto the next image after 7 seconds if the user isn't hovered of the element. This is good for users so that if their mouse is hovered near the Book Now button, it will stop moving so the user can click on it. The carousel is on the homepage, films and family page. The book now button will send the user to the login page if they are not logged in and the schedules page if they are logged in. | ![screenshot](docs/readme_imgs/carousel.png) |
-| Footer | The footer contains opening hours, social media pages, contact details, location and company logo. The footer is included on everypage. Font Awesome icons are added to the footer to show the user what the links are for without having to read anything. The links in the footer contain a hover effect, the same as the navbar text. | ![screenshot](docs/readme_imgs/footer.png) |
+| Footer | The footer contains opening hours, social media pages, contact details, location and company logo. The footer is included on every page. Font Awesome icons are added to the footer to show the user what the links are for without having to read anything. The links in the footer contain a hover effect, the same as the navbar text. | ![screenshot](docs/readme_imgs/footer.png) |
 | Scroll-to-Top Button | This button allows users to quickly return to the top of the page. This helps save time because the user doesn't have to manually scroll to the top of the page if it is a long page. This button is blocked on some pages that don't require it such as the login in page. The button styling is the same as other buttons on the page to show that it is functional.   | ![screenshot](docs/readme_imgs/back_to_top_button.png) |
-| Select film page | This page is only available for logged in users and its the first step in booking a film to watch.    | ![screenshot](docs/readme_imgs/select_film_page.png) |
+| Select film page | This page is only available for logged in users and it's the first step in booking a film to watch.    | ![screenshot](docs/readme_imgs/select_film_page.png) |
 | Schedule Page | Logged-in users can view a schedule of available times for the film they have chosen.  | ![screenshot](docs/readme_imgs/schedule_page.png) |
 | Food & Drink Page | All users can view the cinemas food & drink items. Each item displays an image, name and description giving visitors a clear idea of what's available before they arrive. Users can plan what snack they want in advance because they know what the cinema others. | ![screenshot](docs/readme_imgs/food_drink_page.png) |
 | Family Page | This page contains only family films which is sorted out by admin/staff. The hero carousel on this page only displays hero images of family films, which helps with audience relevance since the page is dedicated to family-friendly content.  | ![screenshot](docs/readme_imgs/family_page.png) |
 | Promotional (call-to-action) section | I have this type of section for the homepage and the family page. The homepage features a "Films For The Family!" section with two buttons: "Sign Up" and "View Films". This section is only displayed to users who are not logged in. Its purpose is to encourage account creation by making it clear that an account is required to book films.
 For logged-in users, this section is replaced with a different one that promotes film booking directly, providing a more relevant experience based on the user’s status. Lastly, the third section is visible to all users and is located on the family page. This section promotes the Food & Drink page, encouraging visitors to explore available snacks and meals for their cinema visit.| | ![screenshot](docs/readme_imgs/family_section.png) ![screenshot](docs/readme_imgs/book_section.png) ![screenshot](docs/readme_imgs/menu_section.png)  |
 | User Account management | Allows logged in users to update their information such as email, password, name and last name. | ![screenshot](docs/readme_imgs/profile.png) ![screenshot](docs/readme_imgs/update_profile.png) ![screenshot](docs/readme_imgs/change_password.png) |
-| My Bookings page | My Bookings page allows logged in users to view their bookings and be able to delete/cancel bookings they want to remove by pressing the delete button to the right of the booking text. The delete button will give the user a warning just incase misclicks happen on the page. | ![screenshot](docs/readme_imgs/my_bookings_page.png) |
-| Admin Manage navbar dropdown | The Manage navbar dropdown links only appear when the user is a staff/admin user. This navabar dropdown was made for staff to find the CRUD functions easier for different pages. | ![screenshot](docs/readme_imgs/manage_dropdown.png) |
-| Admin manage films list  | This page is for staff/admin only and it allows for CRUD function for films. Staff/admin can edit a film through a form of any movie that is added. Staff/admin can edit title, descripition, poster image, hero image, cast, genre, release date and duration. This form also includes checkboxes for popular, coming soon, family and hero image which adds them to specific sections or pages. Staff/admin can add films with the same form they use for film edit as well as delete films. | ![screenshot](docs/readme_imgs/manage_films.png) ![screenshot](docs/readme_imgs/film_form.png)  |
+| My Bookings page | My Bookings page allows logged in users to view their bookings and be able to delete/cancel bookings they want to remove by pressing the delete button to the right of the booking text. The delete button will give the user a warning just in case misclicks happen on the page. | ![screenshot](docs/readme_imgs/my_bookings_page.png) |
+| Admin Manage navbar dropdown | The Manage navbar dropdown links only appear when the user is a staff/admin user. This navbar dropdown was made for staff to find the CRUD functions easier for different pages. | ![screenshot](docs/readme_imgs/manage_dropdown.png) |
+| Admin manage films list  | This page is for staff/admin only and it allows for CRUD function for films. Staff/admin can edit a film through a form of any movie that is added. Staff/admin can edit title, description, poster image, hero image, cast, genre, release date and duration. This form also includes checkboxes for popular, coming soon, family and hero image which adds them to specific sections or pages. Staff/admin can add films with the same form they use for film edit as well as delete films. | ![screenshot](docs/readme_imgs/manage_films.png) ![screenshot](docs/readme_imgs/film_form.png)  |
 | Admin manage schedule list  | This page is for staff/admin only and it allows for adding, viewing and deleting schedules. When user clicks "Add schedule" it will open up a create schedule form containing film, days of week, slot, specific date and specific time. I have made it so it is on a weekly schedule to make it easier and quicker to add schedules.  | ![screenshot](docs/readme_imgs/manage_schedule.png) ![screenshot](docs/readme_imgs/schedule_form.png)  |
 | Admin manage booking list | This page is for staff/admin only and it allows for viewing, editing and deleting bookings. The edit booking form allows staff/admins to edit film schedule, seat and user. | ![screenshot](docs/readme_imgs/booking_list.png) ![screenshot](docs/readme_imgs/booking_form.png)  |
 | Admin manage user list | This page is for staff/admin only and it allows for viewing, editing and deleting users. Staff/admins can change first name, last name, email address and staff status.  | ![screenshot](docs/readme_imgs/manage_booking.png) ![screenshot](docs/readme_imgs/user_form.png)  |
@@ -297,10 +297,10 @@ For logged-in users, this section is replaced with a different one that promotes
 - **QR Code Tickets**: Generate a QR code for each booking so users can scan it on entry to the cinema.
 - **Search Bar on Navbar**: Add a search function for users to quickly find specific films instead of scrolling. Search could include films, genres, food and drink items, and showtimes.
 - **Admin Dashboard Analytics**: Provide site admins/staff with an analytics dashboard displaying user activity and booking statistics.
-- **Payment Intergration**: Allow users to book and pay for tickets online without visiting the cinema. This feature would build on the seat booking system and could use a payment integration tool such as Stripe via the Django package `django-stripe-payments`.
+- **Payment Integration**: Allow users to book and pay for tickets online without visiting the cinema. This feature would build on the seat booking system and could use a payment integration tool such as Stripe via the Django package `django-stripe-payments`.
 - **Memberships**: Introduce membership tiers offering benefits such as discounts on films and food & drink items, with higher tiers unlocking greater rewards.
 - **Movie Trailer**: Add the ability for users to watch film trailers, displayed on the `films_detail.html` page for each film.
-- **Delete Modal**: Add a custom modal instead of the alert function in js to give users better user experience.
+- **Delete Modal**: Add a custom modal instead of the alert function in js to give users a better user experience.
 
 
 
@@ -337,7 +337,7 @@ For logged-in users, this section is replaced with a different one that promotes
 
 ### Data Model
 
-Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
+Entity Relationship Diagrams (ERD) help to visualise database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
 
 
 ![screenshot](docs/readme_imgs/erd.png)
@@ -517,7 +517,7 @@ To obtain your own **Cloudinary API key**, create an account and log in.
 
 This project uses [Neon PostgrSQL Database](https://neon.com/) for the Relational Database with Django.
 
-To obtain your **Neon PostgreSQL Databse**, I followed these steps:
+To obtain your **Neon PostgreSQL Database**, I followed these steps:
 
 - Go to [Neon](https://neon.com/) to create a **free account**.
 - From your **dashboard**, create a **new project**.

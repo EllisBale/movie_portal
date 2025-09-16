@@ -247,10 +247,10 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a logged in User | I want to be able to view available seats, |  so that I decide If I want to book that seat. | ![screenshot](docs/testing_imgs/user_stories/user_story_9.png) |
 | As a logged in User | I want to change my profile information, | so that I can change name, email address and password. | ![screenshot](docs/testing_imgs/user_stories/user_story_10.png) | 
 | As a logged in User | I want to be able to cancel a booking, | so that in case plans change. | ![screenshot](docs/testing_imgs/user_stories/user_story_11.png) |
-| As a Admin/Manager | I want to be able to access the admin controls through the navbar, | so I can quickly edit, add and delete films, bookings, schedules and more. | ![screenshot](docs/testing_imgs/user_stories/user_story_12.png)  |
-| As a Admin/Manager | I want to be able to view users bookings, | so that I can remove bookings, see how busy cinema gets and verify seat numbers. | ![screenshot](docs/testing_imgs/user_stories/user_story_13.png) |
-| As a Admin/Manager  | I want to be able to edit, delete and add films from the lists, | so that I can change movie image, change description and change movie name. | ![screenshot](docs/testing_imgs/user_stories/user_story_14.png) |
-| As a Admin/Manager | I want to be able to update the menu, | so that I can add new snacks/drinks to the menu and remove items the cinema no longer sells. | ![screenshot](docs/testing_imgs/user_stories/user_story_15.png) |
+| As an Admin/Manager | I want to be able to access the admin controls through the navbar, | so I can quickly edit, add and delete films, bookings, schedules and more. | ![screenshot](docs/testing_imgs/user_stories/user_story_12.png)  |
+| As an Admin/Manager | I want to be able to view users bookings, | so that I can remove bookings, see how busy cinema gets and verify seat numbers. | ![screenshot](docs/testing_imgs/user_stories/user_story_13.png) |
+| As an Admin/Manager  | I want to be able to edit, delete and add films from the lists, | so that I can change movie image, change description and change movie name. | ![screenshot](docs/testing_imgs/user_stories/user_story_14.png) |
+| As an Admin/Manager | I want to be able to update the menu, | so that I can add new snacks/drinks to the menu and remove items the cinema no longer sells. | ![screenshot](docs/testing_imgs/user_stories/user_story_15.png) |
 
 
 ## Automated Testing
