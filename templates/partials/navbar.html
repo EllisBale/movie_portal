@@ -10,41 +10,41 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav d-flex justify-content-evenly w-100">
                 <li class="nav-item">
-                    <a class="nav-link active text-white primary-hover" aria-current="page" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link text-white primary-hover {% if request.resolver_match.url_name == 'home' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white primary-hover" href="{% url 'films' %}">Films</a>
+                    <a class="nav-link text-white primary-hover {% if request.resolver_match.url_name == 'films' or request.resolver_match.url_name == 'film_detail' %}active{% endif %}" href="{% url 'films' %}">Films</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white primary-hover" href="{% url 'family' %}">Family</a>
+                    <a class="nav-link text-white primary-hover {% if request.resolver_match.url_name == 'family' %}active{% endif %}" href="{% url 'family' %}">Family</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white primary-hover" href="{% url 'menu' %}">Food & Drink </a>
+                    <a class="nav-link text-white primary-hover {% if request.resolver_match.url_name == 'menu' %}active{% endif %}" href="{% url 'menu' %}">Food & Drink </a>
                 </li>
                 {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link text-white primary-hover" href="{% url 'select_film' %}"> Booking</a>
-                </li>
-                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white dark-hover" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Account
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile <i class="fa-solid fa-lock"></i> </a></li>
-                        <li><a class="dropdown-item" href="{% url 'user_bookings' %}"> My Bookings <i class="fa-solid fa-book"></i></a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white primary-hover {% if request.resolver_match.url_name == 'select_film' or request.resolver_match.url_name == 'film_schedules' or request.resolver_match.url_name == 'booking_seat' or request.resolver_match.url_name == 'booking_success' %}active{% endif %}" href="{% url 'select_film' %}"> Booking</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white dark-hover {% if request.resolver_match.url_name == 'profile' or request.resolver_match.url_name == 'profile_update' or request.resolver_match.url_name == 'change_password' or request.resolver_match.url_name == 'user_bookings' %}active{% endif %}" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="{% url 'profile' %}">Profile <i class="fa-solid fa-lock"></i> </a></li>
+                            <li><a class="dropdown-item" href="{% url 'user_bookings' %}"> My Bookings <i class="fa-solid fa-book"></i></a></li>
+                        </ul>
+                    </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link text-white dark-hover" href="{% url 'account_login' %}"> Login <i class="fas fa-sign-in-alt"></i></a>
+                    <a class="nav-link text-white dark-hover {% if request.resolver_match.url_name == 'account_login'%}active{% endif %}" href="{% url 'account_login' %}"> Login <i class="fas fa-sign-in-alt"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white dark-hover" href="{% url 'account_signup' %}"> Register <i class="fas fa-user-plus"></i></a>
+                    <a class="nav-link text-white dark-hover {% if request.resolver_match.url_name == 'account_signup'%}active{% endif %}" href="{% url 'account_signup' %}"> Register <i class="fas fa-user-plus"></i></a>
                 </li>
                 {% endif %}
                 {% if user.is_staff %}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white dark-hover" href="#" id="manageDropdownStaff" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-white dark-hover {% if request.resolver_match.url_name == 'films_list' or request.resolver_match.url_name == 'schedule_list' or request.resolver_match.url_name == 'bookings_list' or request.resolver_match.url_name == 'user_list' %}active{% endif %}" href="#" id="manageDropdownStaff" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Manage
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="manageDropdownStaff">
@@ -61,7 +61,7 @@
                 
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link text-white dark-hover" href="{% url 'account_logout' %}">
+                    <a class="nav-link text-white dark-hover {% if request.resolver_match.url_name == 'account_logout'%}active{% endif %}" href="{% url 'account_logout' %}">
                         Logout <i class="fas fa-sign-out-alt"></i>
                     </a>
                 </li>

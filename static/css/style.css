@@ -94,6 +94,11 @@ a:hover { color: var(--colour-accent) }
 .dropdown-item { font-family: var(--button-font) }
 
 
+.nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--colour-accent); 
+}
+
 /* ===== Alert Message ===== */
 
 .alert {
@@ -316,6 +321,18 @@ footer { background: var(--colour-secondary); }
 @media (max-width: 1024px) {
     .card-poster-hover { transform: none; }
     .card-poster-hover.inactive { opacity: 1; filter: none; transform: scale(1); }
+}
+
+@media (max-width: 992px){
+    .nav-link.active {
+        border-bottom: none;
+        background: none;
+    }
+
+    .primary-hover:hover,
+    .dark-hover:hover {
+        color: #fff !important;
+    }
 }
 
 @media (max-width: 768px) {
